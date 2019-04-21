@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "deploy:staging": "echo \"Error: no test specified\" && exit 1",
-    "deploy:production": "echo \"Error: no test specified\" && exit 1"
+    "deploy:staging": "gulp deploy --staging",
+    "deploy:production": "gulp deploy --production"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "shipit-cli": "^4.2.0",
-    "shipit-deploy": "^4.1.4"
+    "gulp": "4.0.0",
+    "gulp-rsync": "0.0.8",
+    "minimist": "^1.2.0"
   }
 }
