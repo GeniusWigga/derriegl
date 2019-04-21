@@ -1,0 +1,61 @@
+{
+  "prefetchRate": 5,
+  "maxThreads": null,
+  "disableRoutePrefixing": false,
+  "outputFileRate": 100,
+  "extensions": [
+    ".js",
+    ".jsx"
+  ],
+  "minLoadTime": 200,
+  "disablePreload": false,
+  "disableRuntime": false,
+  "preloadPollInterval": 300,
+  "productionSourceMaps": false,
+  "entry": "index.js",
+  "plugins": [
+    [
+      "/Users/konstantinaxt/Documents/Webprojekte/derriegl.de/node_modules/react-static-plugin-source-filesystem/node.api.js",
+      {
+        "location": "/Users/konstantinaxt/Documents/Webprojekte/derriegl.de/src/pages"
+      }
+    ],
+    "/Users/konstantinaxt/Documents/Webprojekte/derriegl.de/node_modules/react-static-plugin-reach-router/browser.api.js",
+    "/Users/konstantinaxt/Documents/Webprojekte/derriegl.de/node_modules/react-static-plugin-sitemap/dist/node.api.js",
+    "/Users/konstantinaxt/Documents/Webprojekte/derriegl.de"
+  ],
+  "paths": {
+    "ROOT": "/Users/konstantinaxt/Documents/Webprojekte/derriegl.de",
+    "SRC": "/Users/konstantinaxt/Documents/Webprojekte/derriegl.de/src",
+    "DIST": "/Users/konstantinaxt/Documents/Webprojekte/derriegl.de/dist",
+    "ASSETS": "/Users/konstantinaxt/Documents/Webprojekte/derriegl.de/dist",
+    "PLUGINS": "/Users/konstantinaxt/Documents/Webprojekte/derriegl.de/plugins",
+    "TEMP": "/Users/konstantinaxt/Documents/Webprojekte/derriegl.de/tmp",
+    "ARTIFACTS": "/Users/konstantinaxt/Documents/Webprojekte/derriegl.de/artifacts",
+    "PUBLIC": "/Users/konstantinaxt/Documents/Webprojekte/derriegl.de/public",
+    "NODE_MODULES": "/Users/konstantinaxt/Documents/Webprojekte/derriegl.de/node_modules",
+    "EXCLUDE_MODULES": "/Users/konstantinaxt/Documents/Webprojekte/derriegl.de/node_modules",
+    "PACKAGE": "/Users/konstantinaxt/Documents/Webprojekte/derriegl.de/package.json",
+    "HTML_TEMPLATE": "/Users/konstantinaxt/Documents/Webprojekte/derriegl.de/dist/index.html",
+    "STATIC_DATA": "/Users/konstantinaxt/Documents/Webprojekte/derriegl.de/dist/staticData"
+  },
+  "siteRoot": "",
+  "basePath": "",
+  "publicPath": "/",
+  "assetsPath": "",
+  "extractCssChunks": false,
+  "inlineCss": false,
+  "babelExcludes": [],
+  "devServer": {
+    "host": "http://localhost",
+    "port": 3000
+  },
+  "terser": {
+    "terserOptions": {
+      "mangle": {},
+      "parse": {},
+      "compress": {},
+      "output": {}
+    }
+  }
+}

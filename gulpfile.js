@@ -4,7 +4,7 @@ const rsync = require("gulp-rsync");
 
 gulp.task("deploy", () => {
 
-  const rsyncPaths = ["build"];
+  const rsyncPaths = ["dist"];
   const rsyncConf = {
     progress: true,
     incremental: true,
