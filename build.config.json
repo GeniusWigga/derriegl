@@ -1,0 +1,17 @@
+{
+  "defaultLanguage": "de",
+  "languages": [
+    {
+      "id": "de",
+      "dataPath": "data/index"
+    }
+  ],
+  "pages": [
+    {
+      "id": "index",
+      "path": "/",
+      "templateFile": "src/pages/index",
+      "translationKey": "index"
+    }
+  ]
+}

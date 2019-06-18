@@ -1,16 +1,18 @@
 import React from "react";
-import { useSiteData } from "react-static";
+import { useRouteData } from "react-static";
 
 import { Link } from "./Router";
 
 export default () => {
 
-  const { menu } = useSiteData();
+  const routeData = useRouteData();
+
+  console.log("routeData: ", routeData);
 
   return (
     <nav className="menu ">
-      <Link to="/">{menu.home}</Link>
-      <Link to="/about">{menu.ingredients}</Link>
+      <Link to="/">Test</Link>
+      <Link to="/about">Ingredients</Link>
     </nav>
   );
 }
