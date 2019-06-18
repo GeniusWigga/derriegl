@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clean": "rm -rf artifacts && rm -rf dist && rm -rf tmp",
     "deploy:staging": "npm run build && gulp deploy --staging",
     "deploy:production": "npm run build && gulp deploy --production",
     "start": "react-static start",
@@ -23,7 +24,9 @@
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-static": "7.1.0",
+    "react-static-plugin-localized": "0.0.9",
     "react-static-plugin-reach-router": "7.0.10",
+    "react-static-plugin-sass": "7.1.0",
     "react-static-plugin-sitemap": "7.0.10",
     "react-static-plugin-source-filesystem": "7.1.0"
   },

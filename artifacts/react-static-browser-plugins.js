@@ -3,6 +3,11 @@ import plugin0 from '../node_modules/react-static-plugin-reach-router/browser.ap
 
 // Plugins
 const plugins = [{
+        location: "../node_modules/react-static-plugin-localized",
+        plugins: [],
+        hooks: {}
+      },
+{
         location: "../node_modules/react-static-plugin-source-filesystem",
         plugins: [],
         hooks: {}
@@ -14,6 +19,11 @@ const plugins = [{
       },
 {
         location: "../node_modules/react-static-plugin-sitemap/dist",
+        plugins: [],
+        hooks: {}
+      },
+{
+        location: "../node_modules/react-static-plugin-sass",
         plugins: [],
         hooks: {}
       },

@@ -1,13 +1,14 @@
 import path from "path";
-import axios from "axios";
+import LocalizedConfig from "./build.config.json";
 
 export default {
-  getSiteData: () => {
-    return {
-
-    };
-  },
   plugins: [
+    [
+      require.resolve("react-static-plugin-localized"),
+      {
+        config: LocalizedConfig,
+      },
+    ],
     [
       require.resolve("react-static-plugin-source-filesystem"),
       {
@@ -16,5 +17,6 @@ export default {
     ],
     require.resolve("react-static-plugin-reach-router"),
     require.resolve("react-static-plugin-sitemap"),
+    require.resolve("react-static-plugin-sass"),
   ],
 };

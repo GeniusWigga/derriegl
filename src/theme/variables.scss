@@ -1,0 +1,122 @@
+// Colors
+// ---------------------------------------------------
+$color-ci: #df9900;
+$color-ci-blue: #1da1d1;
+$color-ci-green: #1d6c5a;
+
+$color-details-font: #fff;
+$color-update-font: #fff;
+
+$color-white: #f8f5f1;
+$color-invert: #c8c8c8;
+
+$color-grey-90: #1a1a1a;
+$color-grey-80: #323234;
+$color-grey-70: #4a4a4a;
+$color-grey-60: #878787;
+$color-grey-50: #b0b0b0;
+$color-grey-40: #aaa;
+$color-grey-30: #d0d0d0;
+$color-grey-20: #e1e1e1;
+$color-grey-10: #ececec;
+$color-grey-5: #efefef;
+
+$color-border: $color-grey-20;
+
+$color-black: $color-grey-90;
+
+// Typography
+// ---------------------------------------------------
+$font-family: "Source Sans Pro", sans-serif;
+$font-family-icon: FontAwesome;
+
+$font-awesome-point-content: "\F111";
+$fa-font-path: "../assets/webfonts";
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+$line-height: 1.2em;
+
+// Typography sizes
+// ---------------------------------------------------
+$font-small-11: 11px;
+$font-small-12: 12px;
+
+$font-medium-14: 14px; // base tablet
+$font-medium-16: 16px; // base smartphone
+$font-medium-18: 18px;
+$font-medium-20: 20px; // base desktop small, h2 tablet, h3 tablet, h4 tablet
+$font-medium-22: 22px;
+$font-medium-25: 25px; // base desktop, h3 smartphone, h4 smartphone
+
+$font-large-35: 35px; // h3, h4
+$font-large-40: 40px; // h1, h2, h1 L tablet, h1 XL tablet, h1 XXL tablet
+$font-large-45: 45px; // h1 smartphone, h1 L smartphone, h1 L smartphone
+
+$font-huge-70: 70px; // h1 L
+$font-huge-90: 90px; // h1 XL
+$font-huge-150: 150px; // h1 XXL
+
+// Typography spaces
+// ---------------------------------------------------
+$space-small-5: 5px; // small padding
+$space-small-10: 10px;
+
+$space-medium-15: 15px;
+$space-medium-20: 20px;
+$space-medium-30: 30px;
+$space-medium-40: 40px;
+
+$space-large-50: 50px;
+$space-large-60: 60px;
+
+$space-huge-75: 75px; // content with background
+$space-huge-100: 100px; // section
+$space-huge-150: 150px;
+
+// Layout
+// ---------------------------------------------------
+$page-padding-small: $space-medium-15;
+$page-padding-medium: $space-medium-20;
+
+$page-max-width: 1000px;
+
+$sidebar-max-width: 230px;
+
+$thumb-height: 333px;
+$thumb-width: 500px;
+
+$global-z-elements: HEADER, MENU, OVERLAY;
+
+// Bar width (dependent on the width of the text)
+// ---------------------------------------------------
+$typo-bar-width-from-200: 150px;
+$typo-bar-width-from-120-to-200: 100px;
+$typo-bar-width-to-120: 80px;
+$typo-bar-height: 6px;
+$typo-bar-space: 8px;
+
+// Border
+// ---------------------------------------------------
+$border-width-lighter: 1px;
+$border-width-light: 2px;
+$border-width-regular: $space-small-5;
+$border-width-bold: 8px;
+
+$border-radius-small: 2px;
+
+$border-light: $border-width-lighter solid $color-border;
+
+// Misc
+// ---------------------------------------------------
+$transition-duration-fast: 0.15s;
+$transition-duration-medium: 0.3s;
+$transition-duration-slow: 0.45s;
+
+// Easing
+// ---------------------------------------------------
+$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+$ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+$ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
