@@ -1,10 +1,11 @@
+@import "theme/variables";
+
 * {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
-    Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-family: $font-family;
   font-weight: 300;
   font-size: 16px;
   margin: 0;
