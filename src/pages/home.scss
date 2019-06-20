@@ -42,4 +42,39 @@
       padding-left: $space-medium-15;
     }
   }
+
+  .home__products-headline {
+    text-align: center;
+  }
+
+  .home__products-sub-headline {
+    color: $color-ci;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .home__badge-wrapper {
+    display: flex;
+    bottom: $space-medium-30;
+    justify-content: flex-end;
+    left: 50%;
+    max-width: $header-max-width;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+
+  .home__badge {
+    fill: $color-ci;
+    width: 200px;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .home__products-image {
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    max-width: 200px;
+  }
 }
