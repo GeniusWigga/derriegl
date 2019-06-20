@@ -7,8 +7,8 @@ $color-ci-green: #1d6c5a;
 $color-details-font: #fff;
 $color-update-font: #fff;
 
-$color-white: #f8f5f1;
-$color-invert: #c8c8c8;
+$color-white: #ffffff;
+$color-invert: #f8f5f1;
 
 $color-grey-90: #1a1a1a;
 $color-grey-80: #323234;
@@ -24,6 +24,7 @@ $color-grey-5: #efefef;
 $color-border: $color-grey-20;
 
 $color-black: $color-grey-90;
+$color-font: $color-grey-90;
 
 // Typography
 // ---------------------------------------------------
@@ -78,7 +79,9 @@ $space-huge-150: 150px;
 $page-padding-small: $space-medium-15;
 $page-padding-medium: $space-medium-20;
 
-$page-max-width: 1000px;
+$page-max-width: 1920px;
+$header-max-width: 1400px;
+$header-height: 80px;
 
 $sidebar-max-width: 230px;
 

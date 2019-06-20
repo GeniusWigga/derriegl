@@ -2,7 +2,10 @@
   "index": {
     "header": {
       "home": "Der Riegel",
-      "ingredients": "Unsere Zutaten"
+      "ingredients": "Unsere Zutaten",
+      "aboutus": "Über uns",
+      "buy": "Wo zu kaufen?",
+      "contact": "Kontakt"
     }
   }
 }

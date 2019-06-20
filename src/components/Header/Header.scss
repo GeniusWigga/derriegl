@@ -1,7 +1,33 @@
+@import "../../theme/variables";
+
 .header {
+  align-items: center;
+  background: $color-white;
+  display: flex;
+  height: $header-height;
+  margin: auto;
+  max-width: $header-max-width;
   width: 100%;
 
+  .header__logo-wrapper {
+    box-sizing: border-box;
+    padding: 0 $space-medium-30;
+    text-align: center;
+    width: 30%;
+  }
+
+  .header__logo {
+    display: inline-block;
+    width: 200px;
+  }
+
   .header__item {
+    color: $color-font;
+    padding: 0 $space-medium-15;
     text-decoration: none;
+
+    &:hover {
+      color: $color-ci;
+    }
   }
 }
