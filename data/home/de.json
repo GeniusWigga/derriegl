@@ -1,11 +1,12 @@
 {
-  "index": {
+  "home": {
     "header": {
       "home": "Der Riegel",
       "ingredients": "Unsere Zutaten",
       "aboutus": "Über uns",
-      "buy": "Wo zu kaufen?",
+      "buy": "Wo kaufen?",
       "contact": "Kontakt"
-    }
+    },
+    "headline": "# Natürliche Energie <br> für jederzeit"
   }
 }

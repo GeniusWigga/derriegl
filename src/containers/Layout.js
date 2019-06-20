@@ -4,10 +4,10 @@ import Header from "../components/Header/Header";
 
 export default (props) => {
 
-  const { children, translations } = props;
+  const { className, children, translations } = props;
 
   return (
-    <div>
+    <div className={className}>
       <Header translations={translations} />
       {children}
     </div>

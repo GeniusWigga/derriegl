@@ -3,15 +3,15 @@
   "languages": [
     {
       "id": "de",
-      "dataPath": "data/index"
+      "dataPath": "data/home"
     }
   ],
   "pages": [
     {
-      "id": "index",
+      "id": "home",
       "path": "/",
-      "templateFile": "src/pages/index",
-      "translationKey": "index"
+      "templateFile": "src/pages/home",
+      "translationKey": "home"
     }
   ]
 }

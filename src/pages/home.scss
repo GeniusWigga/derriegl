@@ -1,0 +1,45 @@
+@import "../theme/variables";
+@import "../theme/responsive";
+
+.home {
+  .home__hero {
+    height: $hero-height;
+    overflow: hidden;
+    position: relative;
+
+    @include mobile {
+      height: $hero-height-mobile;
+    }
+  }
+
+  .home__hero-img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+
+    @include mobile {
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 1000px;
+      width: 100%;
+    }
+  }
+
+  .home__hero-headline {
+    box-sizing: border-box;
+    color: $color-white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding-left: $space-medium-30;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: $header-max-width;
+
+    @include mobile {
+      padding-left: $space-medium-15;
+    }
+  }
+}
