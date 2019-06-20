@@ -1,6 +1,11 @@
 @import "theme/font";
 @import "theme/variables";
 
+@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/brands";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/regular";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/solid";
+
 * {
   scroll-behavior: smooth;
 }

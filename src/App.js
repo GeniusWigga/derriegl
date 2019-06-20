@@ -2,7 +2,6 @@ import React from "react";
 import { Root, Routes, addPrefetchExcludes } from "react-static";
 
 import { Router } from "components/Router";
-
 import "./app.scss";
 
 // Any routes that start with 'dynamic' will be treated as non-static routes

@@ -31,6 +31,7 @@
     "react-static-plugin-source-filesystem": "7.1.0"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "5.9.0",
     "babel-eslint": "9.x",
     "eslint": "5.x",
     "eslint-config-react-app": "3.0.8",

@@ -17,6 +17,10 @@ export default ({ translations }) => {
       <Link className="header__item" to="/#about">{header.aboutus}</Link>
       <Link className="header__item" to="/#buy">{header.buy}</Link>
       <Link className="header__item" to="/#contact">{header.contact}</Link>
+
+      <div className="header__burger">
+        <i className="fas fa-bars" />
+      </div>
     </nav>
   );
 }
