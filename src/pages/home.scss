@@ -74,7 +74,34 @@
   .home__products-image {
     text-align: center;
     margin: auto;
-    width: 100%;
-    max-width: 200px;
+    width: auto;
+    height: 500px;
+  }
+
+  .home__slider-button {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    width: $space-medium-40;
+    z-index: 1;
+
+    .arrow {
+      width: $space-medium-40;
+    }
+
+    &--next {
+      right: 0;
+
+      .arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .swiper-button-disabled {
+    display: none;
   }
 }

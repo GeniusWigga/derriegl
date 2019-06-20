@@ -1,18 +1,35 @@
 import React from "react";
 import ReactMarkdown from "react-markdown/with-html";
 import Swiper from "react-id-swiper";
+import { Navigation } from "swiper/dist/js/swiper.esm";
 
 import { useRouteData } from "react-static";
 
 import Layout from "../containers/Layout";
 import Badge from "../components/Icons/Badge";
+import Arrow from "../components/Icons/Arrow";
 
 import "./home.scss";
+import buildClassName from "../helpers/buildClassName";
 
 export default () => {
 
   const routeData = useRouteData();
   const { translations } = routeData;
+
+  const params = {
+    modules: [Navigation],
+    navigation: {
+      nextEl: ".home__slider-button--next",
+      prevEl: ".home__slider-button--prev",
+    },
+    renderPrevButton: () => <div className={buildClassName("home__slider-button", { prev: true })}>
+      <Arrow />
+    </div>,
+    renderNextButton: () => <div className={buildClassName("home__slider-button", { next: true })}>
+      <Arrow />
+    </div>,
+  };
 
   return (
     <Layout {...routeData} className="home">
@@ -24,10 +41,9 @@ export default () => {
         <ReactMarkdown escapeHtml={false} className="home__hero-headline" source={translations.headline} />
       </div>
       <div className="home__products">
-
         <h2 className="home__products-headline">{translations.products.headline}</h2>
 
-        <Swiper>
+        <Swiper {...params}>
           <div>
             <h3 className="home__products-sub-headline">{translations.products.natural.headline}</h3>
 
