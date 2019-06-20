@@ -8,6 +8,9 @@ import { useRouteData } from "react-static";
 import Layout from "../containers/Layout";
 import Badge from "../components/Icons/Badge";
 import Arrow from "../components/Icons/Arrow";
+import Oat from "../components/Icons/Oat";
+import Apricot from "../components/Icons/Apricot";
+import Dates from "../components/Icons/Dates";
 
 import "./home.scss";
 import buildClassName from "../helpers/buildClassName";
@@ -49,6 +52,19 @@ export default () => {
 
             <div className="home__products-intro">
               <img className="home__products-image" src="/img/products/natural.png" alt="natural image" />
+            </div>
+
+            <div className="home__products-info">
+              <div className="home__products-info-col">
+                <Oat className="home__oat" />
+              </div>
+              <div className="home__products-info-col">
+                <ReactMarkdown className="home__products-description" escapeHtml={false} source={translations.products.natural.description} />
+              </div>
+              <div className="home__products-info-col">
+                <Apricot className="home__apricot" />
+                <Dates className="home__dates" />
+              </div>
             </div>
           </div>
           <div>Slide 2</div>
