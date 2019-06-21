@@ -1,7 +1,7 @@
 {
   "home": {
     "header": {
-      "home": "Der Riegel",
+      "home": "Die Riegel",
       "ingredients": "Unsere Zutaten",
       "aboutus": "Über uns",
       "buy": "Wo kaufen?",
@@ -9,7 +9,6 @@
     },
     "headline": "# Natürliche Energie <br> für jederzeit",
     "products": {
-      "headline": "Die Riegel",
       "button": "Nährwertangaben",
       "natural": {
         "headline": "Natural",
@@ -18,6 +17,10 @@
         "carbs": "hochwertige <br> Kohlenhydrate",
         "description": "Unser Natural Riegel ist der perfekte vegane Begleiter für jeden. Egal ob im Büro für Zwischendurch um die Konzentrationsfähigkeit zu erhöhen oder während eines Marathons, der Natural Riegel versorgt dich mit hochwertigen Kohlenhydraten und Proteinen. Er beinhaltet Haferflocken und ist somit ein richtiger Energie-Booster. Der optimale Teampartner wenn es darauf ankommt!"
       }
+    },
+    "baseingredients": {
+      "headline": "",
+      "quality": "## \"Der Riegel steht\" für Qualität durch und durch \n Unsere Zutaten sind alle zu 100% natürlich. Wir verwenden keine Zusatzstoffe, Aromen, Farbstoffe oder ähnliches in unseren Produkten. Die Grundmasse der Riegel besteht aus Datteln und Aprikosen, je nach Geschmacksrichtung werden verschiedene Zutaten zugegeben wie beispielsweise Kokosflocken, Nusspaste, Haferflocken oder auch getrocknete Bananen und Cranberrystückchen. Für die optimale Versorgung an Proteinen geben wir Sojaprotein zu, das ist am besten verdaulich für den Körper."
     },
     "footer": {
       "headline": "## Der Riegel",

@@ -1,7 +1,7 @@
 import React from "react";
 import ReactMarkdown from "react-markdown/with-html";
 import Swiper from "react-id-swiper";
-import { Navigation } from "swiper/dist/js/swiper.esm";
+import { Navigation, Pagination } from "swiper/dist/js/swiper.esm";
 
 import { useRouteData } from "react-static";
 
@@ -9,12 +9,28 @@ import Layout from "../containers/Layout";
 import Button from "../components/Button/Button";
 import Badge from "../components/Icons/Badge";
 import Arrow from "../components/Icons/Arrow";
+import LongArrow from "../components/Icons/LongArrow";
 import Oat from "../components/Icons/Oat";
 import Apricot from "../components/Icons/Apricot";
 import Dates from "../components/Icons/Dates";
 
 import "./home.scss";
 import buildClassName from "../helpers/buildClassName";
+
+const ArrowWrapper = ({ prev, next, children }) => {
+  return <div className={buildClassName("home__slider-button",
+    {
+      prev,
+      next,
+    })}>
+    {children}
+  </div>;
+};
+
+const NAVIGATION_PROPS = {
+  nextEl: ".home__slider-button--next",
+  prevEl: ".home__slider-button--prev",
+};
 
 export default () => {
 
@@ -25,16 +41,21 @@ export default () => {
     modules: [Navigation],
     slidesPerView: "auto",
     centeredSlides: true,
-    navigation: {
-      nextEl: ".home__slider-button--next",
-      prevEl: ".home__slider-button--prev",
+    navigation: NAVIGATION_PROPS,
+    renderPrevButton: () => <ArrowWrapper prev><Arrow /></ArrowWrapper>,
+    renderNextButton: () => <ArrowWrapper next><Arrow /></ArrowWrapper>,
+  };
+
+  const simpleParams = {
+    modules: [Navigation, Pagination],
+    navigation: NAVIGATION_PROPS,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "bullets",
+      clickable: true,
     },
-    renderPrevButton: () => <div className={buildClassName("home__slider-button", { prev: true })}>
-      <Arrow />
-    </div>,
-    renderNextButton: () => <div className={buildClassName("home__slider-button", { next: true })}>
-      <Arrow />
-    </div>,
+    renderPrevButton: () => <ArrowWrapper prev><LongArrow /></ArrowWrapper>,
+    renderNextButton: () => <ArrowWrapper next><LongArrow /></ArrowWrapper>,
   };
 
   return (
@@ -47,7 +68,7 @@ export default () => {
         <ReactMarkdown escapeHtml={false} className="home__hero-headline" source={translations.headline} />
       </div>
       <div className="home__products">
-        <h2 className="home__products-headline">{translations.products.headline}</h2>
+        <h2 className="home__headline">{translations.header.home}</h2>
 
         <Swiper {...params}>
           <div>
@@ -109,6 +130,27 @@ export default () => {
           <div>Slide 5</div>
         </Swiper>
 
+      </div>
+      <div className="home__ingredients">
+        <h2 className="home__headline">{translations.header.ingredients}</h2>
+
+        <div className="home__row">
+          <div className="home__col">
+            <Swiper {...simpleParams}>
+              <div><img src="/img/base-ingredients/all.jpg" alt="all ingredients image" /></div>
+              <div><img src="/img/base-ingredients/apricot.jpg" alt="apricot ingredient image" /></div>
+              <div><img src="/img/base-ingredients/dates.jpg" alt="dates ingredient image" /></div>
+              <div><img src="/img/base-ingredients/dates-alt.jpg" alt="dates alternativ ingredient image" /></div>
+            </Swiper>
+          </div>
+          <div className="home__col">
+            <ReactMarkdown
+              className="home__col-content"
+              escapeHtml={false}
+              source={translations.baseingredients.quality}
+            />
+          </div>
+        </div>
       </div>
     </Layout>
   );
