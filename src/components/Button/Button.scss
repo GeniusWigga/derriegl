@@ -1,0 +1,13 @@
+@import "../../theme/variables";
+
+.button {
+  background: $color-ci;
+  border-color: transparent;
+  border-radius: $space-medium-30;
+  color: $color-white;
+  cursor: pointer;
+  font-size: $font-medium-18;
+  outline: none;
+  padding: $space-small-10 $space-medium-40;
+  text-transform: uppercase;
+}

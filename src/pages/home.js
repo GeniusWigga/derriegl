@@ -6,6 +6,7 @@ import { Navigation } from "swiper/dist/js/swiper.esm";
 import { useRouteData } from "react-static";
 
 import Layout from "../containers/Layout";
+import Button from "../components/Button/Button";
 import Badge from "../components/Icons/Badge";
 import Arrow from "../components/Icons/Arrow";
 import Oat from "../components/Icons/Oat";
@@ -94,7 +95,7 @@ export default () => {
                   escapeHtml={false}
                   source={translations.products.natural.description}
                 />
-                <button className="home__btn">{translations.products.button}</button>
+                <Button className="home__btn">{translations.products.button}</Button>
               </div>
               <div className="home__products-info-col">
                 <Apricot className="home__apricot" />

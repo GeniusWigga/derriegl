@@ -18,6 +18,18 @@
         "carbs": "hochwertige <br> Kohlenhydrate",
         "description": "Unser Natural Riegel ist der perfekte vegane Begleiter für jeden. Egal ob im Büro für Zwischendurch um die Konzentrationsfähigkeit zu erhöhen oder während eines Marathons, der Natural Riegel versorgt dich mit hochwertigen Kohlenhydraten und Proteinen. Er beinhaltet Haferflocken und ist somit ein richtiger Energie-Booster. Der optimale Teampartner wenn es darauf ankommt!"
       }
+    },
+    "footer": {
+      "headline": "## Der Riegel",
+      "description": "... aus 100% natürlichen Zutaten schmeckt unglaublich lecker und versorgt dich mit den besten Nährstoffen - egal ob Unterwegs oder beim Sport.",
+      "contact": "Kontakt",
+      "phone": "+49 123 456 789",
+      "email": "hallo@derriegel.com",
+      "calltoaction": "Sag uns hallo",
+      "imprint": "Impressum",
+      "address": "Der Riegel GmbH <br> Musterstraße 12 <br> 12345, Musterhausen <br> Deutschland",
+      "fb": "https://facebook.com",
+      "insta": "https://instagram.com"
     }
   }
 }
