@@ -10,11 +10,12 @@
     "headline": "# Natürliche Energie <br> für jederzeit",
     "products": {
       "headline": "Die Riegel",
+      "button": "Nährwertangaben",
       "natural": {
         "headline": "Natural",
         "vegan": "vegan",
         "protein": "viel, viel Protein",
-        "carbs": "hochwertige Kohlenhydrate",
+        "carbs": "hochwertige <br> Kohlenhydrate",
         "description": "Unser Natural Riegel ist der perfekte vegane Begleiter für jeden. Egal ob im Büro für Zwischendurch um die Konzentrationsfähigkeit zu erhöhen oder während eines Marathons, der Natural Riegel versorgt dich mit hochwertigen Kohlenhydraten und Proteinen. Er beinhaltet Haferflocken und ist somit ein richtiger Energie-Booster. Der optimale Teampartner wenn es darauf ankommt!"
       }
     }

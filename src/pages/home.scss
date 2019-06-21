@@ -36,11 +36,15 @@
     padding-left: $space-medium-30;
     transform: translate(-50%, -50%);
     width: 100%;
-    max-width: $header-max-width;
+    max-width: $page-sub-max-width;
 
     @include mobile {
       padding-left: $space-medium-15;
     }
+  }
+
+  .home__products {
+    padding: $space-large-50 0;
   }
 
   .home__products-headline {
@@ -58,7 +62,7 @@
     bottom: $space-medium-30;
     justify-content: flex-end;
     left: 50%;
-    max-width: $header-max-width;
+    max-width: $page-sub-max-width;
     position: absolute;
     transform: translateX(-50%);
     width: 100%;
@@ -77,45 +81,72 @@
     bottom: 20px;
   }
 
-  .home__oat {
-    height: auto;
-    width: 100px;
-  }
-
+  .home__apricot,
+  .home__oat,
   .home__dates {
     height: auto;
-    width: 100px;
+    max-width: 180px;
+    width: 100%;
   }
 
   .home__apricot {
-    height: auto;
-    width: 100px;
+    max-width: 100px;
+    padding-bottom: $space-medium-20;
   }
 
   .home__products-description {
     text-align: center;
+    padding-bottom: $space-large-50;
+  }
+
+  .home__products-intro {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    height: 750px;
+    padding: $space-medium-20 0;
+    position: relative;
   }
 
   .home__products-info {
     display: flex;
+    padding: $space-medium-20 0;
   }
 
   .home__products-info-col {
-    width: calc(100% / 3);
+    justify-content: center;
 
     &:first-of-type {
       display: flex;
-      justify-content: flex-end;
+      padding-right: $space-large-50;
+      width: 30%;
+    }
+
+    &:nth-of-type(2) {
+      display: inline-block;
+      text-align: center;
+      width: 40%;
     }
 
     &:last-of-type {
+      align-items: center;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      padding-left: $space-large-50;
+      width: 30%;
     }
   }
 
-  .home__products-image {
+  .home__products-img-packaging {
+    width: auto;
+    height: 650px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .home__products-img-bar {
     text-align: center;
     margin: auto;
     width: auto;
@@ -126,10 +157,11 @@
     align-items: center;
     cursor: pointer;
     display: flex;
-    height: 500px;
+    height: 800px;
+    justify-content: center;
     position: absolute;
     top: 0;
-    width: $space-medium-40;
+    width: $space-huge-100;
     z-index: 1;
 
     .arrow {
@@ -146,7 +178,92 @@
     }
   }
 
+  .home__btn {
+    background: $color-ci;
+    border-radius: $space-medium-30;
+    color: $color-white;
+    font-size: $font-medium-18;
+    padding: $space-small-10 $space-medium-40;
+    text-transform: uppercase;
+  }
+
+  .swiper-container {
+    max-width: $page-sub-max-width;
+  }
+
   .swiper-button-disabled {
     display: none;
+  }
+
+  .home__products-substances {
+    align-items: center;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+
+    &--vegan {
+      top: 30%;
+      left: 62%;
+    }
+
+    &--protein {
+      top: 50%;
+      left: 35%;
+    }
+
+    &--carbs {
+      top: 70%;
+      left: 64%;
+    }
+
+    .home__substances {
+      font-family: $font-family-headline;
+      font-size: $font-medium-25;
+      margin-left: $space-small-10;
+    }
+
+    .home__indicator {
+      align-items: center;
+      background: $color-ci;
+      border-right: $border-width-light solid $color-white;
+      border-top: $border-width-light solid $color-white;
+      border-bottom: $border-width-light solid $color-white;
+      display: flex;
+      height: 3px;
+      position: relative;
+      width: 200px;
+      z-index: 2;
+    }
+
+    .home__indicator-circle {
+      background: $color-ci;
+      border: $border-width-light solid $color-white;
+      border-radius: 50%;
+      content: "";
+      left: -22px;
+      height: $space-medium-20;
+      width: $space-medium-20;
+      position: absolute;
+      z-index: 1;
+    }
+
+    &--invert {
+      flex-direction: row-reverse;
+
+      .home__indicator {
+        border-right: none;
+        border-left: $border-width-light solid $color-white;
+      }
+
+      .home__substances {
+        margin-right: $space-small-10;
+      }
+
+      .home__indicator-circle {
+        left: auto;
+        right: -22px;
+      }
+    }
   }
 }

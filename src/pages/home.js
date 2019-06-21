@@ -22,6 +22,8 @@ export default () => {
 
   const params = {
     modules: [Navigation],
+    slidesPerView: "auto",
+    centeredSlides: true,
     navigation: {
       nextEl: ".home__slider-button--next",
       prevEl: ".home__slider-button--prev",
@@ -51,7 +53,35 @@ export default () => {
             <h3 className="home__products-sub-headline">{translations.products.natural.headline}</h3>
 
             <div className="home__products-intro">
-              <img className="home__products-image" src="/img/products/natural.png" alt="natural image" />
+              <div className="home__products-substances home__products-substances--vegan">
+                <div className="home__indicator" />
+                <div className="home__indicator-circle" />
+                <ReactMarkdown
+                  escapeHtml={false}
+                  className="home__substances"
+                  source={translations.products.natural.vegan}
+                />
+              </div>
+              <div className="home__products-substances home__products-substances--protein home__products-substances--invert">
+                <div className="home__indicator" />
+                <div className="home__indicator-circle" />
+                <ReactMarkdown
+                  escapeHtml={false}
+                  className="home__substances"
+                  source={translations.products.natural.protein}
+                />
+              </div>
+              <div className="home__products-substances home__products-substances--carbs">
+                <div className="home__indicator" />
+                <div className="home__indicator-circle" />
+                <ReactMarkdown
+                  escapeHtml={false}
+                  className="home__substances"
+                  source={translations.products.natural.carbs}
+                />
+              </div>
+              <img className="home__products-img-bar" src="/img/products/natural.png" alt="natural bar image" />
+              <img className="home__products-img-packaging" src="/img/packaging.png" alt="packaging image" />
             </div>
 
             <div className="home__products-info">
@@ -59,7 +89,12 @@ export default () => {
                 <Oat className="home__oat" />
               </div>
               <div className="home__products-info-col">
-                <ReactMarkdown className="home__products-description" escapeHtml={false} source={translations.products.natural.description} />
+                <ReactMarkdown
+                  className="home__products-description"
+                  escapeHtml={false}
+                  source={translations.products.natural.description}
+                />
+                <button className="home__btn">{translations.products.button}</button>
               </div>
               <div className="home__products-info-col">
                 <Apricot className="home__apricot" />
