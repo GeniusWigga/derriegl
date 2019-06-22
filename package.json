@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf artifacts && rm -rf dist && rm -rf tmp",
-    "deploy:staging": "npm run build && gulp deploy --staging",
-    "deploy:production": "npm run build && gulp deploy --production",
+    "deploy:staging": "npm run clean && npm run build && gulp deploy --staging",
+    "deploy:production": "npm run clean && npm run build && gulp deploy --production",
     "start": "react-static start",
     "stage": "react-static build --staging",
     "build": "react-static build",

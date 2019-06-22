@@ -45,6 +45,10 @@
 
   .home__headline {
     text-align: center;
+
+    &--space {
+      margin-bottom: $space-large-50;
+    }
   }
 
   .home__products-sub-headline {
@@ -64,6 +68,8 @@
     width: 100%;
   }
 
+  .home__bar,
+  .home__leaf,
   .home__oat,
   .home__badge,
   .home__dates,
@@ -88,6 +94,10 @@
   .home__apricot {
     max-width: 100px;
     padding-bottom: $space-medium-20;
+  }
+
+  .home__section {
+    margin: $space-large-50 0;
   }
 
   .home__products-description {
@@ -150,8 +160,6 @@
   }
 
   .home__products {
-    padding: $space-large-50 0;
-
     .swiper-container {
       max-width: $page-sub-max-width;
     }
@@ -280,6 +288,16 @@
     }
   }
 
+  .home__leaf {
+    height: auto;
+    width: $space-large-60;
+  }
+
+  .home__bar {
+    height: auto;
+    width: $space-large-60;
+  }
+
   .home__row {
     display: flex;
     margin: auto;
@@ -288,17 +306,36 @@
 
   .home__col {
     width: 50%;
+
+    &--content {
+      align-items: center;
+      background: $color-white;
+      display: flex;
+      padding: $space-medium-40;
+    }
+
+    .icon {
+      margin-bottom: $space-medium-40;
+    }
+  }
+
+  .home__col-content-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
 
   .home__col-content {
-    background: $color-white;
     box-sizing: border-box;
     height: 100%;
     text-align: center;
-    padding: $space-medium-40;
 
     h2 {
       margin-bottom: $space-medium-40;
+    }
+
+    p {
+      margin: $space-medium-20 0;
     }
   }
 }

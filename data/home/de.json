@@ -19,8 +19,13 @@
       }
     },
     "baseingredients": {
-      "headline": "",
-      "quality": "## \"Der Riegel steht\" für Qualität durch und durch \n Unsere Zutaten sind alle zu 100% natürlich. Wir verwenden keine Zusatzstoffe, Aromen, Farbstoffe oder ähnliches in unseren Produkten. Die Grundmasse der Riegel besteht aus Datteln und Aprikosen, je nach Geschmacksrichtung werden verschiedene Zutaten zugegeben wie beispielsweise Kokosflocken, Nusspaste, Haferflocken oder auch getrocknete Bananen und Cranberrystückchen. Für die optimale Versorgung an Proteinen geben wir Sojaprotein zu, das ist am besten verdaulich für den Körper."
+      "quality": "<h2> \"Der Riegel\" steht für Qualität durch und durch. </h2> <p>Unsere Zutaten sind alle zu 100% natürlich. Wir verwenden keine Zusatzstoffe, Aromen, Farbstoffe oder ähnliches in unseren Produkten. Die Grundmasse der Riegel besteht aus Datteln und Aprikosen, je nach Geschmacksrichtung werden verschiedene Zutaten zugegeben wie beispielsweise Kokosflocken, Nusspaste, Haferflocken oder auch getrocknete Bananen und Cranberrystückchen. Für die optimale Versorgung an Proteinen geben wir Sojaprotein zu, dass ist am besten verdaulich für den Körper. Unsere Riegel werden alle in reiner Handarbeit hergestellt, somit ist jeder Riegel einzigartig!</p>"
+    },
+    "suppingredients": {
+      "headline": "## Unsere Riegel werden alle in reiner Handarbeit hergestellt - Somit ist jeder Riegel einzigartig."
+    },
+    "aboutus": {
+      "why": "## Warum Der Riegel? \n  <p><strong>Ganz ehrlich:</strong> So ziemlich jeder „Fitness-Riegel“ auf dem Markt wirbt mit super natürlichen Zutaten, keinem Zuckerzusatz, kaum Fett und natürlich mit Unmengen an Protein. Wir haben uns viele Riegel angesehen, sie probiert und uns die Zutatenlisten angesehen.</p>  <p><strong>Was dabei rauskam?</strong> Zutatenlisten, die gefüllt sind mit irgendwelchen Stoffen die man nicht mal richtig aussprechen kann. Nährwerte die nicht wirklich einem ideal entsprechen egal ob für einen Leistungssportler oder einem durchschnittlichen Fitnessstudiogänger. „So kann das nicht weitergehen!“ dachten wir uns.</p>"
     },
     "footer": {
       "headline": "## Der Riegel",

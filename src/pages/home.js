@@ -13,6 +13,8 @@ import LongArrow from "../components/Icons/LongArrow";
 import Oat from "../components/Icons/Oat";
 import Apricot from "../components/Icons/Apricot";
 import Dates from "../components/Icons/Dates";
+import Leaf from "../components/Icons/Leaf";
+import Bar from "../components/Icons/Bar";
 
 import "./home.scss";
 import buildClassName from "../helpers/buildClassName";
@@ -67,7 +69,8 @@ export default () => {
         </div>
         <ReactMarkdown escapeHtml={false} className="home__hero-headline" source={translations.headline} />
       </div>
-      <div className="home__products">
+
+      <div className="home__section home__products">
         <h2 className="home__headline">{translations.header.home}</h2>
 
         <Swiper {...params}>
@@ -131,8 +134,9 @@ export default () => {
         </Swiper>
 
       </div>
+
       <div className="home__ingredients">
-        <h2 className="home__headline">{translations.header.ingredients}</h2>
+        <h2 className="home__headline home__headline--space">{translations.header.ingredients}</h2>
 
         <div className="home__row">
           <div className="home__col">
@@ -143,12 +147,59 @@ export default () => {
               <div><img src="/img/base-ingredients/dates-alt.jpg" alt="dates alternativ ingredient image" /></div>
             </Swiper>
           </div>
+          <div className="home__col home__col--content">
+            <div className="home__col-content-wrapper">
+              <Leaf className="home__leaf icon" />
+              <ReactMarkdown
+                className="home__col-content"
+                escapeHtml={false}
+                source={translations.baseingredients.quality}
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="home__row">
+          <div className="home__col home__col--content">
+            <div className="home__col-content-wrapper">
+              <Bar className="home__bar icon" />
+              <ReactMarkdown
+                className="home__col-content"
+                escapeHtml={false}
+                source={translations.suppingredients.headline}
+              />
+            </div>
+          </div>
           <div className="home__col">
-            <ReactMarkdown
-              className="home__col-content"
-              escapeHtml={false}
-              source={translations.baseingredients.quality}
-            />
+            <Swiper {...simpleParams}>
+              <div><img src="/img/supplementary-ingredients/cocos.jpg" alt="cocos ingredients image" /></div>
+              <div><img src="/img/supplementary-ingredients/cranberries.jpg" alt="cranberries ingredient image" /></div>
+              <div><img src="/img/supplementary-ingredients/hazelnuts.jpg" alt="hazelnuts ingredient image" /></div>
+              <div><img src="/img/supplementary-ingredients/oat.jpg" alt="oat ingredient image" /></div>
+            </Swiper>
+          </div>
+        </div>
+      </div>
+
+      <div className="home__section home__about-us">
+        <h2 className="home__headline home__headline--space">{translations.header.aboutus}</h2>
+
+        <div className="home__row">
+          <div className="home__col">
+            <Swiper {...simpleParams}>
+              <div><img src="/img/why-section/bars.jpg" alt="bars image" /></div>
+              <div><img src="/img/why-section/emotion.jpg" alt="emotion image" /></div>
+              <div><img src="/img/why-section/bowl.jpg" alt="bowl image" /></div>
+            </Swiper>
+          </div>
+          <div className="home__col home__col--content">
+            <div className="home__col-content-wrapper">
+              <ReactMarkdown
+                className="home__col-content"
+                escapeHtml={false}
+                source={translations.aboutus.why}
+              />
+            </div>
           </div>
         </div>
       </div>
