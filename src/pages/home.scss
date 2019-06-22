@@ -328,6 +328,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
 
   .home__col-content {
@@ -364,5 +365,30 @@
   .home__contact-btn {
     text-decoration: none;
     color: inherit;
+  }
+
+  .home__email {
+    text-decoration: none;
+    color: $color-ci;
+  }
+
+  .home__email, .home__social {
+    margin: $space-medium-15 0;
+  }
+
+  .home__social {
+    align-items: center;
+    display: flex;
+    text-decoration: none;
+  }
+
+  .home__social-content {
+    color: $color-ci;
+    margin-left: $space-small-10;
+  }
+
+  .home__social-icons {
+    height: $space-medium-20;
+    width: $space-medium-20;
   }
 }

@@ -228,7 +228,38 @@ export default () => {
             escapeHtml={false}
             source={translations.buy.headline}
           />
-          <Button><a className="home__contact-btn" href={`mailto:${translations.footer.email}`}>{translations.buy.contact}</a></Button>
+          <Button>
+            <a className="home__contact-btn" href={`mailto:${translations.footer.email}`}>{translations.buy.contact}</a>
+          </Button>
+        </div>
+      </div>
+
+      <div className="home__section home__contact">
+        <div className="home__row">
+          <div className="home__col home__col--content">
+            <div className="home__col-content-wrapper">
+              <ReactMarkdown
+                className="home__col-content"
+                escapeHtml={false}
+                source={translations.contact.text}
+              />
+              <div className="home__social-wrapper">
+                <a className="home__email"
+                   href={`mailto:${translations.footer.email}`}>hallo@derriegel.com</a>
+                <a className="home__social" href={translations.footer.fb}>
+                  <img className="home__social-icons" src="/icons/fb.svg" alt="svg icon facebook" />
+                  <span className="home__social-content">@der-riegel</span>
+                </a>
+                <a className="home__social" href={translations.footer.insta}>
+                  <img className="home__social-icons" src="/icons/insta.svg" alt="svg icon insta" />
+                  <span className="home__social-content">@der-riegel-germany</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="home__col">
+            <div><img src="/img/why-section/ceos.jpg" alt="ceos image" /></div>
+          </div>
         </div>
       </div>
     </Layout>
