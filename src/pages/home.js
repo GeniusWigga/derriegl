@@ -202,6 +202,21 @@ export default () => {
             </div>
           </div>
         </div>
+
+        <div className="home__row">
+          <div className="home__col home__col--content">
+            <div className="home__col-content-wrapper">
+              <ReactMarkdown
+                className="home__col-content"
+                escapeHtml={false}
+                source={translations.aboutus.team}
+              />
+            </div>
+          </div>
+          <div className="home__col">
+            <div><img src="/img/why-section/ceos.jpg" alt="ceos image" /></div>
+          </div>
+        </div>
       </div>
     </Layout>
   );
