@@ -49,7 +49,10 @@ export default ({ translations }) => {
           <a className="footer_social" href={translations.footer.insta}>
             <img src="/icons/insta.svg" alt="svg icon insta" /></a>
         </div>
-        <Button className="footer__button">{translations.footer.calltoaction}</Button>
+        <Button className="footer__button">
+          <a className="footer__contact-btn"
+             href={`mailto:${translations.footer.email}`}>{translations.footer.calltoaction}</a>
+        </Button>
       </div>
     </footer>
   );

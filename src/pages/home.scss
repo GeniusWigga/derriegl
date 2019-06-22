@@ -49,6 +49,10 @@
     &--space {
       margin-bottom: $space-large-50;
     }
+
+    &--invert {
+      color: $color-white;
+    }
   }
 
   .home__products-sub-headline {
@@ -338,5 +342,27 @@
     p {
       margin: $space-medium-20 0;
     }
+  }
+
+  .home__buy-content {
+    display: inline-block;
+    text-align: center;
+  }
+
+  .home_buy-headline {
+    color: $color-white;
+    margin-bottom: $space-medium-20;
+  }
+
+  .home__buy {
+    background: #333232;
+    display: flex;
+    flex-direction: column;
+    padding: $space-medium-40 0;
+  }
+
+  .home__contact-btn {
+    text-decoration: none;
+    color: inherit;
   }
 }

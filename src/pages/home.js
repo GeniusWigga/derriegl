@@ -218,6 +218,19 @@ export default () => {
           </div>
         </div>
       </div>
+
+      <div className="home__buy">
+        <h2 className="home__headline home__headline--space home__headline--invert">{translations.header.buy}</h2>
+
+        <div className="home__buy-content">
+          <ReactMarkdown
+            className="home_buy-headline"
+            escapeHtml={false}
+            source={translations.buy.headline}
+          />
+          <Button><a className="home__contact-btn" href={`mailto:${translations.footer.email}`}>{translations.buy.contact}</a></Button>
+        </div>
+      </div>
     </Layout>
   );
 }
