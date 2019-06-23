@@ -107,6 +107,10 @@
   .home__products-description {
     text-align: center;
     padding-bottom: $space-large-50;
+
+    @include mobile {
+      padding-bottom: $space-medium-20;
+    }
   }
 
   .home__products-intro {
@@ -116,14 +120,23 @@
     height: 750px;
     padding: $space-medium-20 0;
     position: relative;
+
+    @include mobile {
+      height: 500px;
+    }
   }
 
   .home__products-info {
     display: flex;
     padding: $space-medium-20 0;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   .home__products-info-col {
+    box-sizing: border-box;
     justify-content: center;
 
     &:first-of-type {
@@ -145,6 +158,15 @@
       padding-left: $space-large-50;
       width: 30%;
     }
+
+    @include mobile {
+      &:first-of-type,
+      &:nth-of-type(2),
+      &:last-of-type {
+        padding: $space-medium-20;
+        width: 100%;
+      }
+    }
   }
 
   .home__products-img-packaging {
@@ -154,6 +176,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    @include mobile {
+      height: 400px;
+    }
   }
 
   .home__products-img-bar {
@@ -161,6 +187,10 @@
     margin: auto;
     width: auto;
     height: 500px;
+
+    @include mobile {
+      height: 300px;
+    }
   }
 
   .home__products {
@@ -170,6 +200,10 @@
 
     .home__slider-button {
       height: 800px;
+
+      @include mobile {
+        height: 500px;
+      }
     }
   }
 
@@ -187,6 +221,10 @@
     .arrow {
       height: auto;
       width: $space-medium-40;
+
+      @include mobile {
+        width: $space-medium-20;
+      }
     }
 
     &--next {
@@ -220,6 +258,11 @@
     background: $color-white;
   }
 
+  .home__products-wrapper {
+    margin: auto;
+    position: relative;
+  }
+
   .home__products-substances {
     align-items: center;
     display: flex;
@@ -228,24 +271,43 @@
     position: absolute;
 
     &--vegan {
-      top: 30%;
-      left: 62%;
+      top: 5em;
+      left: 18em;
+
+      @include mobile {
+        top: 3em;
+        left: 8em;
+      }
     }
 
     &--protein {
-      top: 50%;
-      left: 35%;
+      top: 14em;
+      left: -7em;
+
+      @include mobile {
+        top: 8em;
+        left: -1em;
+      }
     }
 
     &--carbs {
-      top: 70%;
-      left: 64%;
+      top: 23em;
+      left: 19em;
+
+      @include mobile {
+        top: 13em;
+        left: 10em;
+      }
     }
 
     .home__substances {
       font-family: $font-family-headline;
       font-size: $font-medium-25;
       margin-left: $space-small-10;
+
+      @include mobile {
+        font-size: $font-medium-18;
+      }
     }
 
     .home__indicator {
@@ -259,6 +321,11 @@
       position: relative;
       width: 200px;
       z-index: 2;
+
+      @include mobile {
+        min-width: $space-large-50;
+        width: $space-large-50;
+      }
     }
 
     .home__indicator-circle {
@@ -283,6 +350,7 @@
 
       .home__substances {
         margin-right: $space-small-10;
+        margin-left: 0;
       }
 
       .home__indicator-circle {
@@ -306,10 +374,18 @@
     display: flex;
     margin: auto;
     max-width: $page-sub-max-width;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   .home__col {
     width: 50%;
+
+    @include mobile {
+      width: 100%;
+    }
 
     &--content {
       align-items: center;

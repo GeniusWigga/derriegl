@@ -55,12 +55,16 @@
   }
 
   .header__nav-wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
     @include mobile {
       background: $color-white;
       display: none;
       flex-direction: column;
       position: fixed;
-      top: $header-height;
+      top: $header-height-mobile;
       left: 0;
       right: 0;
       bottom: 0;

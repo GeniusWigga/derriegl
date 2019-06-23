@@ -42,7 +42,7 @@ export default ({ translations }) => {
       </div>
 
       <div className="footer_social-contact-wrapper">
-        <div className="footer_social-buttons">
+        <div className="footer__social-buttons">
           <a className="footer_social" href={translations.footer.fb}>
             <img src="/icons/fb.svg" alt="svg icon facebook" />
           </a>
