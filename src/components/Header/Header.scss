@@ -1,5 +1,6 @@
 @import "../../theme/variables";
 @import "../../theme/responsive";
+@import "../../theme/typography";
 
 .header {
   align-items: center;
@@ -16,6 +17,7 @@
 
   @include mobile {
     height: $header-height-mobile;
+    position: fixed;
   }
 
   .header__logo-wrapper {
@@ -50,7 +52,12 @@
     }
 
     @include mobile {
-      padding: 0 0 $space-small-10 $space-medium-15;
+      padding: $space-medium-15;
+      border-top: $border-width-lighter solid $color-border;
+
+      &:last-of-type {
+        box-shadow: 0 5px 7px rgba(171, 171, 171, .59);
+      }
     }
   }
 
@@ -58,6 +65,9 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    white-space: nowrap;
+
+    @include fluid-type($mobile-breakpoint, $page-max-width, $font-medium-14, $font-medium-16);
 
     @include mobile {
       background: $color-white;
@@ -72,6 +82,7 @@
 
       &--open {
         display: flex;
+        transform: none;
       }
     }
   }

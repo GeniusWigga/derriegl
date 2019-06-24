@@ -338,6 +338,12 @@
       width: $space-medium-20;
       position: absolute;
       z-index: 1;
+
+      @include mobile {
+        left: -12px;
+        height: $space-small-10;
+        width: $space-small-10;
+      }
     }
 
     &--invert {
@@ -356,6 +362,10 @@
       .home__indicator-circle {
         left: auto;
         right: -22px;
+
+        @include mobile {
+          right: -12px;
+        }
       }
     }
   }
@@ -377,6 +387,9 @@
 
     @include mobile {
       flex-direction: column;
+      max-width: 600px;
+      margin: auto;
+      padding: $space-small-10 $space-medium-20;
     }
   }
 
@@ -393,6 +406,10 @@
       box-sizing: border-box;
       display: flex;
       padding: $space-medium-40;
+
+      @include mobile {
+        min-height: 400px;
+      }
     }
 
     .icon {
@@ -417,7 +434,7 @@
     }
 
     p {
-      margin: $space-medium-20 0;
+      margin-top: $space-medium-20;
     }
   }
 

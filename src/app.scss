@@ -1,6 +1,7 @@
 @import "theme/font";
 @import "theme/variables";
 @import "theme/responsive";
+@import "theme/typography";
 @import "../node_modules/react-id-swiper/src/styles/scss/swiper";
 @import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
 @import "../node_modules/@fortawesome/fontawesome-free/scss/brands";
@@ -27,15 +28,17 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 80px;
+  @include fluid-type($mobile-breakpoint, $page-max-width, $font-large-40, 80px);
 
   @include mobile {
-    font-size: 40px;
+    font-size: $font-large-40;
   }
 }
 
 h2 {
   font-size: $space-medium-40;
+
+  @include fluid-type($mobile-breakpoint, $page-max-width, $font-medium-25, $font-large-40);
 }
 
 p {
