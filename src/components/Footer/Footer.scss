@@ -2,8 +2,11 @@
 @import "../../theme/responsive";
 
 .footer {
-  background: $color-black;
+  //background-image: url(../../../public/img/wood.jpg);
+  background-image: url(../../../public/img/wood-black.jpg);
+  //background-image: url(../../../public/img/wood-invert.jpg);
   color: $color-white;
+  padding-bottom: $space-medium-20;
 
   .footer__wrapper {
     display: flex;

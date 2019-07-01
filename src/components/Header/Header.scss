@@ -5,12 +5,13 @@
 .header {
   align-items: center;
   background: $color-white;
+  box-shadow: 0 5px 7px rgba(171, 171, 171, .59);
   display: flex;
   height: $header-height;
   left: 50%;
   margin: auto;
   max-width: $page-sub-max-width;
-  position: absolute;
+  position: fixed;
   transform: translateX(-50%);
   width: 100%;
   z-index: 2;
@@ -47,7 +48,8 @@
     text-decoration: none;
     text-transform: uppercase;
 
-    &:hover {
+    &:hover,
+    &--active {
       color: $color-ci;
     }
 

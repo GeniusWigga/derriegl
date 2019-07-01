@@ -62,7 +62,7 @@ export default () => {
 
   return (
     <Layout {...routeData} className="home">
-      <div className="home__hero">
+      <div className="home__hero" id="home">
         <img className="home__hero-img" src="/img/hero.jpg" alt="home hero" />
         <div className="home__badge-wrapper">
           <Badge className="home__badge" />
@@ -137,7 +137,7 @@ export default () => {
 
       </div>
 
-      <div className="home__ingredients">
+      <div className="home__ingredients" id="ingredients">
         <h2 className="home__headline home__headline--space">{translations.header.ingredients}</h2>
 
         <div className="home__row">
@@ -183,7 +183,7 @@ export default () => {
         </div>
       </div>
 
-      <div className="home__section home__about-us">
+      <div className="home__section home__about-us" id="about">
         <h2 className="home__headline home__headline--space">{translations.header.aboutus}</h2>
 
         <div className="home__row">
@@ -221,8 +221,12 @@ export default () => {
         </div>
       </div>
 
-      <div className="home__buy">
+      <div className="home__buy" id="buy">
         <h2 className="home__headline home__headline--space home__headline--invert">{translations.header.buy}</h2>
+
+        {_.map(translations.buy.stores, (store, key) => {
+          return <a key={key} target="_blank" rel="noreferrer nofollow" className="home__buy-store" href={store.href}>{store.text}</a>;
+        })}
 
         <div className="home__buy-content">
           <ReactMarkdown
@@ -236,7 +240,7 @@ export default () => {
         </div>
       </div>
 
-      <div className="home__section home__contact">
+      <div className="home__section home__contact" id="contact">
         <div className="home__row">
           <div className="home__col home__col--content">
             <div className="home__col-content-wrapper">
@@ -248,14 +252,14 @@ export default () => {
               <div className="home__social-wrapper">
                 <a className="home__email"
                    href={`mailto:${translations.footer.email}`}>hallo@derriegel.com</a>
-                <a className="home__social" href={translations.footer.fb}>
-                  <img className="home__social-icons" src="/icons/fb.svg" alt="svg icon facebook" />
-                  <span className="home__social-content">@der-riegel</span>
-                </a>
-                <a className="home__social" href={translations.footer.insta}>
-                  <img className="home__social-icons" src="/icons/insta.svg" alt="svg icon insta" />
-                  <span className="home__social-content">@der-riegel-germany</span>
-                </a>
+                {/*<a className="home__social" href={translations.footer.fb}>*/}
+                {/*  <img className="home__social-icons" src="/icons/fb.svg" alt="svg icon facebook" />*/}
+                {/*  <span className="home__social-content">@der-riegel</span>*/}
+                {/*</a>*/}
+                {/*<a className="home__social" href={translations.footer.insta}>*/}
+                {/*  <img className="home__social-icons" src="/icons/insta.svg" alt="svg icon insta" />*/}
+                {/*  <span className="home__social-content">@der-riegel-germany</span>*/}
+                {/*</a>*/}
               </div>
             </div>
           </div>

@@ -445,11 +445,28 @@
 
   .home_buy-headline {
     color: $color-white;
+    margin-bottom: $space-large-50;
+  }
+
+  .home__buy-store {
+    text-align: center;
+    text-decoration: none;
+    color: $color-white;
     margin-bottom: $space-medium-20;
+    padding: $space-small-10 0;
+
+    &:last-of-type {
+      margin-bottom: $space-large-50;
+    }
   }
 
   .home__buy {
-    background: #333232;
+    //background-image: url(../../public/img/wood.jpg);
+    background-image: url(../../public/img/wood-black.jpg);
+    //background-image: url(../../public/img/wood-invert.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     padding: $space-medium-40 0;
