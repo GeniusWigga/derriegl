@@ -140,7 +140,7 @@ export default () => {
 
             <div className="home__products-intro">
               <div className="home__products-wrapper">
-                <img className="home__products-img-bar" src="/img/products/natural.png" alt="natural bar image" />
+                <img className="home__products-img-bar" src="/img/products/choco.png" alt="natural bar image" />
                 <img className="home__products-img-packaging" src="/img/packaging.png" alt="packaging image" />
               </div>
             </div>
@@ -170,7 +170,7 @@ export default () => {
 
             <div className="home__products-intro">
               <div className="home__products-wrapper">
-                <img className="home__products-img-bar" src="/img/products/natural.png" alt="natural bar image" />
+                <img className="home__products-img-bar" src="/img/products/cocos.png" alt="cocos bar image" />
                 <img className="home__products-img-packaging" src="/img/packaging.png" alt="packaging image" />
               </div>
             </div>
@@ -198,7 +198,7 @@ export default () => {
 
             <div className="home__products-intro">
               <div className="home__products-wrapper">
-                <img className="home__products-img-bar" src="/img/products/natural.png" alt="natural bar image" />
+                <img className="home__products-img-bar" src="/img/products/mixed.png" alt="mixed bar image" />
                 <img className="home__products-img-packaging" src="/img/packaging.png" alt="packaging image" />
               </div>
             </div>
