@@ -46,6 +46,7 @@ export default () => {
   const { translations } = routeData;
 
   const params = {
+    autoHeight: true,
     modules: [Navigation],
     slidesPerView: "auto",
     centeredSlides: true,

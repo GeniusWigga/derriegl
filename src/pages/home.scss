@@ -103,6 +103,23 @@
     padding-top: $space-huge-75;
   }
 
+  .home__coconut {
+    width: 150px;
+    height: 100px;
+    align-self: center;
+  }
+
+  .home__banana {
+    width: 150px;
+    height: 100px;
+  }
+
+  .home__cranberry {
+    width: 100px;
+    height: 100px;
+    padding: $space-medium-40 $space-medium-20 0 0;
+  }
+
   .home__badge {
     width: 200px;
     right: 20px;
@@ -131,7 +148,7 @@
     padding-bottom: $space-large-50;
 
     @include mobile {
-      padding-bottom: $space-medium-20;
+      padding-bottom: $space-medium-40;
     }
   }
 
