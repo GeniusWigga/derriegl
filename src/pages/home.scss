@@ -77,8 +77,30 @@
   .home__oat,
   .home__badge,
   .home__dates,
+  .home__nut,
+  .home__nut-half,
+  .home__nut-half-invert,
+  .home__coconut,
+  .home__cranberry,
+  .home__banana,
   .home__apricot {
     fill: $color-ci;
+  }
+
+  .home__nut,
+  .home__nut-half,
+  .home__nut-half-invert {
+    height: $space-huge-75;
+    width: $space-huge-75;
+    position: relative;
+  }
+
+  .home__nut {
+    padding-top: $space-large-60;
+  }
+
+  .home__nut-half-invert {
+    padding-top: $space-huge-75;
   }
 
   .home__badge {
@@ -138,6 +160,7 @@
   .home__products-info-col {
     box-sizing: border-box;
     justify-content: center;
+    position: relative;
 
     &:first-of-type {
       display: flex;
