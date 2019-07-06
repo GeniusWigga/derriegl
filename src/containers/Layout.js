@@ -1,17 +1,24 @@
-import React from "react";
+import React, { Component } from "react";
 
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
+import { injectScripts, smoothScroll } from "../helpers/frontend";
 
-export default (props) => {
+export default class extends Component {
+  componentDidMount() {
+    injectScripts(smoothScroll);
+  }
 
-  const { className, children, translations } = props;
+  render() {
 
-  return (
-    <div className={className}>
-      <Header translations={translations} />
-      {children}
-      <Footer translations={translations} />
-    </div>
-  );
+    const { className, children, translations } = this.props;
+
+    return (
+      <div className={className}>
+        <Header translations={translations} />
+        {children}
+        <Footer translations={translations} />
+      </div>
+    );
+  }
 }

@@ -15,6 +15,9 @@ import Apricot from "../components/Icons/Apricot";
 import Dates from "../components/Icons/Dates";
 import Leaf from "../components/Icons/Leaf";
 import Bar from "../components/Icons/Bar";
+import Nut from "../components/Icons/Nut";
+import NutHalf from "../components/Icons/NutHalf";
+import NutHalfInvert from "../components/Icons/NutHalfInvert";
 
 import "./home.scss";
 import buildClassName from "../helpers/buildClassName";
@@ -129,7 +132,36 @@ export default () => {
               </div>
             </div>
           </div>
-          <div>Slide 2</div>
+          <div>
+            <h3 className="home__products-sub-headline">{translations.products.nut.headline}</h3>
+
+            <div className="home__products-intro">
+              <div className="home__products-wrapper">
+                <img className="home__products-img-bar" src="/img/products/natural.png" alt="natural bar image" />
+                <img className="home__products-img-packaging" src="/img/packaging.png" alt="packaging image" />
+              </div>
+            </div>
+
+            <div className="home__products-info">
+              <div className="home__products-info-col">
+                <Nut className="home__nut" />
+                <NutHalf className="home__nut-half" />
+                <NutHalfInvert className="home__nut-half-invert" />
+              </div>
+              <div className="home__products-info-col">
+                <ReactMarkdown
+                  className="home__products-description"
+                  escapeHtml={false}
+                  source={translations.products.nut.description}
+                />
+                <Button className="home__btn">{translations.products.button}</Button>
+              </div>
+              <div className="home__products-info-col">
+                <Apricot className="home__apricot" />
+                <Dates className="home__dates" />
+              </div>
+            </div>
+          </div>
           <div>Slide 3</div>
           <div>Slide 4</div>
           <div>Slide 5</div>
@@ -225,7 +257,11 @@ export default () => {
         <h2 className="home__headline home__headline--space home__headline--invert">{translations.header.buy}</h2>
 
         {_.map(translations.buy.stores, (store, key) => {
-          return <a key={key} target="_blank" rel="noreferrer nofollow" className="home__buy-store" href={store.href}>{store.text}</a>;
+          return <a key={key}
+                    target="_blank"
+                    rel="noreferrer nofollow"
+                    className="home__buy-store"
+                    href={store.href}>{store.text}</a>;
         })}
 
         <div className="home__buy-content">
