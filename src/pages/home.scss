@@ -310,7 +310,7 @@
     transform: translateX(-50%);
     position: absolute;
 
-    &--vegan {
+    &:first-of-type {
       top: 5em;
       left: 18em;
 
@@ -320,7 +320,7 @@
       }
     }
 
-    &--protein {
+    &:nth-of-type(2) {
       top: 14em;
       left: -7em;
 
@@ -330,7 +330,7 @@
       }
     }
 
-    &--carbs {
+    &:nth-of-type(3) {
       top: 23em;
       left: 19em;
 

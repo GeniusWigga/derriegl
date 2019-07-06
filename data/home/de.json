@@ -12,21 +12,30 @@
       "button": "Nährwertangaben",
       "natural": {
         "headline": "Natural",
-        "vegan": "vegan",
-        "protein": "viel, viel Protein",
+        "vegan": "Vegan",
+        "protein": "Protein",
         "carbs": "hochwertige <br> Kohlenhydrate",
         "description": "Unser Natural Riegel ist der perfekte vegane Begleiter für jeden. Egal ob im Büro für Zwischendurch um die Konzentrationsfähigkeit zu erhöhen oder während eines Marathons, der Natural Riegel versorgt dich mit hochwertigen Kohlenhydraten und Proteinen. Er beinhaltet Haferflocken und ist somit ein richtiger Energie-Booster. Der optimale Teampartner wenn es darauf ankommt!"
       },
       "nut": {
         "headline": "Nuss",
+        "choco": "Vollmilch <br> Schokoladenüberzug",
+        "nut": "Hausgemacht <br> Nusspaste",
         "description": "Unser Nuss Riegel ist im Team „Lifestyle“. Zutaten mit Bio – Qualität kombiniert mit unglaublich leckerem Geschmack. Die Proteinbombe besticht durch den natürlich nussigen Geschmack, der hervorgerufen wird durch die eigens hergestellte Nusspaste in Kombination mit den besten Zutaten. Mit diesem Riegel hast du den perfekten Begleiter für deinen Fitnesslifestyle immer griffbereit."
       },
       "cocos": {
         "headline": "Kokos",
+        "choco": "Weißer <br> Schokoladenüberzug",
+        "cocos": "Kokos",
+        "protein": "Protein",
+        "lifestyle": "Lifestyle",
         "description": "Unser Kokos Riegel gehört definitiv zu der Reihe „Lifestyle“ – Riegel. Mit seinem unglaublich leckeren Geschmack überzeugt er jeden Kokos-Fan. Durch den hohen Eiweißgehalt ist der Kokos Riegel der perfekte Snack nach einem kräftezehrenden Training um den Körper mit den besten Nährstoffen zu versorgen. Aber auch für Unterwegs stellt er durch den perfekt abgestimmten Geschmack alle anderen Schokoriegel in den Schatten."
       },
       "active": {
         "headline": "Active",
+        "vegan": "Vegan",
+        "fruity": "Fruchtig",
+        "banana": "Banane / Cranberry",
         "description": "Unser Banane-Cranberry Riegel ist die optimale vegane Zwischenmahlzeit im kleinen Format. Der Riegel ist voller natürlichen Zutaten und besticht durch seinen einzigartigen Geschmack. Mit der Süße der Banane und der Säure der Cranberry entsteht ein sommerlicher, frischer Genuss. Die Kombination aus Proteinen und Kohlenhydraten, ist vor allem bei starken Belastungen sehr vorteilhaft, deswegen wird dieser Riegel auch bei Wettkampfsportlern im Ausdauerbereich sehr gerne eingesetzt!"
       }
     },
