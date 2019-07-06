@@ -18,6 +18,9 @@ import Bar from "../components/Icons/Bar";
 import Nut from "../components/Icons/Nut";
 import NutHalf from "../components/Icons/NutHalf";
 import NutHalfInvert from "../components/Icons/NutHalfInvert";
+import Coconut from "../components/Icons/Coconut";
+import Cranberry from "../components/Icons/Cranberry";
+import Banana from "../components/Icons/Banana";
 
 import "./home.scss";
 import buildClassName from "../helpers/buildClassName";
@@ -162,9 +165,63 @@ export default () => {
               </div>
             </div>
           </div>
-          <div>Slide 3</div>
-          <div>Slide 4</div>
-          <div>Slide 5</div>
+          <div>
+            <h3 className="home__products-sub-headline">{translations.products.cocos.headline}</h3>
+
+            <div className="home__products-intro">
+              <div className="home__products-wrapper">
+                <img className="home__products-img-bar" src="/img/products/natural.png" alt="natural bar image" />
+                <img className="home__products-img-packaging" src="/img/packaging.png" alt="packaging image" />
+              </div>
+            </div>
+
+            <div className="home__products-info">
+              <div className="home__products-info-col">
+                <Coconut className="home__coconut" />
+              </div>
+              <div className="home__products-info-col">
+                <ReactMarkdown
+                  className="home__products-description"
+                  escapeHtml={false}
+                  source={translations.products.cocos.description}
+                />
+                <Button className="home__btn">{translations.products.button}</Button>
+              </div>
+              <div className="home__products-info-col">
+                <Apricot className="home__apricot" />
+                <Dates className="home__dates" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 className="home__products-sub-headline">{translations.products.active.headline}</h3>
+
+            <div className="home__products-intro">
+              <div className="home__products-wrapper">
+                <img className="home__products-img-bar" src="/img/products/natural.png" alt="natural bar image" />
+                <img className="home__products-img-packaging" src="/img/packaging.png" alt="packaging image" />
+              </div>
+            </div>
+
+            <div className="home__products-info">
+              <div className="home__products-info-col">
+                <Cranberry className="home__cranberry" />
+                <Banana className="home__banana" />
+              </div>
+              <div className="home__products-info-col">
+                <ReactMarkdown
+                  className="home__products-description"
+                  escapeHtml={false}
+                  source={translations.products.active.description}
+                />
+                <Button className="home__btn">{translations.products.button}</Button>
+              </div>
+              <div className="home__products-info-col">
+                <Apricot className="home__apricot" />
+                <Dates className="home__dates" />
+              </div>
+            </div>
+          </div>
         </Swiper>
 
       </div>
