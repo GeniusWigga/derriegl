@@ -27,6 +27,7 @@
     "react-dom": "16.8.6",
     "react-id-swiper": "2.1.2",
     "react-markdown": "4.0.8",
+    "react-responsive-modal": "^4.0.1",
     "react-static": "7.1.0",
     "react-static-plugin-localized": "0.0.9",
     "react-static-plugin-reach-router": "7.0.10",

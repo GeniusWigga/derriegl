@@ -5,11 +5,11 @@ import buildClassName from "../../helpers/buildClassName";
 
 export default (props) => {
 
-  const { className, children } = props;
+  const { className, children, onClick } = props;
 
   const classes = buildClassName("button", null, className);
 
   return (
-    <button className={classes}>{children}</button>
+    <button onClick={onClick} className={classes}>{children}</button>
   );
 }

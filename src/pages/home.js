@@ -1,9 +1,8 @@
 import React from "react";
+import { useRouteData } from "react-static";
 import ReactMarkdown from "react-markdown/with-html";
 import Swiper from "react-id-swiper";
 import { Navigation, Pagination } from "swiper/dist/js/swiper.esm";
-
-import { useRouteData } from "react-static";
 
 import Layout from "../containers/Layout";
 import Button from "../components/Button/Button";
@@ -24,6 +23,7 @@ import Banana from "../components/Icons/Banana";
 
 import "./home.scss";
 import buildClassName from "../helpers/buildClassName";
+import ModalButton from "../components/ModalButton/ModalButton";
 
 const ArrowWrapper = ({ prev, next, children }) => {
   return <div className={buildClassName("home__slider-button",
@@ -38,6 +38,13 @@ const ArrowWrapper = ({ prev, next, children }) => {
 const NAVIGATION_PROPS = {
   nextEl: ".home__slider-button--next",
   prevEl: ".home__slider-button--prev",
+};
+
+const MODALS = {
+  NATURAL: "NATURAL",
+  NUT: "NUT",
+  COCOS: "COCOS",
+  ACTIVE: "ACTIVE",
 };
 
 export default () => {
@@ -155,7 +162,9 @@ export default () => {
                   escapeHtml={false}
                   source={translations.products.natural.description}
                 />
-                <Button className="home__btn">{translations.products.button}</Button>
+                <ModalButton type={MODALS.NATURAL} buttonClassName="home__btn" buttonContent={translations.products.button}>
+                  <h2>Simple centered modal</h2>
+                </ModalButton>
               </div>
               <div className="home__products-info-col">
                 <Apricot className="home__apricot" />
