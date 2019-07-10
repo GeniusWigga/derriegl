@@ -9,8 +9,6 @@ const ModalButton = ({ buttonContent, children, type, buttonClassName }) => {
   const [modal, onOpenModal] = useState({});
   const buttonClasses = buildClassName("modal-button", null, buttonClassName);
 
-  console.log("modal: ", modal);
-
   return (
     <Fragment>
       <Button onClick={() => onOpenModal({ [type]: true })} className={buttonClasses}>{buttonContent}</Button>

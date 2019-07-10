@@ -163,7 +163,11 @@ export default () => {
                   source={translations.products.natural.description}
                 />
                 <ModalButton type={MODALS.NATURAL} buttonClassName="home__btn" buttonContent={translations.products.button}>
-                  <h2>Simple centered modal</h2>
+                  <ReactMarkdown
+                    escapeHtml={false}
+                    className="home__nutrition"
+                    source={translations.products.natural.nutrition}
+                  />
                 </ModalButton>
               </div>
               <div className="home__products-info-col">
@@ -232,7 +236,15 @@ export default () => {
                   escapeHtml={false}
                   source={translations.products.nut.description}
                 />
-                <Button className="home__btn">{translations.products.button}</Button>
+
+                <ModalButton type={MODALS.NUT} buttonClassName="home__btn" buttonContent={translations.products.button}>
+                  <ReactMarkdown
+                    escapeHtml={false}
+                    className="home__nutrition"
+                    source={translations.products.nut.nutrition}
+                  />
+                </ModalButton>
+
               </div>
               <div className="home__products-info-col">
                 <Apricot className="home__apricot" />
@@ -335,7 +347,15 @@ export default () => {
                   escapeHtml={false}
                   source={translations.products.cocos.description}
                 />
-                <Button className="home__btn">{translations.products.button}</Button>
+
+                <ModalButton type={MODALS.COCOS} buttonClassName="home__btn" buttonContent={translations.products.button}>
+                  <ReactMarkdown
+                    escapeHtml={false}
+                    className="home__nutrition"
+                    source={translations.products.cocos.nutrition}
+                  />
+                </ModalButton>
+
               </div>
               <div className="home__products-info-col">
                 <Apricot className="home__apricot" />
@@ -420,7 +440,15 @@ export default () => {
                   escapeHtml={false}
                   source={translations.products.active.description}
                 />
-                <Button className="home__btn">{translations.products.button}</Button>
+
+                <ModalButton type={MODALS.ACTIVE} buttonClassName="home__btn" buttonContent={translations.products.button}>
+                  <ReactMarkdown
+                    escapeHtml={false}
+                    className="home__nutrition"
+                    source={translations.products.active.nutrition}
+                  />
+                </ModalButton>
+
               </div>
               <div className="home__products-info-col">
                 <Apricot className="home__apricot" />
@@ -563,7 +591,7 @@ export default () => {
             </div>
           </div>
           <div className="home__col">
-            <div><img src="/img/why-section/ceos.jpg" alt="ceos image" /></div>
+            <div><img src="/img/contact-emotion.png" alt="ceos image" /></div>
           </div>
         </div>
       </div>

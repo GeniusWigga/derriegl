@@ -15,12 +15,14 @@
         "vegan": "Vegan",
         "protein": "Protein",
         "carbs": "hochwertige <br> Kohlenhydrate",
+        "nutrition": "| Nährwerte                                  \t| Pro 100g         \t| Pro Riegel (45g) \t|\n|--------------------------------------------\t|------------------\t|------------------\t|\n| Energie/Energy                             \t| 322 kcal 1347 kJ \t| 129 kcal 540 kJ  \t|\n| Fett/Fat  - davon gesättigte   Fettsäuren  \t| 2,1 g   0,7 g    \t| 0,9   0,3 g      \t|\n| Kohlenhydrate/ Carbohydrate - davon Zucker \t| 63,8 g   38 g    \t| 28,7 g  17,1 g   \t|\n| Eiweiß/Protein                             \t| 7,4 g            \t| 3,3 g            \t|\n| Salz/Salt                                  \t| 0,03 g           \t| 0,01 g           \t|",
         "description": "Unser Natural Riegel ist der perfekte vegane Begleiter für jeden. Egal ob im Büro für Zwischendurch um die Konzentrationsfähigkeit zu erhöhen oder während eines Marathons, der Natural Riegel versorgt dich mit hochwertigen Kohlenhydraten und Proteinen. Er beinhaltet Haferflocken und ist somit ein richtiger Energie-Booster. Der optimale Teampartner wenn es darauf ankommt!"
       },
       "nut": {
         "headline": "Nuss",
         "choco": "Vollmilch <br> Schokoladenüberzug",
         "nut": "Hausgemacht <br> Nusspaste",
+        "nutrition": "| Nährwerte                                  \t| Pro 100g         \t| Pro Riegel (45g) \t|\n|--------------------------------------------\t|------------------\t|------------------\t|\n| Energie/Energy                             \t| 409 kcal 1711 kJ \t| 184 kcal 769 kJ  \t|\n| Fett/Fat  - davon gesättigte   Fettsäuren  \t| 16,2 g   7,6 g   \t| 7,3 g   3,4 g    \t|\n| Kohlenhydrate/ Carbohydrate - davon Zucker \t| 47,4 g  41,2 g   \t| 21,3 g  18,5 g   \t|\n| Eiweiß/Protein                             \t| 14,6 g           \t| 6,6 g            \t|\n| Salz/Salt                                  \t| 0,06 g           \t| 0,03 g           \t|",
         "description": "Unser Nuss Riegel ist im Team „Lifestyle“. Zutaten mit Bio – Qualität kombiniert mit unglaublich leckerem Geschmack. Die Proteinbombe besticht durch den natürlich nussigen Geschmack, der hervorgerufen wird durch die eigens hergestellte Nusspaste in Kombination mit den besten Zutaten. Mit diesem Riegel hast du den perfekten Begleiter für deinen Fitnesslifestyle immer griffbereit."
       },
       "cocos": {
@@ -29,6 +31,7 @@
         "cocos": "Kokos",
         "protein": "Protein",
         "lifestyle": "Lifestyle",
+        "nutrition": "| Nährwerte                                  \t| Pro 100g         \t| Pro Riegel (45g) \t|\n|--------------------------------------------\t|------------------\t|------------------\t|\n| Energie/Energy                             \t| 456 kcal 1908 kJ \t| 205 kcal 858 kJ  \t|\n| Fett/Fat  - davon gesättigte   Fettsäuren  \t| 24,5 g   19,8 g  \t| 11 g   8,9 g     \t|\n| Kohlenhydrate/ Carbohydrate - davon Zucker \t| 43,5 g  36,5 g   \t| 19,6 g  16,4 g   \t|\n| Eiweiß/Protein                             \t| 12,4 g           \t| 5,6 g            \t|\n| Salz/Salt                                  \t| 0,1 g            \t| 0,05 g           \t|",
         "description": "Unser Kokos Riegel gehört definitiv zu der Reihe „Lifestyle“ – Riegel. Mit seinem unglaublich leckeren Geschmack überzeugt er jeden Kokos-Fan. Durch den hohen Eiweißgehalt ist der Kokos Riegel der perfekte Snack nach einem kräftezehrenden Training um den Körper mit den besten Nährstoffen zu versorgen. Aber auch für Unterwegs stellt er durch den perfekt abgestimmten Geschmack alle anderen Schokoriegel in den Schatten."
       },
       "active": {
@@ -36,6 +39,7 @@
         "vegan": "Vegan",
         "fruity": "Fruchtig",
         "banana": "Banane / Cranberry",
+        "nutrition": "| Nährwerte                                  \t| Pro 100g         \t| Pro Riegel (45g) \t|\n|--------------------------------------------\t|------------------\t|------------------\t|\n| Energie/Energy                             \t| 322 kcal 1347 kJ \t| 129 kcal 540 kJ  \t|\n| Fett/Fat  - davon gesättigte   Fettsäuren  \t| 2,1 g   0,7 g    \t| 0,9 g   0,3 g    \t|\n| Kohlenhydrate/ Carbohydrate - davon Zucker \t| 59 g  45,2 g     \t| 27 g  20 g       \t|\n| Eiweiß/Protein                             \t| 10,8 g           \t| 4,9 g            \t|\n| Salz/Salt                                  \t| 0,01 g           \t| 0,004 g          \t|",
         "description": "Unser Banane-Cranberry Riegel ist die optimale vegane Zwischenmahlzeit im kleinen Format. Der Riegel ist voller natürlichen Zutaten und besticht durch seinen einzigartigen Geschmack. Mit der Süße der Banane und der Säure der Cranberry entsteht ein sommerlicher, frischer Genuss. Die Kombination aus Proteinen und Kohlenhydraten, ist vor allem bei starken Belastungen sehr vorteilhaft, deswegen wird dieser Riegel auch bei Wettkampfsportlern im Ausdauerbereich sehr gerne eingesetzt!"
       }
     },
