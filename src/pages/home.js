@@ -168,6 +168,11 @@ export default () => {
                     className="home__nutrition"
                     source={translations.products.natural.nutrition}
                   />
+                  <ReactMarkdown
+                    escapeHtml={false}
+                    className="home__ingredients"
+                    source={translations.products.natural.ingredients}
+                  />
                 </ModalButton>
               </div>
               <div className="home__products-info-col">
@@ -242,6 +247,11 @@ export default () => {
                     escapeHtml={false}
                     className="home__nutrition"
                     source={translations.products.nut.nutrition}
+                  />
+                  <ReactMarkdown
+                    escapeHtml={false}
+                    className="home__ingredients"
+                    source={translations.products.nut.ingredients}
                   />
                 </ModalButton>
 
@@ -354,6 +364,11 @@ export default () => {
                     className="home__nutrition"
                     source={translations.products.cocos.nutrition}
                   />
+                  <ReactMarkdown
+                    escapeHtml={false}
+                    className="home__ingredients"
+                    source={translations.products.cocos.ingredients}
+                  />
                 </ModalButton>
 
               </div>
@@ -446,6 +461,11 @@ export default () => {
                     escapeHtml={false}
                     className="home__nutrition"
                     source={translations.products.active.nutrition}
+                  />
+                  <ReactMarkdown
+                    escapeHtml={false}
+                    className="home__ingredients"
+                    source={translations.products.active.ingredients}
                   />
                 </ModalButton>
 
