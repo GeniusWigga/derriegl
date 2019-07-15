@@ -303,30 +303,6 @@
     position: relative;
   }
 
-  .home__products-wrapper--cocos {
-    .home__products-substances {
-      &:first-of-type {
-        top: 10%;
-        left: 35%;
-      }
-
-      &:nth-of-type(2) {
-        top: 30%;
-        left: 50%;
-      }
-
-      &:nth-of-type(3) {
-        top: 50%;
-        left: 35%;
-      }
-
-      &:last-of-type {
-        top: 70%;
-        left: 50%;
-      }
-    }
-  }
-
   .home__indicator-circle {
     background: $color-ci;
     border: $border-width-light solid $color-white;
@@ -369,7 +345,6 @@
   }
 
   .home__products-intro {
-
     .home__products-substances {
       align-items: center;
       display: flex;
@@ -430,7 +405,30 @@
         }
       }
     }
+  }
 
+  .home__products-wrapper--cocos {
+    .home__products-substances {
+      &:first-of-type {
+        top: 10%;
+        left: 35%;
+      }
+
+      &:nth-of-type(2) {
+        top: 40%;
+        left: 50%;
+      }
+
+      &:nth-of-type(3) {
+        top: 60%;
+        left: 35%;
+      }
+
+      &:last-of-type {
+        top: 80%;
+        left: 50%;
+      }
+    }
   }
 
   .home__products-substances-mobile {
@@ -582,4 +580,43 @@
     height: $space-medium-20;
     width: $space-medium-20;
   }
+}
+
+.home__ingredients,
+.home__nutrition {
+  @include mobile {
+    font-size: $font-small-12;
+  }
+}
+
+.home__nutrition {
+  display: flex;
+  justify-content: center;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  thead {
+    font-weight: bold;
+  }
+
+  th, td {
+    padding: $space-small-10 $space-small-5;
+  }
+
+  tr {
+    &:nth-of-type(even) {
+      background: $color-grey-30;
+    }
+  }
+
+  tbody {
+    border: $border-width-lighter solid $color-border;
+  }
+}
+
+.home__ingredients {
+  padding: $space-small-10 0;
 }
