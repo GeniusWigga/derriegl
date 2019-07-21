@@ -407,30 +407,6 @@
     }
   }
 
-  .home__products-wrapper--cocos {
-    .home__products-substances {
-      &:first-of-type {
-        top: 10%;
-        left: 35%;
-      }
-
-      &:nth-of-type(2) {
-        top: 40%;
-        left: 50%;
-      }
-
-      &:nth-of-type(3) {
-        top: 60%;
-        left: 35%;
-      }
-
-      &:last-of-type {
-        top: 80%;
-        left: 50%;
-      }
-    }
-  }
-
   .home__products-substances-mobile {
 
     @include tablet-large {
@@ -604,6 +580,13 @@
 
   th, td {
     padding: $space-small-10 $space-small-5;
+    text-align: center;
+  }
+
+  td {
+    &:first-of-type {
+      text-align: left;
+    }
   }
 
   tr {

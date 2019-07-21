@@ -204,6 +204,15 @@ export default () => {
                     source={translations.products.nut.nut}
                   />
                 </div>
+                <div className="home__products-substances home__products-substances--nut-protein">
+                  <div className="home__indicator" />
+                  <div className="home__indicator-circle" />
+                  <ReactMarkdown
+                    escapeHtml={false}
+                    className="home__substances"
+                    source={translations.products.nut.protein}
+                  />
+                </div>
                 <img className="home__products-img-bar" src="/img/products/choco.png" alt="natural bar image" />
                 <img className="home__products-img-packaging" src="/img/packaging.png" alt="packaging image" />
               </div>
@@ -225,6 +234,15 @@ export default () => {
                   escapeHtml={false}
                   className="home__substances"
                   source={translations.products.nut.nut}
+                />
+              </div>
+
+              <div className="home__products-substances home__products-substances--nut-protein">
+                <div className="home__indicator-circle" />
+                <ReactMarkdown
+                  escapeHtml={false}
+                  className="home__substances"
+                  source={translations.products.nut.protein}
                 />
               </div>
             </div>
@@ -295,15 +313,6 @@ export default () => {
                     source={translations.products.cocos.protein}
                   />
                 </div>
-                <div className="home__products-substances home__products-substances--cocos-lifestyle home__products-substances--invert">
-                  <div className="home__indicator" />
-                  <div className="home__indicator-circle" />
-                  <ReactMarkdown
-                    escapeHtml={false}
-                    className="home__substances"
-                    source={translations.products.cocos.lifestyle}
-                  />
-                </div>
 
                 <img className="home__products-img-bar" src="/img/products/cocos.png" alt="cocos bar image" />
                 <img className="home__products-img-packaging" src="/img/packaging.png" alt="packaging image" />
@@ -335,14 +344,6 @@ export default () => {
                   escapeHtml={false}
                   className="home__substances"
                   source={translations.products.cocos.protein}
-                />
-              </div>
-              <div className="home__products-substances home__products-substances--cocos-lifestyles">
-                <div className="home__indicator-circle" />
-                <ReactMarkdown
-                  escapeHtml={false}
-                  className="home__substances"
-                  source={translations.products.cocos.lifestyle}
                 />
               </div>
             </div>
