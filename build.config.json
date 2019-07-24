@@ -12,6 +12,12 @@
       "path": "/",
       "templateFile": "src/pages/home",
       "translationKey": "home"
+    },
+    {
+      "id": "imprint",
+      "path": "/imprint",
+      "templateFile": "src/pages/imprint",
+      "translationKey": "imprint"
     }
   ]
 }

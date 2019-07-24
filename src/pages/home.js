@@ -77,7 +77,7 @@ export default () => {
   return (
     <Layout {...routeData} className="home">
       <div className="home__hero" id="home">
-        <img className="home__hero-img" src="/img/hero.jpg" alt="home hero" />
+        <img className="home__hero-img" src="/img/hero_2.jpg" alt="home hero" />
         <div className="home__badge-wrapper">
           <Badge className="home__badge" />
         </div>
