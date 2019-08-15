@@ -1,0 +1,13 @@
+@import "../../theme/variables";
+
+.instagram-wrapper {
+  display: flex;
+
+  div {
+    margin-right: $space-medium-20;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

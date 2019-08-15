@@ -24,6 +24,7 @@ import Banana from "../components/Icons/Banana";
 import "./home.scss";
 import buildClassName from "../helpers/buildClassName";
 import ModalButton from "../components/ModalButton/ModalButton";
+import InstagramWrapper from "../components/InstagramWrapper/InstagramWrapper";
 
 const ArrowWrapper = ({ prev, next, children }) => {
   return <div className={buildClassName("home__slider-button",
@@ -162,7 +163,9 @@ export default () => {
                   escapeHtml={false}
                   source={translations.products.natural.description}
                 />
-                <ModalButton type={MODALS.NATURAL} buttonClassName="home__btn" buttonContent={translations.products.button}>
+                <ModalButton type={MODALS.NATURAL}
+                             buttonClassName="home__btn"
+                             buttonContent={translations.products.button}>
                   <ReactMarkdown
                     escapeHtml={false}
                     className="home__nutrition"
@@ -359,7 +362,9 @@ export default () => {
                   source={translations.products.cocos.description}
                 />
 
-                <ModalButton type={MODALS.COCOS} buttonClassName="home__btn" buttonContent={translations.products.button}>
+                <ModalButton type={MODALS.COCOS}
+                             buttonClassName="home__btn"
+                             buttonContent={translations.products.button}>
                   <ReactMarkdown
                     escapeHtml={false}
                     className="home__nutrition"
@@ -457,7 +462,9 @@ export default () => {
                   source={translations.products.active.description}
                 />
 
-                <ModalButton type={MODALS.ACTIVE} buttonClassName="home__btn" buttonContent={translations.products.button}>
+                <ModalButton type={MODALS.ACTIVE}
+                             buttonClassName="home__btn"
+                             buttonContent={translations.products.button}>
                   <ReactMarkdown
                     escapeHtml={false}
                     className="home__nutrition"
@@ -616,6 +623,15 @@ export default () => {
           </div>
         </div>
       </div>
+
+      <div className="home__section home__instagram" id="instagram">
+        <h2 className="home__headline home__headline--space">{translations.header.instagram}</h2>
+
+        <div className="home__row">
+          <InstagramWrapper shouldRender />
+        </div>
+      </div>
+
     </Layout>
   );
 }
