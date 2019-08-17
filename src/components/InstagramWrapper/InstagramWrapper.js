@@ -41,10 +41,11 @@ const InstagramWrapper = props => {
     <div className="instagram-wrapper">
       {
         _.map(_.get(instaResponse, ["res", "data", "data"]), (feed, id) => {
-          return <InstagramEmbed
-            key={id}
-            url={_.get(feed, "link")}
-          />;
+          const src = _.get(feed, ["images", "standard_resolution", "url"]);
+
+          return <a className="instagram-wrapper__post" key={id} href={_.get(feed, "link")} target="_blank">
+            <img src={src} alt="insta post" />
+          </a>;
         })
       }
     </div>

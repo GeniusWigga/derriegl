@@ -71,6 +71,11 @@
     "contact": {
       "text": "<h2>Hast du Fragen zu uns oder <br> unseren Riegeln ?</h2> <p>Schreib uns eine Nachricht!</p>"
     },
+    "instagram": {
+      "text": "@der-riegel",
+      "button": "Folge uns",
+      "link": "https://www.instagram.com/axtkonstantin/?hl=de"
+    },
     "footer": {
       "headline": "## Der Riegel",
       "description": "... aus 100% natürlichen Zutaten schmeckt unglaublich lecker und versorgt dich mit den besten Nährstoffen - egal ob Unterwegs oder beim Sport.",

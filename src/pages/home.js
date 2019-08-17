@@ -626,10 +626,16 @@ export default () => {
 
       <div className="home__section home__instagram" id="instagram">
         <h2 className="home__headline home__headline--space">{translations.header.instagram}</h2>
+        <h3 className="home__insta-text">{translations.instagram.text}</h3>
 
         <div className="home__row">
           <InstagramWrapper shouldRender />
         </div>
+        <Button>
+          <a className="home__follow-instagram"
+             target="_blank"
+             href={translations.instagram.link}>{translations.instagram.button}</a>
+        </Button>
       </div>
 
     </Layout>

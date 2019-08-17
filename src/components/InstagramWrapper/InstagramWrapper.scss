@@ -1,13 +1,19 @@
 @import "../../theme/variables";
+@import "../../theme/responsive";
 
 .instagram-wrapper {
   display: flex;
+  margin-bottom: $space-medium-40;
+  width: 100%;
 
-  div {
+  .instagram-wrapper__post {
+    display: block;
+    height: auto;
     margin-right: $space-medium-20;
+    width: calc((100% / 5) - #{$space-medium-20});
 
-    &:last-child {
-      margin-right: 0;
+    @include mobile {
+      width: calc((100% / 2) - #{$space-medium-20});
     }
   }
 }

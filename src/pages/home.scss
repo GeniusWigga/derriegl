@@ -556,6 +556,20 @@
     height: $space-medium-20;
     width: $space-medium-20;
   }
+
+  .home__instagram {
+    text-align: center;
+  }
+
+  .home__insta-text {
+    margin-bottom: $space-large-50;
+    text-align: center;
+  }
+
+  .home__follow-instagram {
+    color: $color-white;
+    text-decoration: none;
+  }
 }
 
 .home__ingredients,
