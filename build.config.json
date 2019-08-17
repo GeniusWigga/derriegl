@@ -3,7 +3,7 @@
   "languages": [
     {
       "id": "de",
-      "dataPath": "data/home"
+      "dataPath": "data/locales"
     }
   ],
   "pages": [

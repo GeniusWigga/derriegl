@@ -1,0 +1,39 @@
+@import "../theme/variables";
+@import "../theme/responsive";
+
+.imprint {
+  margin: auto;
+  max-width: $page-sub-max-width;
+  padding: 0 $space-small-10;
+
+  .imprint__back {
+    display: block;
+    padding: $space-medium-20 0;
+    text-decoration: none;
+  }
+
+  .imprint__icon {
+    margin-right: $space-small-10;
+  }
+
+  h1 {
+    margin: $space-medium-40 0;
+  }
+
+  h2 {
+    margin: $space-medium-30 0;
+  }
+
+  a {
+    color: $color-ci;
+    text-decoration: none;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  p {
+    margin: $space-small-10 0;
+  }
+}

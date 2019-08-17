@@ -53,6 +53,8 @@ export default () => {
   const routeData = useRouteData();
   const { translations } = routeData;
 
+  console.log("translations: ", translations);
+
   const params = {
     autoHeight: true,
     modules: [Navigation],
@@ -605,7 +607,7 @@ export default () => {
                 source={translations.contact.text}
               />
               <div className="home__social-wrapper">
-                <a className="home__email"
+                <a className="home__social"
                    href={`mailto:${translations.footer.email}`}>hallo@derriegel.com</a>
                 {/*<a className="home__social" href={translations.footer.fb}>*/}
                 {/*  <img className="home__social-icons" src="/icons/fb.svg" alt="svg icon facebook" />*/}

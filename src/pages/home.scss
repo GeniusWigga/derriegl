@@ -532,18 +532,11 @@
     color: inherit;
   }
 
-  .home__email {
-    text-decoration: none;
-    color: $color-ci;
-  }
-
-  .home__email, .home__social {
-    margin: $space-medium-15 0;
-  }
-
   .home__social {
     align-items: center;
+    color: $color-ci;
     display: flex;
+    margin: $space-medium-15 0;
     text-decoration: none;
   }
 

@@ -37,12 +37,13 @@ const InstagramWrapper = props => {
          });
   }, []);
 
+  const posts = _.chain(instaResponse).get(["res", "data", "data"]).slice(0, 5).value();
+
   return (
     <div className="instagram-wrapper">
       {
-        _.map(_.get(instaResponse, ["res", "data", "data"]), (feed, id) => {
+        _.map(posts, (feed, id) => {
           const src = _.get(feed, ["images", "standard_resolution", "url"]);
-
           return <a className="instagram-wrapper__post" key={id} href={_.get(feed, "link")} target="_blank">
             <img src={src} alt="insta post" />
           </a>;
