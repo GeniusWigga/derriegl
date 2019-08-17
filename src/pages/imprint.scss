@@ -2,7 +2,7 @@
 @import "../theme/responsive";
 
 .imprint {
-  margin: auto;
+  margin: 0 auto $space-large-50 auto;
   max-width: $page-sub-max-width;
   padding: 0 $space-small-10;
 
