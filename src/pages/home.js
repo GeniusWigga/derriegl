@@ -611,10 +611,10 @@ export default () => {
                 {/*  <img className="home__social-icons" src="/icons/fb.svg" alt="svg icon facebook" />*/}
                 {/*  <span className="home__social-content">@der-riegel</span>*/}
                 {/*</a>*/}
-                {/*<a className="home__social" href={translations.footer.insta}>*/}
-                {/*  <img className="home__social-icons" src="/icons/insta.svg" alt="svg icon insta" />*/}
-                {/*  <span className="home__social-content">@der-riegel-germany</span>*/}
-                {/*</a>*/}
+                <a className="home__social" href={translations.footer.insta}>
+                  <img className="home__social-icons" src="/icons/insta.svg" alt="svg icon insta" />
+                  <span className="home__social-content">{translations.instagram.text}</span>
+                </a>
               </div>
             </div>
           </div>
@@ -634,7 +634,7 @@ export default () => {
         <Button>
           <a className="home__follow-instagram"
              target="_blank"
-             href={translations.instagram.link}>{translations.instagram.button}</a>
+             href={translations.footer.insta}>{translations.instagram.button}</a>
         </Button>
       </div>
 

@@ -42,13 +42,13 @@ export default ({ translations }) => {
       </div>
 
       <div className="footer_social-contact-wrapper">
-        {/*<div className="footer__social-buttons">*/}
-        {/*  <a className="footer_social" href={translations.footer.fb}>*/}
-        {/*    <img src="/icons/fb.svg" alt="svg icon facebook" />*/}
-        {/*  </a>*/}
-        {/*  <a className="footer_social" href={translations.footer.insta}>*/}
-        {/*    <img src="/icons/insta.svg" alt="svg icon insta" /></a>*/}
-        {/*</div>*/}
+        <div className="footer__social-buttons">
+          {/*<a className="footer_social" href={translations.footer.fb}>*/}
+          {/*  <img src="/icons/fb.svg" alt="svg icon facebook" />*/}
+          {/*</a>*/}
+          <a className="footer_social" href={translations.footer.insta}>
+            <img src="/icons/insta.svg" alt="svg icon insta" /></a>
+        </div>
         <Button className="footer__button">
           <a className="footer__contact-btn"
              href={`mailto:${translations.footer.email}`}>{translations.footer.calltoaction}</a>
