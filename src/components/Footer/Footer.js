@@ -4,6 +4,7 @@ import "./Footer.scss";
 import ReactMarkdown from "react-markdown/with-html";
 
 import Button from "../Button/Button";
+import { Link } from "../../components/Router";
 
 export default ({ translations }) => {
 
@@ -32,7 +33,7 @@ export default ({ translations }) => {
         </div>
         <div className="footer__col">
           <div className="footer__col-wrapper">
-            <h3 className="footer__headline">{translations.footer.imprint}</h3>
+            <h3 className="footer__headline"><Link className="footer__headline-link" to="/imprint">{translations.footer.imprint}</Link></h3>
             <ReactMarkdown
               escapeHtml={false}
               source={translations.footer.address}

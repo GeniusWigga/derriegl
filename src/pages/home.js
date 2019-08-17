@@ -53,8 +53,6 @@ export default () => {
   const routeData = useRouteData();
   const { translations } = routeData;
 
-  console.log("translations: ", translations);
-
   const params = {
     autoHeight: true,
     modules: [Navigation],
