@@ -6,7 +6,7 @@ import axios from "axios";
 import "./InstagramWrapper.scss";
 
 const CODE = "f56af7cd31414133994b9cde8f102c5f";
-const ACCESS_TOKEN = "4721520390.82a8378.e6e831d07af244dc8d2710970dde2fa4";
+const ACCESS_TOKEN = "18311925341.1677ed0.751f6f2d170e44868e2d75886216ffa1";
 const CLIENT_ID = "82a83789fb9a4da0bcccb99a884a0f08";
 const CLIENT_SECRET = "c17bb43f5ccd421196d33638ca753dcb";
 const REDIRECT_URI = "http://test.derriegel.com";
