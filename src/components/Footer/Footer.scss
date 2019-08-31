@@ -60,10 +60,18 @@
   .footer__headline-link {
     color: inherit;
     text-decoration: none;
+
+    &:hover {
+      color: $color-ci;
+    }
   }
 
   .footer__headline {
     margin-bottom: $space-medium-30;
+
+    &--privacy {
+      margin-bottom: 0;
+    }
 
     @include mobile {
       margin: $space-medium-30 0 $space-medium-20 0;

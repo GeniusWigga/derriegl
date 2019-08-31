@@ -18,6 +18,12 @@
       "path": "/imprint",
       "templateFile": "src/pages/imprint",
       "translationKey": "imprint"
+    },
+    {
+      "id": "privacy",
+      "path": "/privacy",
+      "templateFile": "src/pages/privacy",
+      "translationKey": "privacy"
     }
   ]
 }

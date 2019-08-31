@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown/with-html";
 
 import Button from "../Button/Button";
 import { Link } from "../../components/Router";
+import buildClassName from "../../helpers/buildClassName";
 
 export default ({ translations }) => {
 
@@ -33,11 +34,14 @@ export default ({ translations }) => {
         </div>
         <div className="footer__col">
           <div className="footer__col-wrapper">
-            <h3 className="footer__headline"><Link className="footer__headline-link" to="/imprint">{translations.footer.imprint}</Link></h3>
+            <h3 className="footer__headline"><Link className="footer__headline-link"
+                                                   to="/imprint">{translations.footer.imprint}</Link></h3>
             <ReactMarkdown
               escapeHtml={false}
               source={translations.footer.address}
             />
+            <h3 className={buildClassName("footer__headline", { privacy: true })}>
+              <Link className="footer__headline-link" to="/privacy">{translations.footer.privacy}</Link></h3>
           </div>
         </div>
       </div>
