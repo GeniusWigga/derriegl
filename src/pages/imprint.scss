@@ -17,6 +17,7 @@
   }
 
   h1 {
+    hyphens: auto;
     margin: $space-medium-40 0;
   }
 
@@ -35,5 +36,6 @@
 
   p {
     margin: $space-small-10 0;
+    word-break: break-word;
   }
 }

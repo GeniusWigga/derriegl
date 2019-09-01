@@ -565,13 +565,6 @@
   }
 }
 
-.home__ingredients,
-.home__nutrition {
-  @include mobile {
-    font-size: $font-small-12;
-  }
-}
-
 .home__nutrition {
   display: flex;
   justify-content: center;
