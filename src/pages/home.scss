@@ -559,6 +559,17 @@
     text-align: center;
   }
 
+  .home__image-video {
+    position: relative;
+    padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
+  }
+
+  .home__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
   .home__follow-instagram {
     color: $color-white;
     text-decoration: none;

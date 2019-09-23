@@ -1,6 +1,8 @@
 import React from "react";
 import { useRouteData } from "react-static";
 import ReactMarkdown from "react-markdown/with-html";
+import ReactPlayer from "react-player";
+import { InView } from "react-intersection-observer";
 import Swiper from "react-id-swiper";
 import { Navigation, Pagination } from "swiper/dist/js/swiper.esm";
 
@@ -487,6 +489,21 @@ export default () => {
         </Swiper>
 
       </div>
+
+      <InView>
+        {({ inView, ref, entry }) => (
+          <div ref={ref} className="home__image-video">
+            <ReactPlayer
+              className="home__video"
+              muted
+              url='/video/iron-man.mp4'
+              playing={inView}
+              width='100%'
+              height='100%'
+            />
+          </div>
+        )}
+      </InView>
 
       <div className="home__ingredients" id="ingredients">
         <h2 className="home__headline home__headline--space">{translations.header.ingredients}</h2>

@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import 'intersection-observer'
 
 // Your top level component
 import App from "./App";
