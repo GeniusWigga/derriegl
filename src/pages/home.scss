@@ -2,6 +2,14 @@
 @import "../theme/responsive";
 
 .home {
+  @include up-to-desktop {
+    padding-top: $space-medium-20;
+  }
+
+  @include mobile {
+    padding-top: $header-height-mobile;
+  }
+
   .home__hero {
     height: $hero-height;
     overflow: hidden;
@@ -560,8 +568,13 @@
   }
 
   .home__image-video {
+    margin-bottom: $space-huge-100;
     position: relative;
-    padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
+    padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+
+    @include mobile {
+      margin-bottom: $space-large-50;
+    }
   }
 
   .home__video {
@@ -573,6 +586,37 @@
   .home__follow-instagram {
     color: $color-white;
     text-decoration: none;
+  }
+
+  .home__icon {
+    bottom: 0;
+    color: $color-white;
+    cursor: pointer;
+    font-size: $font-large-35;
+    padding-bottom: $space-medium-20;
+    position: absolute;
+    right: 0;
+
+    @include mobile {
+      font-size: $font-medium-20;
+      padding-bottom: $space-small-10;
+    }
+
+    &.fa-volume-mute, &.fa-volume-up {
+      right: 2em;
+
+      @include mobile {
+        right: $space-medium-40;
+      }
+    }
+
+    &.fa-expand {
+      right: $font-medium-20;
+
+      @include mobile {
+        right: $space-small-10;
+      }
+    }
   }
 }
 

@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { useRouteData } from "react-static";
 import ReactMarkdown from "react-markdown/with-html";
 import ReactPlayer from "react-player";
 import { InView } from "react-intersection-observer";
 import Swiper from "react-id-swiper";
+import _ from "lodash";
 import { Navigation, Pagination } from "swiper/dist/js/swiper.esm";
 
 import Layout from "../containers/Layout";
@@ -54,6 +55,7 @@ export default () => {
 
   const routeData = useRouteData();
   const { translations } = routeData;
+  const [muted, onMute] = useState(true);
 
   const params = {
     autoHeight: true,
@@ -77,15 +79,53 @@ export default () => {
     renderNextButton: () => <ArrowWrapper next><LongArrow /></ArrowWrapper>,
   };
 
+  function goFullscreen(element) {
+    const elem = _.first(element.wrapper.getElementsByTagName("video"));
+    if (elem && elem.mozRequestFullScreen) {
+      elem.mozRequestFullScreen();
+    } else if (elem && elem.webkitRequestFullScreen) {
+      elem.webkitRequestFullScreen();
+    }
+  }
+
+  const player = useRef(null);
+
+  const renderMuted = () => {
+    if (muted) {
+      return <i onClick={() => onMute(false)} className="home__icon fas fa-volume-mute" />;
+    }
+
+    return <i onClick={() => onMute(true)} className="home__icon fas fa-volume-up" />;
+  };
+
   return (
     <Layout {...routeData} className="home">
-      <div className="home__hero" id="home">
-        <img className="home__hero-img" src="/img/hero_2.jpg" alt="home hero" />
-        <div className="home__badge-wrapper">
-          <Badge className="home__badge" />
-        </div>
-        <ReactMarkdown escapeHtml={false} className="home__hero-headline" source={translations.headline} />
-      </div>
+      <InView>
+        {({ inView, ref, entry }) => (
+          <div ref={ref} className="home__image-video" id="home">
+            <ReactPlayer
+              ref={player}
+              loop
+              className="home__video"
+              muted={muted}
+              url='/video/iron-man.mp4'
+              playing={inView}
+              width='100%'
+              height='100%'
+            />
+            {renderMuted()}
+            <i onClick={() => goFullscreen(_.get(player, "current"))} className="home__icon fas fa-expand" />
+          </div>
+        )}
+      </InView>
+
+      {/*<div className="home__hero" id="home">*/}
+      {/*  <img className="home__hero-img" src="/img/hero_2.jpg" alt="home hero" />*/}
+      {/*  <div className="home__badge-wrapper">*/}
+      {/*    <Badge className="home__badge" />*/}
+      {/*  </div>*/}
+      {/*  <ReactMarkdown escapeHtml={false} className="home__hero-headline" source={translations.headline} />*/}
+      {/*</div>*/}
 
       <div className="home__section home__products">
         <h2 className="home__headline">{translations.header.home}</h2>
@@ -490,20 +530,6 @@ export default () => {
 
       </div>
 
-      <InView>
-        {({ inView, ref, entry }) => (
-          <div ref={ref} className="home__image-video">
-            <ReactPlayer
-              className="home__video"
-              muted
-              url='/video/iron-man.mp4'
-              playing={inView}
-              width='100%'
-              height='100%'
-            />
-          </div>
-        )}
-      </InView>
 
       <div className="home__ingredients" id="ingredients">
         <h2 className="home__headline home__headline--space">{translations.header.ingredients}</h2>
