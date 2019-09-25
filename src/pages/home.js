@@ -52,10 +52,17 @@ const MODALS = {
 };
 
 export default () => {
+  const getWindowWidth = () => {
+    return typeof window && window && window.innerWidth;
+  };
+
+  const isMobile = () => {
+    return getWindowWidth() <= 767;
+  };
 
   const routeData = useRouteData();
   const { translations } = routeData;
-  const [muted, onMute] = useState(true);
+  const [muted, onMute] = useState(!isMobile());
 
   const params = {
     autoHeight: true,
@@ -80,7 +87,7 @@ export default () => {
   };
 
   function goFullscreen(element) {
-    const elem = _.first(element.wrapper.getElementsByTagName("video"));
+    const elem = element.getInternalPlayer();
     if (elem && elem.mozRequestFullScreen) {
       elem.mozRequestFullScreen();
     } else if (elem && elem.webkitRequestFullScreen) {
@@ -98,10 +105,18 @@ export default () => {
     return <i onClick={() => onMute(true)} className="home__icon fas fa-volume-up" />;
   };
 
+  const shouldPlay = (inView) => {
+    if(isMobile()) {
+      return false;
+    }
+
+    return inView;
+  };
+
   return (
     <Layout {...routeData} className="home">
       <InView>
-        {({ inView, ref, entry }) => (
+        {({ inView, ref }) => (
           <div ref={ref} className="home__image-video" id="home">
             <ReactPlayer
               ref={player}
@@ -109,7 +124,8 @@ export default () => {
               className="home__video"
               muted={muted}
               url='/video/iron-man.mp4'
-              playing={inView}
+              controls={isMobile()}
+              playing={shouldPlay(inView)}
               width='100%'
               height='100%'
             />
