@@ -106,7 +106,7 @@ export default () => {
   };
 
   const shouldPlay = (inView) => {
-    if(isMobile()) {
+    if (isMobile()) {
       return false;
     }
 
@@ -115,33 +115,13 @@ export default () => {
 
   return (
     <Layout {...routeData} className="home">
-      <InView>
-        {({ inView, ref }) => (
-          <div ref={ref} className="home__image-video" id="home">
-            <ReactPlayer
-              ref={player}
-              loop
-              className="home__video"
-              muted={muted}
-              url='/video/iron-man.mp4'
-              controls={isMobile()}
-              playing={shouldPlay(inView)}
-              width='100%'
-              height='100%'
-            />
-            {renderMuted()}
-            <i onClick={() => goFullscreen(_.get(player, "current"))} className="home__icon fas fa-expand" />
-          </div>
-        )}
-      </InView>
-
-      {/*<div className="home__hero" id="home">*/}
-      {/*  <img className="home__hero-img" src="/img/hero_2.jpg" alt="home hero" />*/}
-      {/*  <div className="home__badge-wrapper">*/}
-      {/*    <Badge className="home__badge" />*/}
-      {/*  </div>*/}
-      {/*  <ReactMarkdown escapeHtml={false} className="home__hero-headline" source={translations.headline} />*/}
-      {/*</div>*/}
+      <div className="home__hero" id="home">
+        <img className="home__hero-img" src="/img/hero_2.jpg" alt="home hero" />
+        <div className="home__badge-wrapper">
+          <Badge className="home__badge" />
+        </div>
+        <ReactMarkdown escapeHtml={false} className="home__hero-headline" source={translations.headline} />
+      </div>
 
       <div className="home__section home__products">
         <h2 className="home__headline">{translations.header.home}</h2>
@@ -653,6 +633,26 @@ export default () => {
           </Button>
         </div>
       </div>
+
+      <InView>
+        {({ inView, ref }) => (
+          <div ref={ref} className="home__image-video" id="home">
+            <ReactPlayer
+              ref={player}
+              loop
+              className="home__video"
+              muted={muted}
+              url='/video/iron-man.mp4'
+              controls={isMobile()}
+              playing={shouldPlay(inView)}
+              width='100%'
+              height='100%'
+            />
+            {renderMuted()}
+            <i onClick={() => goFullscreen(_.get(player, "current"))} className="home__icon fas fa-expand" />
+          </div>
+        )}
+      </InView>
 
       <div className="home__section home__contact" id="contact">
         <div className="home__row">
