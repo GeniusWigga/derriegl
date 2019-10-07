@@ -628,6 +628,14 @@
       }
     }
   }
+
+  .home__buy-button {
+    max-width: 100% !important;
+
+    .shopify-buy__btn {
+      border-radius: $space-medium-30;
+    }
+  }
 }
 
 .home__nutrition {
