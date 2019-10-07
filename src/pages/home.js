@@ -634,25 +634,27 @@ export default () => {
         </div>
       </div>
 
-      <InView>
-        {({ inView, ref }) => (
-          <div ref={ref} className="home__image-video" id="home">
-            <ReactPlayer
-              ref={player}
-              loop
-              className="home__video"
-              muted={muted}
-              url='/video/iron-man.mp4'
-              controls={isMobile()}
-              playing={shouldPlay(inView)}
-              width='100%'
-              height='100%'
-            />
-            {renderMuted()}
-            <i onClick={() => goFullscreen(_.get(player, "current"))} className="home__icon fas fa-expand" />
-          </div>
-        )}
-      </InView>
+      <div className="home__section home__video-section" id="video">
+        <InView>
+          {({ inView, ref }) => (
+            <div ref={ref} className="home__image-video" id="home">
+              <ReactPlayer
+                ref={player}
+                loop
+                className="home__video"
+                muted={muted}
+                url='/video/iron-man.mp4'
+                controls={isMobile()}
+                playing={shouldPlay(inView)}
+                width='100%'
+                height='100%'
+              />
+              {renderMuted()}
+              <i onClick={() => goFullscreen(_.get(player, "current"))} className="home__icon fas fa-expand" />
+            </div>
+          )}
+        </InView>
+      </div>
 
       <div className="home__section home__contact" id="contact">
         <div className="home__row">

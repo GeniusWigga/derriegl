@@ -567,11 +567,15 @@
     text-align: center;
   }
 
+  .home__video-section {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: $page-sub-max-width;
+  }
+
   .home__image-video {
-    margin: 0 auto;
     position: relative;
     padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
-    max-width: $page-sub-max-width;
 
     @include mobile {
       margin-bottom: $space-large-50;
