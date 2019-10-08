@@ -315,6 +315,8 @@ export default () => {
                   />
                 </ModalButton>
 
+                <div className="home__buy-button" id="product-component-1570513744567" />
+
               </div>
               <div className="home__products-info-col">
                 <Apricot className="home__apricot" />
@@ -416,6 +418,8 @@ export default () => {
                   />
                 </ModalButton>
 
+                <div className="home__buy-button" id="product-component-1570513589515" />
+
               </div>
               <div className="home__products-info-col">
                 <Apricot className="home__apricot" />
@@ -515,6 +519,8 @@ export default () => {
                     source={translations.products.active.ingredients}
                   />
                 </ModalButton>
+
+                <div className="home__buy-button" id="product-component-1570513210386" />
 
               </div>
               <div className="home__products-info-col">
