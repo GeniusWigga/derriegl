@@ -20,6 +20,17 @@
     }
   }
 
+  .button.product {
+    align-items: center;
+    display: inline-flex;
+    margin-top: $space-medium-30;
+    text-decoration: none;
+
+    i {
+      margin-left: 20px;
+    }
+  }
+
   .home__hero-img {
     display: block;
     position: absolute;
@@ -416,7 +427,6 @@
   }
 
   .home__products-substances-mobile {
-
     @include tablet-large {
       display: none;
     }
@@ -612,7 +622,8 @@
       display: none;
     }
 
-    &.fa-volume-mute, &.fa-volume-up {
+    &.fa-volume-mute,
+    &.fa-volume-up {
       right: 2em;
 
       @include mobile {
@@ -643,7 +654,8 @@
     font-weight: bold;
   }
 
-  th, td {
+  th,
+  td {
     padding: $space-small-10 $space-small-5;
     text-align: center;
   }

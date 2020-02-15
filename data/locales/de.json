@@ -6,9 +6,11 @@
       "aboutus": "Über uns",
       "buy": "Wo kaufen?",
       "contact": "Kontakt",
-      "instagram": "Instagram"
+      "instagram": "Instagram",
+      "products": "Produkte"
     },
     "headline": "# Natürliche Energie <br> für jederzeit",
+    "toBar": "Zum Riegel",
     "products": {
       "button": "Nährwertangaben",
       "natural": {

@@ -30,13 +30,16 @@ import ModalButton from "../components/ModalButton/ModalButton";
 import InstagramWrapper from "../components/InstagramWrapper/InstagramWrapper";
 
 const ArrowWrapper = ({ prev, next, children }) => {
-  return <div className={buildClassName("home__slider-button",
-    {
-      prev,
-      next,
-    })}>
-    {children}
-  </div>;
+  return (
+    <div
+      className={buildClassName("home__slider-button", {
+        prev,
+        next,
+      })}
+    >
+      {children}
+    </div>
+  );
 };
 
 const NAVIGATION_PROPS = {
@@ -70,8 +73,16 @@ export default () => {
     slidesPerView: "auto",
     centeredSlides: true,
     navigation: NAVIGATION_PROPS,
-    renderPrevButton: () => <ArrowWrapper prev><Arrow /></ArrowWrapper>,
-    renderNextButton: () => <ArrowWrapper next><Arrow /></ArrowWrapper>,
+    renderPrevButton: () => (
+      <ArrowWrapper prev>
+        <Arrow />
+      </ArrowWrapper>
+    ),
+    renderNextButton: () => (
+      <ArrowWrapper next>
+        <Arrow />
+      </ArrowWrapper>
+    ),
   };
 
   const simpleParams = {
@@ -82,8 +93,16 @@ export default () => {
       type: "bullets",
       clickable: true,
     },
-    renderPrevButton: () => <ArrowWrapper prev><LongArrow /></ArrowWrapper>,
-    renderNextButton: () => <ArrowWrapper next><LongArrow /></ArrowWrapper>,
+    renderPrevButton: () => (
+      <ArrowWrapper prev>
+        <LongArrow />
+      </ArrowWrapper>
+    ),
+    renderNextButton: () => (
+      <ArrowWrapper next>
+        <LongArrow />
+      </ArrowWrapper>
+    ),
   };
 
   function goFullscreen(element) {
@@ -105,7 +124,7 @@ export default () => {
     return <i onClick={() => onMute(true)} className="home__icon fas fa-volume-up" />;
   };
 
-  const shouldPlay = (inView) => {
+  const shouldPlay = inView => {
     if (isMobile()) {
       return false;
     }
@@ -201,9 +220,11 @@ export default () => {
                   escapeHtml={false}
                   source={translations.products.natural.description}
                 />
-                <ModalButton type={MODALS.NATURAL}
-                             buttonClassName="home__btn"
-                             buttonContent={translations.products.button}>
+                <ModalButton
+                  type={MODALS.NATURAL}
+                  buttonClassName="home__btn"
+                  buttonContent={translations.products.button}
+                >
                   <ReactMarkdown
                     escapeHtml={false}
                     className="home__nutrition"
@@ -215,6 +236,13 @@ export default () => {
                     source={translations.products.natural.ingredients}
                   />
                 </ModalButton>
+
+                <br />
+
+                <a className="button product" href="https://derriegel.myshopify.com/products/natural-1">
+                  {translations.toBar}
+                  <i className="fas fa-arrow-right" />
+                </a>
               </div>
               <div className="home__products-info-col">
                 <Apricot className="home__apricot" />
@@ -271,11 +299,7 @@ export default () => {
 
               <div className="home__products-substances home__products-substances--nut-nut home__products-substances--invert">
                 <div className="home__indicator-circle" />
-                <ReactMarkdown
-                  escapeHtml={false}
-                  className="home__substances"
-                  source={translations.products.nut.nut}
-                />
+                <ReactMarkdown escapeHtml={false} className="home__substances" source={translations.products.nut.nut} />
               </div>
 
               <div className="home__products-substances home__products-substances--nut-protein">
@@ -314,6 +338,12 @@ export default () => {
                   />
                 </ModalButton>
 
+                <br />
+
+                <a className="button product" href="https://derriegel.myshopify.com/products/nuss">
+                  {translations.toBar}
+                  <i className="fas fa-arrow-right" />
+                </a>
               </div>
               <div className="home__products-info-col">
                 <Apricot className="home__apricot" />
@@ -326,7 +356,6 @@ export default () => {
 
             <div className="home__products-intro">
               <div className="home__products-wrapper home__products-wrapper--cocos">
-
                 <div className="home__products-substances home__products-substances--cocos-choco">
                   <div className="home__indicator" />
                   <div className="home__indicator-circle" />
@@ -400,9 +429,11 @@ export default () => {
                   source={translations.products.cocos.description}
                 />
 
-                <ModalButton type={MODALS.COCOS}
-                             buttonClassName="home__btn"
-                             buttonContent={translations.products.button}>
+                <ModalButton
+                  type={MODALS.COCOS}
+                  buttonClassName="home__btn"
+                  buttonContent={translations.products.button}
+                >
                   <ReactMarkdown
                     escapeHtml={false}
                     className="home__nutrition"
@@ -415,6 +446,12 @@ export default () => {
                   />
                 </ModalButton>
 
+                <br />
+
+                <a className="button product" href="https://derriegel.myshopify.com/products/kokos">
+                  {translations.toBar}
+                  <i className="fas fa-arrow-right" />
+                </a>
               </div>
               <div className="home__products-info-col">
                 <Apricot className="home__apricot" />
@@ -427,7 +464,6 @@ export default () => {
 
             <div className="home__products-intro">
               <div className="home__products-wrapper">
-
                 <div className="home__products-substances home__products-substances--active-vegan">
                   <div className="home__indicator" />
                   <div className="home__indicator-circle" />
@@ -500,9 +536,11 @@ export default () => {
                   source={translations.products.active.description}
                 />
 
-                <ModalButton type={MODALS.ACTIVE}
-                             buttonClassName="home__btn"
-                             buttonContent={translations.products.button}>
+                <ModalButton
+                  type={MODALS.ACTIVE}
+                  buttonClassName="home__btn"
+                  buttonContent={translations.products.button}
+                >
                   <ReactMarkdown
                     escapeHtml={false}
                     className="home__nutrition"
@@ -515,6 +553,12 @@ export default () => {
                   />
                 </ModalButton>
 
+                <br />
+
+                <a className="button product" href="https://derriegel.myshopify.com/products/active">
+                  {translations.toBar}
+                  <i className="fas fa-arrow-right" />
+                </a>
               </div>
               <div className="home__products-info-col">
                 <Apricot className="home__apricot" />
@@ -523,9 +567,7 @@ export default () => {
             </div>
           </div>
         </Swiper>
-
       </div>
-
 
       <div className="home__ingredients" id="ingredients">
         <h2 className="home__headline home__headline--space">{translations.header.ingredients}</h2>
@@ -533,10 +575,18 @@ export default () => {
         <div className="home__row">
           <div className="home__col">
             <Swiper {...simpleParams}>
-              <div><img src="/img/base-ingredients/all.jpg" alt="all ingredients image" /></div>
-              <div><img src="/img/base-ingredients/apricot.jpg" alt="apricot ingredient image" /></div>
-              <div><img src="/img/base-ingredients/dates.jpg" alt="dates ingredient image" /></div>
-              <div><img src="/img/base-ingredients/dates-alt.jpg" alt="dates alternativ ingredient image" /></div>
+              <div>
+                <img src="/img/base-ingredients/all.jpg" alt="all ingredients image" />
+              </div>
+              <div>
+                <img src="/img/base-ingredients/apricot.jpg" alt="apricot ingredient image" />
+              </div>
+              <div>
+                <img src="/img/base-ingredients/dates.jpg" alt="dates ingredient image" />
+              </div>
+              <div>
+                <img src="/img/base-ingredients/dates-alt.jpg" alt="dates alternativ ingredient image" />
+              </div>
             </Swiper>
           </div>
           <div className="home__col home__col--content">
@@ -564,10 +614,18 @@ export default () => {
           </div>
           <div className="home__col">
             <Swiper {...simpleParams}>
-              <div><img src="/img/supplementary-ingredients/cocos.jpg" alt="cocos ingredients image" /></div>
-              <div><img src="/img/supplementary-ingredients/cranberries.jpg" alt="cranberries ingredient image" /></div>
-              <div><img src="/img/supplementary-ingredients/hazelnuts.jpg" alt="hazelnuts ingredient image" /></div>
-              <div><img src="/img/supplementary-ingredients/oat.jpg" alt="oat ingredient image" /></div>
+              <div>
+                <img src="/img/supplementary-ingredients/cocos.jpg" alt="cocos ingredients image" />
+              </div>
+              <div>
+                <img src="/img/supplementary-ingredients/cranberries.jpg" alt="cranberries ingredient image" />
+              </div>
+              <div>
+                <img src="/img/supplementary-ingredients/hazelnuts.jpg" alt="hazelnuts ingredient image" />
+              </div>
+              <div>
+                <img src="/img/supplementary-ingredients/oat.jpg" alt="oat ingredient image" />
+              </div>
             </Swiper>
           </div>
         </div>
@@ -579,18 +637,20 @@ export default () => {
         <div className="home__row">
           <div className="home__col">
             <Swiper {...simpleParams}>
-              <div><img src="/img/why-section/bars.jpg" alt="bars image" /></div>
-              <div><img src="/img/why-section/emotion.jpg" alt="emotion image" /></div>
-              <div><img src="/img/why-section/bowl.jpg" alt="bowl image" /></div>
+              <div>
+                <img src="/img/why-section/bars.jpg" alt="bars image" />
+              </div>
+              <div>
+                <img src="/img/why-section/emotion.jpg" alt="emotion image" />
+              </div>
+              <div>
+                <img src="/img/why-section/bowl.jpg" alt="bowl image" />
+              </div>
             </Swiper>
           </div>
           <div className="home__col home__col--content">
             <div className="home__col-content-wrapper">
-              <ReactMarkdown
-                className="home__col-content"
-                escapeHtml={false}
-                source={translations.aboutus.why}
-              />
+              <ReactMarkdown className="home__col-content" escapeHtml={false} source={translations.aboutus.why} />
             </div>
           </div>
         </div>
@@ -598,15 +658,13 @@ export default () => {
         <div className="home__row">
           <div className="home__col home__col--content">
             <div className="home__col-content-wrapper">
-              <ReactMarkdown
-                className="home__col-content"
-                escapeHtml={false}
-                source={translations.aboutus.team}
-              />
+              <ReactMarkdown className="home__col-content" escapeHtml={false} source={translations.aboutus.team} />
             </div>
           </div>
           <div className="home__col">
-            <div><img src="/img/why-section/ceos.jpg" alt="ceos image" /></div>
+            <div>
+              <img src="/img/why-section/ceos.jpg" alt="ceos image" />
+            </div>
           </div>
         </div>
       </div>
@@ -615,21 +673,19 @@ export default () => {
         <h2 className="home__headline home__headline--space home__headline--invert">{translations.header.buy}</h2>
 
         {_.map(translations.buy.stores, (store, key) => {
-          return <a key={key}
-                    target="_blank"
-                    rel="noreferrer nofollow"
-                    className="home__buy-store"
-                    href={store.href}>{store.text}</a>;
+          return (
+            <a key={key} target="_blank" rel="noreferrer nofollow" className="home__buy-store" href={store.href}>
+              {store.text}
+            </a>
+          );
         })}
 
         <div className="home__buy-content">
-          <ReactMarkdown
-            className="home_buy-headline"
-            escapeHtml={false}
-            source={translations.buy.headline}
-          />
+          <ReactMarkdown className="home_buy-headline" escapeHtml={false} source={translations.buy.headline} />
           <Button>
-            <a className="home__contact-btn" href={`mailto:${translations.footer.email}`}>{translations.buy.contact}</a>
+            <a className="home__contact-btn" href={`mailto:${translations.footer.email}`}>
+              {translations.buy.contact}
+            </a>
           </Button>
         </div>
       </div>
@@ -643,11 +699,11 @@ export default () => {
                 loop
                 className="home__video"
                 muted={muted}
-                url='/video/iron-man.mp4'
+                url="/video/iron-man.mp4"
                 controls={isMobile()}
                 playing={shouldPlay(inView)}
-                width='100%'
-                height='100%'
+                width="100%"
+                height="100%"
               />
               {renderMuted()}
               <i onClick={() => goFullscreen(_.get(player, "current"))} className="home__icon fas fa-expand" />
@@ -660,14 +716,11 @@ export default () => {
         <div className="home__row">
           <div className="home__col home__col--content">
             <div className="home__col-content-wrapper">
-              <ReactMarkdown
-                className="home__col-content"
-                escapeHtml={false}
-                source={translations.contact.text}
-              />
+              <ReactMarkdown className="home__col-content" escapeHtml={false} source={translations.contact.text} />
               <div className="home__social-wrapper">
-                <a className="home__social"
-                   href={`mailto:${translations.footer.email}`}>hallo@derriegel.com</a>
+                <a className="home__social" href={`mailto:${translations.footer.email}`}>
+                  hallo@derriegel.com
+                </a>
                 {/*<a className="home__social" href={translations.footer.fb}>*/}
                 {/*  <img className="home__social-icons" src="/icons/fb.svg" alt="svg icon facebook" />*/}
                 {/*  <span className="home__social-content">@der-riegel</span>*/}
@@ -680,7 +733,9 @@ export default () => {
             </div>
           </div>
           <div className="home__col">
-            <div><img src="/img/contact-emotion.png" alt="ceos image" /></div>
+            <div>
+              <img src="/img/contact-emotion.png" alt="ceos image" />
+            </div>
           </div>
         </div>
       </div>
@@ -693,12 +748,11 @@ export default () => {
           <InstagramWrapper shouldRender />
         </div>
         <Button>
-          <a className="home__follow-instagram"
-             target="_blank"
-             href={translations.footer.insta}>{translations.instagram.button}</a>
+          <a className="home__follow-instagram" target="_blank" href={translations.footer.insta}>
+            {translations.instagram.button}
+          </a>
         </Button>
       </div>
-
     </Layout>
   );
-}
+};

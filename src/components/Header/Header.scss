@@ -17,7 +17,7 @@
   width: 100%;
   z-index: 2;
 
-  @include mobile {
+  @include up-to-desktop {
     height: $header-height-mobile;
     position: fixed;
   }
@@ -27,7 +27,7 @@
     padding: 0 $space-medium-30;
     width: 250px;
 
-    @include mobile {
+    @include up-to-desktop {
       padding: 0 $space-medium-15;
       text-align: left;
     }
@@ -37,7 +37,7 @@
     display: inline-block;
     width: 150px;
 
-    @include mobile {
+    @include up-to-desktop {
       width: 100px;
     }
   }
@@ -54,7 +54,7 @@
       color: $color-ci;
     }
 
-    @include mobile {
+    @include up-to-desktop {
       padding: $space-medium-15;
       border-top: $border-width-lighter solid $color-border;
 
@@ -72,7 +72,7 @@
 
     @include fluid-type($mobile-breakpoint, $page-max-width, $font-medium-14, $font-medium-16);
 
-    @include mobile {
+    @include up-to-desktop {
       background: $color-white;
       display: none;
       flex-direction: column;
@@ -96,7 +96,7 @@
     margin-left: auto;
     padding: 0 $space-medium-20;
 
-    @include mobile {
+    @include up-to-desktop {
       display: block;
       padding: 0 $space-medium-15;
     }
