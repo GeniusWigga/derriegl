@@ -23,7 +23,7 @@
   .button.product {
     align-items: center;
     display: inline-flex;
-    margin-top: $space-medium-30;
+    margin-bottom: $space-medium-30;
     text-decoration: none;
 
     i {
@@ -296,11 +296,12 @@
   }
 
   .home__btn {
-    background: $color-ci;
-    border-radius: $space-medium-30;
-    color: $color-white;
+    background: $color-white;
+    border: $border-width-lighter solid $color-black;
+    border-radius: 0;
+    color: $color-black;
     font-size: $font-medium-18;
-    padding: $space-small-10 $space-medium-40;
+    padding: $space-small-5 $space-medium-20;
     text-transform: uppercase;
   }
 

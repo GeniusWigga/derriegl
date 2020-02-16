@@ -220,6 +220,14 @@ export default () => {
                   escapeHtml={false}
                   source={translations.products.natural.description}
                 />
+
+                <a className="button product" href="https://derriegel.myshopify.com/products/natural-1">
+                  {translations.toBar}
+                  <i className="fas fa-arrow-right" />
+                </a>
+
+                <br />
+
                 <ModalButton
                   type={MODALS.NATURAL}
                   buttonClassName="home__btn"
@@ -236,13 +244,6 @@ export default () => {
                     source={translations.products.natural.ingredients}
                   />
                 </ModalButton>
-
-                <br />
-
-                <a className="button product" href="https://derriegel.myshopify.com/products/natural-1">
-                  {translations.toBar}
-                  <i className="fas fa-arrow-right" />
-                </a>
               </div>
               <div className="home__products-info-col">
                 <Apricot className="home__apricot" />
@@ -325,6 +326,13 @@ export default () => {
                   source={translations.products.nut.description}
                 />
 
+                <a className="button product" href="https://derriegel.myshopify.com/products/nuss">
+                  {translations.toBar}
+                  <i className="fas fa-arrow-right" />
+                </a>
+
+                <br />
+
                 <ModalButton type={MODALS.NUT} buttonClassName="home__btn" buttonContent={translations.products.button}>
                   <ReactMarkdown
                     escapeHtml={false}
@@ -337,13 +345,6 @@ export default () => {
                     source={translations.products.nut.ingredients}
                   />
                 </ModalButton>
-
-                <br />
-
-                <a className="button product" href="https://derriegel.myshopify.com/products/nuss">
-                  {translations.toBar}
-                  <i className="fas fa-arrow-right" />
-                </a>
               </div>
               <div className="home__products-info-col">
                 <Apricot className="home__apricot" />
@@ -429,6 +430,13 @@ export default () => {
                   source={translations.products.cocos.description}
                 />
 
+                <a className="button product" href="https://derriegel.myshopify.com/products/kokos">
+                  {translations.toBar}
+                  <i className="fas fa-arrow-right" />
+                </a>
+
+                <br />
+
                 <ModalButton
                   type={MODALS.COCOS}
                   buttonClassName="home__btn"
@@ -445,13 +453,6 @@ export default () => {
                     source={translations.products.cocos.ingredients}
                   />
                 </ModalButton>
-
-                <br />
-
-                <a className="button product" href="https://derriegel.myshopify.com/products/kokos">
-                  {translations.toBar}
-                  <i className="fas fa-arrow-right" />
-                </a>
               </div>
               <div className="home__products-info-col">
                 <Apricot className="home__apricot" />
@@ -536,6 +537,13 @@ export default () => {
                   source={translations.products.active.description}
                 />
 
+                <a className="button product" href="https://derriegel.myshopify.com/products/active">
+                  {translations.toBar}
+                  <i className="fas fa-arrow-right" />
+                </a>
+
+                <br />
+
                 <ModalButton
                   type={MODALS.ACTIVE}
                   buttonClassName="home__btn"
@@ -552,13 +560,6 @@ export default () => {
                     source={translations.products.active.ingredients}
                   />
                 </ModalButton>
-
-                <br />
-
-                <a className="button product" href="https://derriegel.myshopify.com/products/active">
-                  {translations.toBar}
-                  <i className="fas fa-arrow-right" />
-                </a>
               </div>
               <div className="home__products-info-col">
                 <Apricot className="home__apricot" />
