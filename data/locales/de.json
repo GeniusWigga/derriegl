@@ -7,7 +7,7 @@
       "buy": "Wo kaufen?",
       "contact": "Kontakt",
       "instagram": "Instagram",
-      "products": "Produkte"
+      "products": "Zum Shop"
     },
     "headline": "# Natürliche Energie <br> für jederzeit",
     "toBar": "Zum Riegel",
@@ -63,6 +63,7 @@
     "buy": {
       "headline": "<h2>Du möchtest unsere Riegel in <br> Deinem Geschäft anbieten?</h2>",
       "contact": "Jetzt kontaktieren",
+      "onlineShop": "Im Online-Shop",
       "stores": [
         {
           "text": "My Sweet Dream | Patisserie - Café - Confiserie, Nandlstädter Str. 3, 85419 Mauern",

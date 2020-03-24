@@ -673,6 +673,15 @@ export default () => {
       <div className="home__buy" id="buy">
         <h2 className="home__headline home__headline--space home__headline--invert">{translations.header.buy}</h2>
 
+        <div className="home__buy-products">
+          <Button>
+            <a className="home__contact-btn" href="https://derriegel.myshopify.com/collections/all">
+              {translations.buy.onlineShop}
+            </a>
+          </Button>
+        </div>
+
+
         {_.map(translations.buy.stores, (store, key) => {
           return (
             <a key={key} target="_blank" rel="noreferrer nofollow" className="home__buy-store" href={store.href}>

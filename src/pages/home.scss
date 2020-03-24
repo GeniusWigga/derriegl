@@ -295,6 +295,11 @@
     }
   }
 
+  .home__buy-products {
+    text-align: center;
+    margin-bottom: $space-medium-40;
+  }
+
   .home__btn {
     background: $color-white;
     border: $border-width-lighter solid $color-black;
@@ -527,6 +532,10 @@
     color: $color-white;
     margin-bottom: $space-medium-20;
     padding: $space-small-10 0;
+
+    &:hover {
+      color: $color-ci;
+    }
 
     &:last-of-type {
       margin-bottom: $space-large-50;
