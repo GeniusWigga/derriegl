@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import InstagramEmbed from "react-instagram-embed";
 import _ from "lodash";
 import axios from "axios";
+import { Grid } from "@material-ui/core";
 
 import "./InstagramWrapper.scss";
 
@@ -22,34 +23,40 @@ const InstagramWrapper = props => {
 
   useEffect(() => {
     const requestUrl = `${API_URL}/v1/users/self/media/recent/?access_token=${ACCESS_TOKEN}`;
-    axios.get(requestUrl)
-         .then(function(res) {
-           onInstaFeed({
-             error: false,
-             res,
-           });
-         })
-         .catch(function(error) {
-           onInstaFeed({
-             error: true,
-             res: error,
-           });
-         });
+    axios
+      .get(requestUrl)
+      .then(function(res) {
+        onInstaFeed({
+          error: false,
+          res,
+        });
+      })
+      .catch(function(error) {
+        onInstaFeed({
+          error: true,
+          res: error,
+        });
+      });
   }, []);
 
-  const posts = _.chain(instaResponse).get(["res", "data", "data"]).slice(0, 5).value();
+  const posts = _.chain(instaResponse)
+    .get(["res", "data", "data"])
+    .slice(0, 5)
+    .value();
 
   return (
-    <div className="instagram-wrapper">
-      {
-        _.map(posts, (feed, id) => {
-          const src = _.get(feed, ["images", "standard_resolution", "url"]);
-          return <a className="instagram-wrapper__post" key={id} href={_.get(feed, "link")} target="_blank">
-            <img src={src} alt="insta post" />
-          </a>;
-        })
-      }
-    </div>
+    <Grid className="instagram-wrapper" container spacing={3}>
+      {_.map(posts, (feed, id) => {
+        const src = _.get(feed, ["images", "standard_resolution", "url"]);
+        return (
+          <Grid key={id} item xs={6} sm={4} md={3}>
+            <a href={_.get(feed, "link")} target="_blank">
+              <img src={src} alt="insta post" />
+            </a>
+          </Grid>
+        );
+      })}
+    </Grid>
   );
 };
 

@@ -4,7 +4,9 @@ import ReactMarkdown from "react-markdown/with-html";
 import ReactPlayer from "react-player";
 import { InView } from "react-intersection-observer";
 import Swiper from "react-id-swiper";
+import { Container, Box, Grid, createMuiTheme } from "@material-ui/core";
 import _ from "lodash";
+import ScopedCssBaseline from "@material-ui/core/ScopedCssBaseline";
 import { Navigation, Pagination } from "swiper/dist/js/swiper.esm";
 
 import Layout from "../containers/Layout";
@@ -28,6 +30,8 @@ import "./home.scss";
 import buildClassName from "../helpers/buildClassName";
 import ModalButton from "../components/ModalButton/ModalButton";
 import InstagramWrapper from "../components/InstagramWrapper/InstagramWrapper";
+import { themeOptions } from "../components/Header/Header";
+const theme = createMuiTheme(themeOptions);
 
 const ArrowWrapper = ({ prev, next, children }) => {
   return (
@@ -134,25 +138,58 @@ export default () => {
 
   return (
     <Layout {...routeData} className="home">
-      <div className="home__hero" id="home">
-        <img className="home__hero-img" src="/img/hero_2.jpg" alt="home hero" />
-        <div className="home__badge-wrapper">
-          <Badge className="home__badge" />
+      <ScopedCssBaseline>
+        <div className="home__hero" id="home">
+          <img className="home__hero-img" src="/img/hero_2.jpg" alt="home hero" />
+          <div className="home__badge-wrapper">
+            <Badge className="home__badge" />
+          </div>
+          <ReactMarkdown escapeHtml={false} className="home__hero-headline" source={translations.headline} />
         </div>
-        <ReactMarkdown escapeHtml={false} className="home__hero-headline" source={translations.headline} />
-      </div>
 
-      <div className="home__section home__products">
-        <h2 className="home__headline">{translations.header.home}</h2>
+        <div className="home__section home__products">
+          <h2 className="home__headline">{translations.header.home}</h2>
 
-        <Swiper {...params}>
-          <div>
-            <h3 className="home__products-sub-headline">{translations.products.natural.headline}</h3>
+          <Swiper {...params}>
+            <div>
+              <h3 className="home__products-sub-headline">{translations.products.natural.headline}</h3>
 
-            <div className="home__products-intro">
-              <div className="home__products-wrapper">
+              <div className="home__products-intro">
+                <div className="home__products-wrapper">
+                  <div className="home__products-substances home__products-substances--vegan">
+                    <div className="home__indicator" />
+                    <div className="home__indicator-circle" />
+                    <ReactMarkdown
+                      escapeHtml={false}
+                      className="home__substances"
+                      source={translations.products.natural.vegan}
+                    />
+                  </div>
+                  <div className="home__products-substances home__products-substances--protein home__products-substances--invert">
+                    <div className="home__indicator" />
+                    <div className="home__indicator-circle" />
+                    <ReactMarkdown
+                      escapeHtml={false}
+                      className="home__substances"
+                      source={translations.products.natural.protein}
+                    />
+                  </div>
+                  <div className="home__products-substances home__products-substances--carbs">
+                    <div className="home__indicator" />
+                    <div className="home__indicator-circle" />
+                    <ReactMarkdown
+                      escapeHtml={false}
+                      className="home__substances"
+                      source={translations.products.natural.carbs}
+                    />
+                  </div>
+                  <img className="home__products-img-bar" src="/img/products/natural.png" alt="natural bar image" />
+                  <img className="home__products-img-packaging" src="/img/packaging.png" alt="packaging image" />
+                </div>
+              </div>
+
+              <div className="home__products-substances-mobile">
                 <div className="home__products-substances home__products-substances--vegan">
-                  <div className="home__indicator" />
                   <div className="home__indicator-circle" />
                   <ReactMarkdown
                     escapeHtml={false}
@@ -161,7 +198,6 @@ export default () => {
                   />
                 </div>
                 <div className="home__products-substances home__products-substances--protein home__products-substances--invert">
-                  <div className="home__indicator" />
                   <div className="home__indicator-circle" />
                   <ReactMarkdown
                     escapeHtml={false}
@@ -170,7 +206,6 @@ export default () => {
                   />
                 </div>
                 <div className="home__products-substances home__products-substances--carbs">
-                  <div className="home__indicator" />
                   <div className="home__indicator-circle" />
                   <ReactMarkdown
                     escapeHtml={false}
@@ -178,86 +213,88 @@ export default () => {
                     source={translations.products.natural.carbs}
                   />
                 </div>
-                <img className="home__products-img-bar" src="/img/products/natural.png" alt="natural bar image" />
-                <img className="home__products-img-packaging" src="/img/packaging.png" alt="packaging image" />
               </div>
-            </div>
 
-            <div className="home__products-substances-mobile">
-              <div className="home__products-substances home__products-substances--vegan">
-                <div className="home__indicator-circle" />
-                <ReactMarkdown
-                  escapeHtml={false}
-                  className="home__substances"
-                  source={translations.products.natural.vegan}
-                />
-              </div>
-              <div className="home__products-substances home__products-substances--protein home__products-substances--invert">
-                <div className="home__indicator-circle" />
-                <ReactMarkdown
-                  escapeHtml={false}
-                  className="home__substances"
-                  source={translations.products.natural.protein}
-                />
-              </div>
-              <div className="home__products-substances home__products-substances--carbs">
-                <div className="home__indicator-circle" />
-                <ReactMarkdown
-                  escapeHtml={false}
-                  className="home__substances"
-                  source={translations.products.natural.carbs}
-                />
-              </div>
-            </div>
-
-            <div className="home__products-info">
-              <div className="home__products-info-col">
-                <Oat className="home__oat" />
-              </div>
-              <div className="home__products-info-col">
-                <ReactMarkdown
-                  className="home__products-description"
-                  escapeHtml={false}
-                  source={translations.products.natural.description}
-                />
-
-                <a className="button product" href="https://derriegel.myshopify.com/products/natural-1">
-                  {translations.toBar}
-                  <i className="fas fa-arrow-right" />
-                </a>
-
-                <br />
-
-                <ModalButton
-                  type={MODALS.NATURAL}
-                  buttonClassName="home__btn"
-                  buttonContent={translations.products.button}
-                >
+              <div className="home__products-info">
+                <div className="home__products-info-col">
+                  <Oat className="home__oat" />
+                </div>
+                <div className="home__products-info-col">
                   <ReactMarkdown
+                    className="home__products-description"
                     escapeHtml={false}
-                    className="home__nutrition"
-                    source={translations.products.natural.nutrition}
+                    source={translations.products.natural.description}
                   />
-                  <ReactMarkdown
-                    escapeHtml={false}
-                    className="home__ingredients"
-                    source={translations.products.natural.ingredients}
-                  />
-                </ModalButton>
-              </div>
-              <div className="home__products-info-col">
-                <Apricot className="home__apricot" />
-                <Dates className="home__dates" />
+
+                  <a className="button product" href="https://derriegel.myshopify.com/products/natural-1">
+                    {translations.toBar}
+                    <i className="fas fa-arrow-right" />
+                  </a>
+
+                  <br />
+
+                  <ModalButton
+                    type={MODALS.NATURAL}
+                    buttonClassName="home__btn"
+                    buttonContent={translations.products.button}
+                  >
+                    <ReactMarkdown
+                      escapeHtml={false}
+                      className="home__nutrition"
+                      source={translations.products.natural.nutrition}
+                    />
+                    <ReactMarkdown
+                      escapeHtml={false}
+                      className="home__ingredients"
+                      source={translations.products.natural.ingredients}
+                    />
+                  </ModalButton>
+                </div>
+                <div className="home__products-info-col">
+                  <Apricot className="home__apricot" />
+                  <Dates className="home__dates" />
+                </div>
               </div>
             </div>
-          </div>
-          <div>
-            <h3 className="home__products-sub-headline">{translations.products.nut.headline}</h3>
+            <div>
+              <h3 className="home__products-sub-headline">{translations.products.nut.headline}</h3>
 
-            <div className="home__products-intro">
-              <div className="home__products-wrapper">
+              <div className="home__products-intro">
+                <div className="home__products-wrapper">
+                  <div className="home__products-substances home__products-substances--nut-choco">
+                    <div className="home__indicator" />
+                    <div className="home__indicator-circle" />
+                    <ReactMarkdown
+                      escapeHtml={false}
+                      className="home__substances"
+                      source={translations.products.nut.choco}
+                    />
+                  </div>
+                  <div className="home__products-substances home__products-substances--nut-nut home__products-substances--invert">
+                    <div className="home__indicator" />
+                    <div className="home__indicator-circle" />
+                    <ReactMarkdown
+                      escapeHtml={false}
+                      className="home__substances"
+                      source={translations.products.nut.nut}
+                    />
+                  </div>
+                  <div className="home__products-substances home__products-substances--nut-protein">
+                    <div className="home__indicator" />
+                    <div className="home__indicator-circle" />
+                    <ReactMarkdown
+                      escapeHtml={false}
+                      className="home__substances"
+                      source={translations.products.nut.protein}
+                    />
+                  </div>
+                  <img className="home__products-img-bar" src="/img/products/choco.png" alt="natural bar image" />
+                  <img className="home__products-img-packaging" src="/img/packaging.png" alt="packaging image" />
+                </div>
+              </div>
+
+              <div className="home__products-substances-mobile">
                 <div className="home__products-substances home__products-substances--nut-choco">
-                  <div className="home__indicator" />
                   <div className="home__indicator-circle" />
                   <ReactMarkdown
                     escapeHtml={false}
@@ -265,8 +302,8 @@ export default () => {
                     source={translations.products.nut.choco}
                   />
                 </div>
+
                 <div className="home__products-substances home__products-substances--nut-nut home__products-substances--invert">
-                  <div className="home__indicator" />
                   <div className="home__indicator-circle" />
                   <ReactMarkdown
                     escapeHtml={false}
@@ -274,8 +311,8 @@ export default () => {
                     source={translations.products.nut.nut}
                   />
                 </div>
+
                 <div className="home__products-substances home__products-substances--nut-protein">
-                  <div className="home__indicator" />
                   <div className="home__indicator-circle" />
                   <ReactMarkdown
                     escapeHtml={false}
@@ -283,82 +320,91 @@ export default () => {
                     source={translations.products.nut.protein}
                   />
                 </div>
-                <img className="home__products-img-bar" src="/img/products/choco.png" alt="natural bar image" />
-                <img className="home__products-img-packaging" src="/img/packaging.png" alt="packaging image" />
-              </div>
-            </div>
-
-            <div className="home__products-substances-mobile">
-              <div className="home__products-substances home__products-substances--nut-choco">
-                <div className="home__indicator-circle" />
-                <ReactMarkdown
-                  escapeHtml={false}
-                  className="home__substances"
-                  source={translations.products.nut.choco}
-                />
               </div>
 
-              <div className="home__products-substances home__products-substances--nut-nut home__products-substances--invert">
-                <div className="home__indicator-circle" />
-                <ReactMarkdown escapeHtml={false} className="home__substances" source={translations.products.nut.nut} />
-              </div>
-
-              <div className="home__products-substances home__products-substances--nut-protein">
-                <div className="home__indicator-circle" />
-                <ReactMarkdown
-                  escapeHtml={false}
-                  className="home__substances"
-                  source={translations.products.nut.protein}
-                />
-              </div>
-            </div>
-
-            <div className="home__products-info">
-              <div className="home__products-info-col">
-                <Nut className="home__nut" />
-                <NutHalf className="home__nut-half" />
-                <NutHalfInvert className="home__nut-half-invert" />
-              </div>
-              <div className="home__products-info-col">
-                <ReactMarkdown
-                  className="home__products-description"
-                  escapeHtml={false}
-                  source={translations.products.nut.description}
-                />
-
-                <a className="button product" href="https://derriegel.myshopify.com/products/nuss">
-                  {translations.toBar}
-                  <i className="fas fa-arrow-right" />
-                </a>
-
-                <br />
-
-                <ModalButton type={MODALS.NUT} buttonClassName="home__btn" buttonContent={translations.products.button}>
+              <div className="home__products-info">
+                <div className="home__products-info-col">
+                  <Nut className="home__nut" />
+                  <NutHalf className="home__nut-half" />
+                  <NutHalfInvert className="home__nut-half-invert" />
+                </div>
+                <div className="home__products-info-col">
                   <ReactMarkdown
+                    className="home__products-description"
                     escapeHtml={false}
-                    className="home__nutrition"
-                    source={translations.products.nut.nutrition}
+                    source={translations.products.nut.description}
                   />
-                  <ReactMarkdown
-                    escapeHtml={false}
-                    className="home__ingredients"
-                    source={translations.products.nut.ingredients}
-                  />
-                </ModalButton>
-              </div>
-              <div className="home__products-info-col">
-                <Apricot className="home__apricot" />
-                <Dates className="home__dates" />
+
+                  <a className="button product" href="https://derriegel.myshopify.com/products/nuss">
+                    {translations.toBar}
+                    <i className="fas fa-arrow-right" />
+                  </a>
+
+                  <br />
+
+                  <ModalButton
+                    type={MODALS.NUT}
+                    buttonClassName="home__btn"
+                    buttonContent={translations.products.button}
+                  >
+                    <ReactMarkdown
+                      escapeHtml={false}
+                      className="home__nutrition"
+                      source={translations.products.nut.nutrition}
+                    />
+                    <ReactMarkdown
+                      escapeHtml={false}
+                      className="home__ingredients"
+                      source={translations.products.nut.ingredients}
+                    />
+                  </ModalButton>
+                </div>
+                <div className="home__products-info-col">
+                  <Apricot className="home__apricot" />
+                  <Dates className="home__dates" />
+                </div>
               </div>
             </div>
-          </div>
-          <div>
-            <h3 className="home__products-sub-headline">{translations.products.cocos.headline}</h3>
+            <div>
+              <h3 className="home__products-sub-headline">{translations.products.cocos.headline}</h3>
 
-            <div className="home__products-intro">
-              <div className="home__products-wrapper home__products-wrapper--cocos">
+              <div className="home__products-intro">
+                <div className="home__products-wrapper home__products-wrapper--cocos">
+                  <div className="home__products-substances home__products-substances--cocos-choco">
+                    <div className="home__indicator" />
+                    <div className="home__indicator-circle" />
+                    <ReactMarkdown
+                      escapeHtml={false}
+                      className="home__substances"
+                      source={translations.products.cocos.choco}
+                    />
+                  </div>
+                  <div className="home__products-substances home__products-substances--cocos-cocos home__products-substances--invert">
+                    <div className="home__indicator" />
+                    <div className="home__indicator-circle" />
+                    <ReactMarkdown
+                      escapeHtml={false}
+                      className="home__substances"
+                      source={translations.products.cocos.cocos}
+                    />
+                  </div>
+                  <div className="home__products-substances home__products-substances--cocos-protein">
+                    <div className="home__indicator" />
+                    <div className="home__indicator-circle" />
+                    <ReactMarkdown
+                      escapeHtml={false}
+                      className="home__substances"
+                      source={translations.products.cocos.protein}
+                    />
+                  </div>
+
+                  <img className="home__products-img-bar" src="/img/products/cocos.png" alt="cocos bar image" />
+                  <img className="home__products-img-packaging" src="/img/packaging.png" alt="packaging image" />
+                </div>
+              </div>
+
+              <div className="home__products-substances-mobile">
                 <div className="home__products-substances home__products-substances--cocos-choco">
-                  <div className="home__indicator" />
                   <div className="home__indicator-circle" />
                   <ReactMarkdown
                     escapeHtml={false}
@@ -366,8 +412,8 @@ export default () => {
                     source={translations.products.cocos.choco}
                   />
                 </div>
-                <div className="home__products-substances home__products-substances--cocos-cocos home__products-substances--invert">
-                  <div className="home__indicator" />
+
+                <div className="home__products-substances home__products-substances--cocos-cocos">
                   <div className="home__indicator-circle" />
                   <ReactMarkdown
                     escapeHtml={false}
@@ -375,8 +421,8 @@ export default () => {
                     source={translations.products.cocos.cocos}
                   />
                 </div>
+
                 <div className="home__products-substances home__products-substances--cocos-protein">
-                  <div className="home__indicator" />
                   <div className="home__indicator-circle" />
                   <ReactMarkdown
                     escapeHtml={false}
@@ -384,89 +430,89 @@ export default () => {
                     source={translations.products.cocos.protein}
                   />
                 </div>
-
-                <img className="home__products-img-bar" src="/img/products/cocos.png" alt="cocos bar image" />
-                <img className="home__products-img-packaging" src="/img/packaging.png" alt="packaging image" />
-              </div>
-            </div>
-
-            <div className="home__products-substances-mobile">
-              <div className="home__products-substances home__products-substances--cocos-choco">
-                <div className="home__indicator-circle" />
-                <ReactMarkdown
-                  escapeHtml={false}
-                  className="home__substances"
-                  source={translations.products.cocos.choco}
-                />
               </div>
 
-              <div className="home__products-substances home__products-substances--cocos-cocos">
-                <div className="home__indicator-circle" />
-                <ReactMarkdown
-                  escapeHtml={false}
-                  className="home__substances"
-                  source={translations.products.cocos.cocos}
-                />
-              </div>
-
-              <div className="home__products-substances home__products-substances--cocos-protein">
-                <div className="home__indicator-circle" />
-                <ReactMarkdown
-                  escapeHtml={false}
-                  className="home__substances"
-                  source={translations.products.cocos.protein}
-                />
-              </div>
-            </div>
-
-            <div className="home__products-info">
-              <div className="home__products-info-col">
-                <Coconut className="home__coconut" />
-              </div>
-              <div className="home__products-info-col">
-                <ReactMarkdown
-                  className="home__products-description"
-                  escapeHtml={false}
-                  source={translations.products.cocos.description}
-                />
-
-                <a className="button product" href="https://derriegel.myshopify.com/products/kokos">
-                  {translations.toBar}
-                  <i className="fas fa-arrow-right" />
-                </a>
-
-                <br />
-
-                <ModalButton
-                  type={MODALS.COCOS}
-                  buttonClassName="home__btn"
-                  buttonContent={translations.products.button}
-                >
+              <div className="home__products-info">
+                <div className="home__products-info-col">
+                  <Coconut className="home__coconut" />
+                </div>
+                <div className="home__products-info-col">
                   <ReactMarkdown
+                    className="home__products-description"
                     escapeHtml={false}
-                    className="home__nutrition"
-                    source={translations.products.cocos.nutrition}
+                    source={translations.products.cocos.description}
                   />
-                  <ReactMarkdown
-                    escapeHtml={false}
-                    className="home__ingredients"
-                    source={translations.products.cocos.ingredients}
-                  />
-                </ModalButton>
-              </div>
-              <div className="home__products-info-col">
-                <Apricot className="home__apricot" />
-                <Dates className="home__dates" />
+
+                  <a className="button product" href="https://derriegel.myshopify.com/products/kokos">
+                    {translations.toBar}
+                    <i className="fas fa-arrow-right" />
+                  </a>
+
+                  <br />
+
+                  <ModalButton
+                    type={MODALS.COCOS}
+                    buttonClassName="home__btn"
+                    buttonContent={translations.products.button}
+                  >
+                    <ReactMarkdown
+                      escapeHtml={false}
+                      className="home__nutrition"
+                      source={translations.products.cocos.nutrition}
+                    />
+                    <ReactMarkdown
+                      escapeHtml={false}
+                      className="home__ingredients"
+                      source={translations.products.cocos.ingredients}
+                    />
+                  </ModalButton>
+                </div>
+                <div className="home__products-info-col">
+                  <Apricot className="home__apricot" />
+                  <Dates className="home__dates" />
+                </div>
               </div>
             </div>
-          </div>
-          <div>
-            <h3 className="home__products-sub-headline">{translations.products.active.headline}</h3>
+            <div>
+              <h3 className="home__products-sub-headline">{translations.products.active.headline}</h3>
 
-            <div className="home__products-intro">
-              <div className="home__products-wrapper">
+              <div className="home__products-intro">
+                <div className="home__products-wrapper">
+                  <div className="home__products-substances home__products-substances--active-vegan">
+                    <div className="home__indicator" />
+                    <div className="home__indicator-circle" />
+                    <ReactMarkdown
+                      escapeHtml={false}
+                      className="home__substances"
+                      source={translations.products.active.vegan}
+                    />
+                  </div>
+                  <div className="home__products-substances home__products-substances--fruity home__products-substances--invert">
+                    <div className="home__indicator" />
+                    <div className="home__indicator-circle" />
+                    <ReactMarkdown
+                      escapeHtml={false}
+                      className="home__substances"
+                      source={translations.products.active.fruity}
+                    />
+                  </div>
+                  <div className="home__products-substances home__products-substances--banana">
+                    <div className="home__indicator" />
+                    <div className="home__indicator-circle" />
+                    <ReactMarkdown
+                      escapeHtml={false}
+                      className="home__substances"
+                      source={translations.products.active.banana}
+                    />
+                  </div>
+
+                  <img className="home__products-img-bar" src="/img/products/mixed.png" alt="mixed bar image" />
+                  <img className="home__products-img-packaging" src="/img/packaging.png" alt="packaging image" />
+                </div>
+              </div>
+
+              <div className="home__products-substances-mobile">
                 <div className="home__products-substances home__products-substances--active-vegan">
-                  <div className="home__indicator" />
                   <div className="home__indicator-circle" />
                   <ReactMarkdown
                     escapeHtml={false}
@@ -475,7 +521,6 @@ export default () => {
                   />
                 </div>
                 <div className="home__products-substances home__products-substances--fruity home__products-substances--invert">
-                  <div className="home__indicator" />
                   <div className="home__indicator-circle" />
                   <ReactMarkdown
                     escapeHtml={false}
@@ -484,7 +529,6 @@ export default () => {
                   />
                 </div>
                 <div className="home__products-substances home__products-substances--banana">
-                  <div className="home__indicator" />
                   <div className="home__indicator-circle" />
                   <ReactMarkdown
                     escapeHtml={false}
@@ -492,277 +536,260 @@ export default () => {
                     source={translations.products.active.banana}
                   />
                 </div>
-
-                <img className="home__products-img-bar" src="/img/products/mixed.png" alt="mixed bar image" />
-                <img className="home__products-img-packaging" src="/img/packaging.png" alt="packaging image" />
               </div>
-            </div>
 
-            <div className="home__products-substances-mobile">
-              <div className="home__products-substances home__products-substances--active-vegan">
-                <div className="home__indicator-circle" />
-                <ReactMarkdown
-                  escapeHtml={false}
-                  className="home__substances"
-                  source={translations.products.active.vegan}
-                />
-              </div>
-              <div className="home__products-substances home__products-substances--fruity home__products-substances--invert">
-                <div className="home__indicator-circle" />
-                <ReactMarkdown
-                  escapeHtml={false}
-                  className="home__substances"
-                  source={translations.products.active.fruity}
-                />
-              </div>
-              <div className="home__products-substances home__products-substances--banana">
-                <div className="home__indicator-circle" />
-                <ReactMarkdown
-                  escapeHtml={false}
-                  className="home__substances"
-                  source={translations.products.active.banana}
-                />
-              </div>
-            </div>
-
-            <div className="home__products-info">
-              <div className="home__products-info-col">
-                <Cranberry className="home__cranberry" />
-                <Banana className="home__banana" />
-              </div>
-              <div className="home__products-info-col">
-                <ReactMarkdown
-                  className="home__products-description"
-                  escapeHtml={false}
-                  source={translations.products.active.description}
-                />
-
-                <a className="button product" href="https://derriegel.myshopify.com/products/active">
-                  {translations.toBar}
-                  <i className="fas fa-arrow-right" />
-                </a>
-
-                <br />
-
-                <ModalButton
-                  type={MODALS.ACTIVE}
-                  buttonClassName="home__btn"
-                  buttonContent={translations.products.button}
-                >
+              <div className="home__products-info">
+                <div className="home__products-info-col">
+                  <Cranberry className="home__cranberry" />
+                  <Banana className="home__banana" />
+                </div>
+                <div className="home__products-info-col">
                   <ReactMarkdown
+                    className="home__products-description"
                     escapeHtml={false}
-                    className="home__nutrition"
-                    source={translations.products.active.nutrition}
+                    source={translations.products.active.description}
                   />
-                  <ReactMarkdown
-                    escapeHtml={false}
-                    className="home__ingredients"
-                    source={translations.products.active.ingredients}
-                  />
-                </ModalButton>
+
+                  <a className="button product" href="https://derriegel.myshopify.com/products/active">
+                    {translations.toBar}
+                    <i className="fas fa-arrow-right" />
+                  </a>
+
+                  <br />
+
+                  <ModalButton
+                    type={MODALS.ACTIVE}
+                    buttonClassName="home__btn"
+                    buttonContent={translations.products.button}
+                  >
+                    <ReactMarkdown
+                      escapeHtml={false}
+                      className="home__nutrition"
+                      source={translations.products.active.nutrition}
+                    />
+                    <ReactMarkdown
+                      escapeHtml={false}
+                      className="home__ingredients"
+                      source={translations.products.active.ingredients}
+                    />
+                  </ModalButton>
+                </div>
+                <div className="home__products-info-col">
+                  <Apricot className="home__apricot" />
+                  <Dates className="home__dates" />
+                </div>
               </div>
-              <div className="home__products-info-col">
-                <Apricot className="home__apricot" />
-                <Dates className="home__dates" />
+            </div>
+          </Swiper>
+        </div>
+
+        <div className="home__ingredients" id="ingredients">
+          <h2 className="home__headline home__headline--space">{translations.header.ingredients}</h2>
+
+          <div className="home__row">
+            <div className="home__col">
+              <Swiper {...simpleParams}>
+                <div>
+                  <img src="/img/base-ingredients/all.jpg" alt="all ingredients image" />
+                </div>
+                <div>
+                  <img src="/img/base-ingredients/apricot.jpg" alt="apricot ingredient image" />
+                </div>
+                <div>
+                  <img src="/img/base-ingredients/dates.jpg" alt="dates ingredient image" />
+                </div>
+                <div>
+                  <img src="/img/base-ingredients/dates-alt.jpg" alt="dates alternativ ingredient image" />
+                </div>
+              </Swiper>
+            </div>
+            <div className="home__col home__col--content">
+              <div className="home__col-content-wrapper">
+                <Leaf className="home__leaf icon" />
+                <ReactMarkdown
+                  className="home__col-content"
+                  escapeHtml={false}
+                  source={translations.baseingredients.quality}
+                />
               </div>
             </div>
           </div>
-        </Swiper>
-      </div>
 
-      <div className="home__ingredients" id="ingredients">
-        <h2 className="home__headline home__headline--space">{translations.header.ingredients}</h2>
-
-        <div className="home__row">
-          <div className="home__col">
-            <Swiper {...simpleParams}>
-              <div>
-                <img src="/img/base-ingredients/all.jpg" alt="all ingredients image" />
+          <div className="home__row">
+            <div className="home__col home__col--content">
+              <div className="home__col-content-wrapper">
+                <Bar className="home__bar icon" />
+                <ReactMarkdown
+                  className="home__col-content"
+                  escapeHtml={false}
+                  source={translations.suppingredients.headline}
+                />
               </div>
-              <div>
-                <img src="/img/base-ingredients/apricot.jpg" alt="apricot ingredient image" />
-              </div>
-              <div>
-                <img src="/img/base-ingredients/dates.jpg" alt="dates ingredient image" />
-              </div>
-              <div>
-                <img src="/img/base-ingredients/dates-alt.jpg" alt="dates alternativ ingredient image" />
-              </div>
-            </Swiper>
-          </div>
-          <div className="home__col home__col--content">
-            <div className="home__col-content-wrapper">
-              <Leaf className="home__leaf icon" />
-              <ReactMarkdown
-                className="home__col-content"
-                escapeHtml={false}
-                source={translations.baseingredients.quality}
-              />
+            </div>
+            <div className="home__col">
+              <Swiper {...simpleParams}>
+                <div>
+                  <img src="/img/supplementary-ingredients/cocos.jpg" alt="cocos ingredients image" />
+                </div>
+                <div>
+                  <img src="/img/supplementary-ingredients/cranberries.jpg" alt="cranberries ingredient image" />
+                </div>
+                <div>
+                  <img src="/img/supplementary-ingredients/hazelnuts.jpg" alt="hazelnuts ingredient image" />
+                </div>
+                <div>
+                  <img src="/img/supplementary-ingredients/oat.jpg" alt="oat ingredient image" />
+                </div>
+              </Swiper>
             </div>
           </div>
         </div>
 
-        <div className="home__row">
-          <div className="home__col home__col--content">
-            <div className="home__col-content-wrapper">
-              <Bar className="home__bar icon" />
-              <ReactMarkdown
-                className="home__col-content"
-                escapeHtml={false}
-                source={translations.suppingredients.headline}
-              />
+        <div className="home__section home__about-us" id="about">
+          <h2 className="home__headline home__headline--space">{translations.header.aboutus}</h2>
+
+          <div className="home__row">
+            <div className="home__col">
+              <Swiper {...simpleParams}>
+                <div>
+                  <img src="/img/why-section/bars.jpg" alt="bars image" />
+                </div>
+                <div>
+                  <img src="/img/why-section/emotion.jpg" alt="emotion image" />
+                </div>
+                <div>
+                  <img src="/img/why-section/bowl.jpg" alt="bowl image" />
+                </div>
+              </Swiper>
+            </div>
+            <div className="home__col home__col--content">
+              <div className="home__col-content-wrapper">
+                <ReactMarkdown className="home__col-content" escapeHtml={false} source={translations.aboutus.why} />
+              </div>
             </div>
           </div>
-          <div className="home__col">
-            <Swiper {...simpleParams}>
-              <div>
-                <img src="/img/supplementary-ingredients/cocos.jpg" alt="cocos ingredients image" />
-              </div>
-              <div>
-                <img src="/img/supplementary-ingredients/cranberries.jpg" alt="cranberries ingredient image" />
-              </div>
-              <div>
-                <img src="/img/supplementary-ingredients/hazelnuts.jpg" alt="hazelnuts ingredient image" />
-              </div>
-              <div>
-                <img src="/img/supplementary-ingredients/oat.jpg" alt="oat ingredient image" />
-              </div>
-            </Swiper>
-          </div>
-        </div>
-      </div>
 
-      <div className="home__section home__about-us" id="about">
-        <h2 className="home__headline home__headline--space">{translations.header.aboutus}</h2>
-
-        <div className="home__row">
-          <div className="home__col">
-            <Swiper {...simpleParams}>
-              <div>
-                <img src="/img/why-section/bars.jpg" alt="bars image" />
+          <div className="home__row">
+            <div className="home__col home__col--content">
+              <div className="home__col-content-wrapper">
+                <ReactMarkdown className="home__col-content" escapeHtml={false} source={translations.aboutus.team} />
               </div>
+            </div>
+            <div className="home__col">
               <div>
-                <img src="/img/why-section/emotion.jpg" alt="emotion image" />
+                <img src="/img/why-section/ceos.jpg" alt="ceos image" />
               </div>
-              <div>
-                <img src="/img/why-section/bowl.jpg" alt="bowl image" />
-              </div>
-            </Swiper>
-          </div>
-          <div className="home__col home__col--content">
-            <div className="home__col-content-wrapper">
-              <ReactMarkdown className="home__col-content" escapeHtml={false} source={translations.aboutus.why} />
             </div>
           </div>
         </div>
 
-        <div className="home__row">
-          <div className="home__col home__col--content">
-            <div className="home__col-content-wrapper">
-              <ReactMarkdown className="home__col-content" escapeHtml={false} source={translations.aboutus.team} />
-            </div>
+        <div className="home__buy" id="buy">
+          <h2 className="home__headline home__headline--space home__headline--invert">{translations.header.buy}</h2>
+
+          <div className="home__buy-products">
+            <Button>
+              <a className="home__contact-btn" href="https://derriegel.myshopify.com/collections/all">
+                {translations.buy.onlineShop}
+              </a>
+            </Button>
           </div>
-          <div className="home__col">
-            <div>
-              <img src="/img/why-section/ceos.jpg" alt="ceos image" />
-            </div>
+
+          {_.map(translations.buy.stores, (store, key) => {
+            return (
+              <a key={key} target="_blank" rel="noreferrer nofollow" className="home__buy-store" href={store.href}>
+                {store.text}
+              </a>
+            );
+          })}
+
+          <div className="home__buy-content">
+            <ReactMarkdown className="home_buy-headline" escapeHtml={false} source={translations.buy.headline} />
+            <Button>
+              <a className="home__contact-btn" href={`mailto:${translations.footer.email}`}>
+                {translations.buy.contact}
+              </a>
+            </Button>
           </div>
         </div>
-      </div>
 
-      <div className="home__buy" id="buy">
-        <h2 className="home__headline home__headline--space home__headline--invert">{translations.header.buy}</h2>
-
-        <div className="home__buy-products">
-          <Button>
-            <a className="home__contact-btn" href="https://derriegel.myshopify.com/collections/all">
-              {translations.buy.onlineShop}
-            </a>
-          </Button>
+        <div className="home__section home__video-section" id="video">
+          <InView>
+            {({ inView, ref }) => (
+              <div ref={ref} className="home__image-video" id="home">
+                <ReactPlayer
+                  ref={player}
+                  loop
+                  className="home__video"
+                  muted={muted}
+                  url="/video/iron-man.mp4"
+                  controls={isMobile()}
+                  playing={shouldPlay(inView)}
+                  width="100%"
+                  height="100%"
+                />
+                {renderMuted()}
+                <i onClick={() => goFullscreen(_.get(player, "current"))} className="home__icon fas fa-expand" />
+              </div>
+            )}
+          </InView>
         </div>
 
-
-        {_.map(translations.buy.stores, (store, key) => {
-          return (
-            <a key={key} target="_blank" rel="noreferrer nofollow" className="home__buy-store" href={store.href}>
-              {store.text}
-            </a>
-          );
-        })}
-
-        <div className="home__buy-content">
-          <ReactMarkdown className="home_buy-headline" escapeHtml={false} source={translations.buy.headline} />
-          <Button>
-            <a className="home__contact-btn" href={`mailto:${translations.footer.email}`}>
-              {translations.buy.contact}
-            </a>
-          </Button>
+        <div className="home__section" id="contact">
+          <Grid container>
+            <Grid
+              item
+              md={6}
+              xs={12}
+              alignContent="center"
+              alignItems="center"
+              style={{ display: "flex", justifyContent: "center", background: theme.palette.white }}
+            >
+              <Box
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                flexDirection="column"
+                p="40px"
+                style={{ minHeight: "400px" }}
+              >
+                <ReactMarkdown className="home__col-content" escapeHtml={false} source={translations.contact.text} />
+                <div className="home__social-wrapper">
+                  <a className="home__social" href={`mailto:${translations.footer.email}`}>
+                    hallo@derriegel.com
+                  </a>
+                  <a className="home__social" href={translations.footer.insta}>
+                    <img className="home__social-icons" src="/icons/insta.svg" alt="svg icon insta" />
+                    <span className="home__social-content">{translations.instagram.text}</span>
+                  </a>
+                </div>
+              </Box>
+            </Grid>
+            <Grid item md={6} xs={12}>
+              <div>
+                <img src="/img/contact-emotion.png" alt="ceos image" />
+              </div>
+            </Grid>
+          </Grid>
         </div>
-      </div>
 
-      <div className="home__section home__video-section" id="video">
-        <InView>
-          {({ inView, ref }) => (
-            <div ref={ref} className="home__image-video" id="home">
-              <ReactPlayer
-                ref={player}
-                loop
-                className="home__video"
-                muted={muted}
-                url="/video/iron-man.mp4"
-                controls={isMobile()}
-                playing={shouldPlay(inView)}
-                width="100%"
-                height="100%"
-              />
-              {renderMuted()}
-              <i onClick={() => goFullscreen(_.get(player, "current"))} className="home__icon fas fa-expand" />
-            </div>
-          )}
-        </InView>
-      </div>
+        <Container id="instagram">
+          <Box p="50px 0 80px 0">
+            <h2 className="home__headline home__headline--space">{translations.header.instagram}</h2>
+            <h3 className="home__insta-text">{translations.instagram.text}</h3>
 
-      <div className="home__section home__contact" id="contact">
-        <div className="home__row">
-          <div className="home__col home__col--content">
-            <div className="home__col-content-wrapper">
-              <ReactMarkdown className="home__col-content" escapeHtml={false} source={translations.contact.text} />
-              <div className="home__social-wrapper">
-                <a className="home__social" href={`mailto:${translations.footer.email}`}>
-                  hallo@derriegel.com
+            <Box pb="40px">
+              <InstagramWrapper shouldRender />
+            </Box>
+            <Box display="flex" justifyContent="center">
+              <Button style={{ display: "inline-block" }}>
+                <a className="home__follow-instagram" target="_blank" href={translations.footer.insta}>
+                  {translations.instagram.button}
                 </a>
-                {/*<a className="home__social" href={translations.footer.fb}>*/}
-                {/*  <img className="home__social-icons" src="/icons/fb.svg" alt="svg icon facebook" />*/}
-                {/*  <span className="home__social-content">@der-riegel</span>*/}
-                {/*</a>*/}
-                <a className="home__social" href={translations.footer.insta}>
-                  <img className="home__social-icons" src="/icons/insta.svg" alt="svg icon insta" />
-                  <span className="home__social-content">{translations.instagram.text}</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="home__col">
-            <div>
-              <img src="/img/contact-emotion.png" alt="ceos image" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="home__section home__instagram" id="instagram">
-        <h2 className="home__headline home__headline--space">{translations.header.instagram}</h2>
-        <h3 className="home__insta-text">{translations.instagram.text}</h3>
-
-        <div className="home__row">
-          <InstagramWrapper shouldRender />
-        </div>
-        <Button>
-          <a className="home__follow-instagram" target="_blank" href={translations.footer.insta}>
-            {translations.instagram.button}
-          </a>
-        </Button>
-      </div>
+              </Button>
+            </Box>
+          </Box>
+        </Container>
+      </ScopedCssBaseline>
     </Layout>
   );
 };
