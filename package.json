@@ -53,7 +53,7 @@
     "eslint-plugin-react": "7.x",
     "gulp": "4.0.0",
     "gulp-rsync": "0.0.8",
-    "minimist": "1.2.0",
+    "minimist": "1.2.3",
     "serve": "10.1.2"
   }
 }
