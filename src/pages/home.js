@@ -6,6 +6,7 @@ import { InView } from "react-intersection-observer";
 import Swiper from "react-id-swiper";
 import _ from "lodash";
 import { Navigation, Pagination } from "swiper/dist/js/swiper.esm";
+import ReactGA from "react-ga";
 
 import Layout from "../containers/Layout";
 import Button from "../components/Button/Button";
@@ -132,6 +133,8 @@ export default () => {
     return inView;
   };
 
+  const trackingId = "UA-163289394-1";
+
   useEffect(() => {
     const s = document.createElement("script");
     const sc = document.createElement("script");
@@ -144,15 +147,17 @@ export default () => {
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-163289394-1', { 'anonymize_ip': true });
+  gtag('config', '${trackingId}', { 'anonymize_ip': true });
 `;
     document.body.appendChild(sc);
     document.body.appendChild(s);
   }, []);
 
-  // useEffect(() => {
-  //   console.log("datalayer: ", window.dataLayer);
-  // });
+  useEffect(() => {
+    if (window.gtag) {
+      window.gtag("config", trackingId, { page_path: window.location.hash });
+    }
+  });
 
   return (
     <Layout {...routeData} className="home">
