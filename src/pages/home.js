@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useRouteData } from "react-static";
 import ReactMarkdown from "react-markdown/with-html";
 import ReactPlayer from "react-player";
@@ -6,6 +6,7 @@ import { InView } from "react-intersection-observer";
 import Swiper from "react-id-swiper";
 import _ from "lodash";
 import { Navigation, Pagination } from "swiper/dist/js/swiper.esm";
+import ReactGA from "react-ga";
 
 import Layout from "../containers/Layout";
 import Button from "../components/Button/Button";
@@ -131,6 +132,11 @@ export default () => {
 
     return inView;
   };
+
+  useEffect(() => {
+    ReactGA.initialize("UA-163289394-1");
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   return (
     <Layout {...routeData} className="home">
@@ -680,7 +686,6 @@ export default () => {
             </a>
           </Button>
         </div>
-
 
         {_.map(translations.buy.stores, (store, key) => {
           return (
