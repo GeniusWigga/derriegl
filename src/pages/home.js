@@ -6,7 +6,6 @@ import { InView } from "react-intersection-observer";
 import Swiper from "react-id-swiper";
 import _ from "lodash";
 import { Navigation, Pagination } from "swiper/dist/js/swiper.esm";
-import ReactGA from "react-ga";
 
 import Layout from "../containers/Layout";
 import Button from "../components/Button/Button";
@@ -134,9 +133,26 @@ export default () => {
   };
 
   useEffect(() => {
-    ReactGA.initialize("UA-163289394-1");
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    const s = document.createElement("script");
+    const sc = document.createElement("script");
+    sc.src = "https://www.googletagmanager.com/gtag/js?id=UA-163289394-1";
+    sc.async = true;
+    s.type = "text/javascript";
+    s.async = true;
+    s.innerHTML = `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-163289394-1', { 'anonymize_ip': true });
+`;
+    document.body.appendChild(sc);
+    document.body.appendChild(s);
   }, []);
+
+  // useEffect(() => {
+  //   console.log("datalayer: ", window.dataLayer);
+  // });
 
   return (
     <Layout {...routeData} className="home">
