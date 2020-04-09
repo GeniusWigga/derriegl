@@ -26,7 +26,7 @@ import Banana from "../components/Icons/Banana";
 
 import "./home.scss";
 import buildClassName from "../helpers/buildClassName";
-import ModalButton from "../components/ModalButton/ModalButton";
+// import ModalButton from "../components/ModalButton/ModalButton";
 import InstagramWrapper from "../components/InstagramWrapper/InstagramWrapper";
 
 const ArrowWrapper = ({ prev, next, children }) => {
@@ -228,22 +228,22 @@ export default () => {
 
                 <br />
 
-                <ModalButton
-                  type={MODALS.NATURAL}
-                  buttonClassName="home__btn"
-                  buttonContent={translations.products.button}
-                >
-                  <ReactMarkdown
-                    escapeHtml={false}
-                    className="home__nutrition"
-                    source={translations.products.natural.nutrition}
-                  />
-                  <ReactMarkdown
-                    escapeHtml={false}
-                    className="home__ingredients"
-                    source={translations.products.natural.ingredients}
-                  />
-                </ModalButton>
+                {/*<ModalButton*/}
+                {/*  type={MODALS.NATURAL}*/}
+                {/*  buttonClassName="home__btn"*/}
+                {/*  buttonContent={translations.products.button}*/}
+                {/*>*/}
+                {/*  <ReactMarkdown*/}
+                {/*    escapeHtml={false}*/}
+                {/*    className="home__nutrition"*/}
+                {/*    source={translations.products.natural.nutrition}*/}
+                {/*  />*/}
+                {/*  <ReactMarkdown*/}
+                {/*    escapeHtml={false}*/}
+                {/*    className="home__ingredients"*/}
+                {/*    source={translations.products.natural.ingredients}*/}
+                {/*  />*/}
+                {/*</ModalButton>*/}
               </div>
               <div className="home__products-info-col">
                 <Apricot className="home__apricot" />
@@ -333,18 +333,18 @@ export default () => {
 
                 <br />
 
-                <ModalButton type={MODALS.NUT} buttonClassName="home__btn" buttonContent={translations.products.button}>
-                  <ReactMarkdown
-                    escapeHtml={false}
-                    className="home__nutrition"
-                    source={translations.products.nut.nutrition}
-                  />
-                  <ReactMarkdown
-                    escapeHtml={false}
-                    className="home__ingredients"
-                    source={translations.products.nut.ingredients}
-                  />
-                </ModalButton>
+                {/*<ModalButton type={MODALS.NUT} buttonClassName="home__btn" buttonContent={translations.products.button}>*/}
+                {/*  <ReactMarkdown*/}
+                {/*    escapeHtml={false}*/}
+                {/*    className="home__nutrition"*/}
+                {/*    source={translations.products.nut.nutrition}*/}
+                {/*  />*/}
+                {/*  <ReactMarkdown*/}
+                {/*    escapeHtml={false}*/}
+                {/*    className="home__ingredients"*/}
+                {/*    source={translations.products.nut.ingredients}*/}
+                {/*  />*/}
+                {/*</ModalButton>*/}
               </div>
               <div className="home__products-info-col">
                 <Apricot className="home__apricot" />
@@ -437,22 +437,22 @@ export default () => {
 
                 <br />
 
-                <ModalButton
-                  type={MODALS.COCOS}
-                  buttonClassName="home__btn"
-                  buttonContent={translations.products.button}
-                >
-                  <ReactMarkdown
-                    escapeHtml={false}
-                    className="home__nutrition"
-                    source={translations.products.cocos.nutrition}
-                  />
-                  <ReactMarkdown
-                    escapeHtml={false}
-                    className="home__ingredients"
-                    source={translations.products.cocos.ingredients}
-                  />
-                </ModalButton>
+                {/*<ModalButton*/}
+                {/*  type={MODALS.COCOS}*/}
+                {/*  buttonClassName="home__btn"*/}
+                {/*  buttonContent={translations.products.button}*/}
+                {/*>*/}
+                {/*  <ReactMarkdown*/}
+                {/*    escapeHtml={false}*/}
+                {/*    className="home__nutrition"*/}
+                {/*    source={translations.products.cocos.nutrition}*/}
+                {/*  />*/}
+                {/*  <ReactMarkdown*/}
+                {/*    escapeHtml={false}*/}
+                {/*    className="home__ingredients"*/}
+                {/*    source={translations.products.cocos.ingredients}*/}
+                {/*  />*/}
+                {/*</ModalButton>*/}
               </div>
               <div className="home__products-info-col">
                 <Apricot className="home__apricot" />
@@ -544,22 +544,22 @@ export default () => {
 
                 <br />
 
-                <ModalButton
-                  type={MODALS.ACTIVE}
-                  buttonClassName="home__btn"
-                  buttonContent={translations.products.button}
-                >
-                  <ReactMarkdown
-                    escapeHtml={false}
-                    className="home__nutrition"
-                    source={translations.products.active.nutrition}
-                  />
-                  <ReactMarkdown
-                    escapeHtml={false}
-                    className="home__ingredients"
-                    source={translations.products.active.ingredients}
-                  />
-                </ModalButton>
+                {/*<ModalButton*/}
+                {/*  type={MODALS.ACTIVE}*/}
+                {/*  buttonClassName="home__btn"*/}
+                {/*  buttonContent={translations.products.button}*/}
+                {/*>*/}
+                {/*  <ReactMarkdown*/}
+                {/*    escapeHtml={false}*/}
+                {/*    className="home__nutrition"*/}
+                {/*    source={translations.products.active.nutrition}*/}
+                {/*  />*/}
+                {/*  <ReactMarkdown*/}
+                {/*    escapeHtml={false}*/}
+                {/*    className="home__ingredients"*/}
+                {/*    source={translations.products.active.ingredients}*/}
+                {/*  />*/}
+                {/*</ModalButton>*/}
               </div>
               <div className="home__products-info-col">
                 <Apricot className="home__apricot" />
