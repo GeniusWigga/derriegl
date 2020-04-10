@@ -37,13 +37,33 @@ export function smoothScroll() {
 }
 
 export function src(path) {
-  const fallbackSrc = `${path}-1900px.png`;
-  const srcSet = `${path}-600px.png 600w,
-                  ${path}-1000px.png 1000w,
-                  ${fallbackSrc} 1900w`;
-
   return {
-    src: fallbackSrc,
-    srcSet,
+    large: {
+      img: {
+        srcSet: `${path}-600px.png 600w,
+                  ${path}-1000px.png 1000w,
+                  ${path}-1900px.png 1900w`,
+        src: `${path}-1900px.png`,
+      },
+      source: `${path}-600px.webp 600w,
+                  ${path}-1000px.webp 1000w,
+                  ${path}-1900px.webp 1900w`,
+    },
+    medium: {
+      img: {
+        srcSet: `${path}-600px.png 600w,
+                  ${path}-1000px.png 1000w`,
+        src: `${path}-1000px.png`,
+      },
+      source: `${path}-600px.webp 600w,
+                  ${path}-1000px.webp 1000w`,
+    },
+    small: {
+      img: {
+        srcSet: `${path}-600px.png 600w`,
+        src: `${path}-600px.png`,
+      },
+      source: `${path}-600px.webp`,
+    },
   };
 }
