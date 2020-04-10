@@ -6,7 +6,6 @@ import { InView } from "react-intersection-observer";
 import Swiper from "react-id-swiper";
 import _ from "lodash";
 import { Navigation, Pagination } from "swiper/dist/js/swiper.esm";
-import ReactGA from "react-ga";
 
 import Layout from "../containers/Layout";
 import Button from "../components/Button/Button";
@@ -27,8 +26,8 @@ import Banana from "../components/Icons/Banana";
 
 import "./home.scss";
 import buildClassName from "../helpers/buildClassName";
-// import ModalButton from "../components/ModalButton/ModalButton";
 import InstagramWrapper from "../components/InstagramWrapper/InstagramWrapper";
+import { src } from "../helpers/frontend";
 
 const ArrowWrapper = ({ prev, next, children }) => {
   return (
@@ -46,13 +45,6 @@ const ArrowWrapper = ({ prev, next, children }) => {
 const NAVIGATION_PROPS = {
   nextEl: ".home__slider-button--next",
   prevEl: ".home__slider-button--prev",
-};
-
-const MODALS = {
-  NATURAL: "NATURAL",
-  NUT: "NUT",
-  COCOS: "COCOS",
-  ACTIVE: "ACTIVE",
 };
 
 export default () => {
@@ -89,6 +81,9 @@ export default () => {
   const simpleParams = {
     modules: [Navigation, Pagination],
     navigation: NAVIGATION_PROPS,
+    // lazy: {
+    //   loadPrevNext: true,
+    // },
     pagination: {
       el: ".swiper-pagination",
       type: "bullets",
@@ -162,7 +157,7 @@ export default () => {
   return (
     <Layout {...routeData} className="home">
       <div className="home__hero" id="home">
-        <img className="home__hero-img" src="/img/hero_2.jpg" alt="home hero" />
+        <img className="home__hero-img" alt="home hero" {...src("/img/hero_2")} />
         <div className="home__badge-wrapper">
           <Badge className="home__badge" />
         </div>
@@ -205,8 +200,8 @@ export default () => {
                     source={translations.products.natural.carbs}
                   />
                 </div>
-                <img className="home__products-img-bar" src="/img/products/natural.png" alt="natural bar image" />
-                <img className="home__products-img-packaging" src="/img/packaging.png" alt="packaging image" />
+                <img className="home__products-img-bar" alt="natural bar image" {...src("/img/products/natural")} />
+                <img className="home__products-img-packaging" alt="packaging image" {...src("/img/packaging")} />
               </div>
             </div>
 
@@ -310,8 +305,8 @@ export default () => {
                     source={translations.products.nut.protein}
                   />
                 </div>
-                <img className="home__products-img-bar" src="/img/products/choco.png" alt="natural bar image" />
-                <img className="home__products-img-packaging" src="/img/packaging.png" alt="packaging image" />
+                <img className="home__products-img-bar" alt="natural bar image" {...src("/img/products/choco")} />
+                <img className="home__products-img-packaging" alt="packaging image" {...src("/img/packaging")} />
               </div>
             </div>
 
@@ -412,8 +407,8 @@ export default () => {
                   />
                 </div>
 
-                <img className="home__products-img-bar" src="/img/products/cocos.png" alt="cocos bar image" />
-                <img className="home__products-img-packaging" src="/img/packaging.png" alt="packaging image" />
+                <img className="home__products-img-bar" alt="cocos bar image" {...src("/img/products/cocos")} />
+                <img className="home__products-img-packaging" alt="packaging image" {...src("/img/packaging")} />
               </div>
             </div>
 
@@ -520,8 +515,8 @@ export default () => {
                   />
                 </div>
 
-                <img className="home__products-img-bar" src="/img/products/mixed.png" alt="mixed bar image" />
-                <img className="home__products-img-packaging" src="/img/packaging.png" alt="packaging image" />
+                <img className="home__products-img-bar" alt="mixed bar image" {...src("/img/products/mixed")} />
+                <img className="home__products-img-packaging" alt="packaging image" {...src("/img/packaging")} />
               </div>
             </div>
 
@@ -568,25 +563,6 @@ export default () => {
                   {translations.toBar}
                   <i className="fas fa-arrow-right" />
                 </a>
-
-                <br />
-
-                {/*<ModalButton*/}
-                {/*  type={MODALS.ACTIVE}*/}
-                {/*  buttonClassName="home__btn"*/}
-                {/*  buttonContent={translations.products.button}*/}
-                {/*>*/}
-                {/*  <ReactMarkdown*/}
-                {/*    escapeHtml={false}*/}
-                {/*    className="home__nutrition"*/}
-                {/*    source={translations.products.active.nutrition}*/}
-                {/*  />*/}
-                {/*  <ReactMarkdown*/}
-                {/*    escapeHtml={false}*/}
-                {/*    className="home__ingredients"*/}
-                {/*    source={translations.products.active.ingredients}*/}
-                {/*  />*/}
-                {/*</ModalButton>*/}
               </div>
               <div className="home__products-info-col">
                 <Apricot className="home__apricot" />
@@ -604,16 +580,23 @@ export default () => {
           <div className="home__col">
             <Swiper {...simpleParams}>
               <div>
-                <img src="/img/base-ingredients/all.jpg" alt="all ingredients image" />
+                <img
+                  // className="swiper-lazy"
+                  alt="all ingredients image"
+                  src="/img/base-ingredients/all-600px.png"
+                  {/*{...src("/img/base-ingredients/all")}*/}
+                  // data-srcset={src("/img/base-ingredients/all").srcSet}
+                  // data-src={src("/img/base-ingredients/all").src}
+                />
               </div>
               <div>
-                <img src="/img/base-ingredients/apricot.jpg" alt="apricot ingredient image" />
+                <img alt="apricot ingredient image" src="/img/base-ingredients/apricot-600px.png" />
               </div>
               <div>
-                <img src="/img/base-ingredients/dates.jpg" alt="dates ingredient image" />
+                <img alt="dates ingredient image" src="/img/base-ingredients/dates-600px.png" />
               </div>
               <div>
-                <img src="/img/base-ingredients/dates-alt.jpg" alt="dates alternativ ingredient image" />
+                <img alt="dates alternativ ingredient image" {...src("/img/base-ingredients/dates-alt")} />
               </div>
             </Swiper>
           </div>
@@ -643,16 +626,16 @@ export default () => {
           <div className="home__col">
             <Swiper {...simpleParams}>
               <div>
-                <img src="/img/supplementary-ingredients/cocos.jpg" alt="cocos ingredients image" />
+                <img alt="cocos ingredients image" {...src("/img/supplementary-ingredients/cocos")} />
               </div>
               <div>
-                <img src="/img/supplementary-ingredients/cranberries.jpg" alt="cranberries ingredient image" />
+                <img alt="cranberries ingredient image" {...src("/img/supplementary-ingredients/cranberries")} />
               </div>
               <div>
-                <img src="/img/supplementary-ingredients/hazelnuts.jpg" alt="hazelnuts ingredient image" />
+                <img alt="hazelnuts ingredient image" {...src("/img/supplementary-ingredients/hazelnuts")} />
               </div>
               <div>
-                <img src="/img/supplementary-ingredients/oat.jpg" alt="oat ingredient image" />
+                <img alt="oat ingredient image" {...src("/img/supplementary-ingredients/oat")} />
               </div>
             </Swiper>
           </div>
@@ -666,13 +649,13 @@ export default () => {
           <div className="home__col">
             <Swiper {...simpleParams}>
               <div>
-                <img src="/img/why-section/bars.jpg" alt="bars image" />
+                <img alt="bars image" {...src("/img/why-section/bars")} />
               </div>
               <div>
-                <img src="/img/why-section/emotion.jpg" alt="emotion image" />
+                <img alt="emotion image" {...src("/img/why-section/emotion")} />
               </div>
               <div>
-                <img src="/img/why-section/bowl.jpg" alt="bowl image" />
+                <img alt="bowl image" {...src("/img/why-section/bowl")} />
               </div>
             </Swiper>
           </div>
@@ -691,7 +674,7 @@ export default () => {
           </div>
           <div className="home__col">
             <div>
-              <img src="/img/why-section/ceos.jpg" alt="ceos image" />
+              <img alt="ceos image" {...src("/img/why-section/ceos")} />
             </div>
           </div>
         </div>
@@ -757,10 +740,6 @@ export default () => {
                 <a className="home__social" href={`mailto:${translations.footer.email}`}>
                   hallo@derriegel.com
                 </a>
-                {/*<a className="home__social" href={translations.footer.fb}>*/}
-                {/*  <img className="home__social-icons" src="/icons/fb.svg" alt="svg icon facebook" />*/}
-                {/*  <span className="home__social-content">@der-riegel</span>*/}
-                {/*</a>*/}
                 <a className="home__social" href={translations.footer.insta}>
                   <img className="home__social-icons" src="/icons/insta.svg" alt="svg icon insta" />
                   <span className="home__social-content">{translations.instagram.text}</span>
@@ -770,7 +749,7 @@ export default () => {
           </div>
           <div className="home__col">
             <div>
-              <img src="/img/contact-emotion.png" alt="ceos image" />
+              <img alt="ceos image" {...src("/img/contact-emotion")} />
             </div>
           </div>
         </div>

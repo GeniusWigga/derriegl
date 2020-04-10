@@ -25,7 +25,7 @@ export default ({ translations }) => {
   return (
     <nav className="header">
       <a href="/" className="header__logo-wrapper">
-        <img className="header__logo" src="/img/logo.png" alt="Der Riegel Logo" />
+        <img className="header__logo" src="/img/logo-600px.png" alt="Der Riegel Logo" />
       </a>
       <div className={buildClassName("header__nav-wrapper", { open })}>
         <a

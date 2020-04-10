@@ -5,6 +5,10 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf artifacts dist tmp",
+    "clean:images": "rm -rf public/img",
+    "optim-images": "imageoptim --imagealpha 'public/img/**/*.png'",
+    "resize-images": "gulp resize-images",
+    "images:optimization": "npm run clean:images && npm run resize-images && npm run optim-images",
     "deploy:staging": "npm run clean && npm run build && gulp deploy --staging",
     "deploy:production": "npm run clean && npm run build && gulp deploy --production",
     "start": "react-static start",
@@ -52,6 +56,7 @@
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-react": "7.19.0",
     "gulp": "4.0.2",
+    "gulp-responsive": "^3.0.1",
     "gulp-rsync": "0.0.8",
     "minimist": "1.2.5 ",
     "serve": "11.3.0"
