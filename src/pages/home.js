@@ -27,7 +27,6 @@ import Banana from "../components/Icons/Banana";
 import "./home.scss";
 import buildClassName from "../helpers/buildClassName";
 import InstagramWrapper from "../components/InstagramWrapper/InstagramWrapper";
-import { src } from "../helpers/frontend";
 import Image from "../components/Image/Image";
 
 const ArrowWrapper = ({ prev, next, children }) => {
@@ -82,9 +81,10 @@ export default () => {
   const simpleParams = {
     modules: [Navigation, Pagination],
     navigation: NAVIGATION_PROPS,
-    // lazy: {
-    //   loadPrevNext: true,
-    // },
+    preloadImages: false,
+    lazy: {
+      loadPrevNext: true,
+    },
     pagination: {
       el: ".swiper-pagination",
       type: "bullets",
@@ -567,20 +567,32 @@ export default () => {
 
         <div className="home__row">
           <div className="home__col">
-            <Swiper {...simpleParams}>
-              <div>
-                <Image alt="all ingredients image" srcPath="/img/base-ingredients/all" size="small" />
-              </div>
-              <div>
-                <Image alt="apricot ingredient image" srcPath="/img/base-ingredients/apricot" size="small" />
-              </div>
-              <div>
-                <Image alt="dates ingredient image" srcPath="/img/base-ingredients/dates" size="small" />
-              </div>
-              <div>
-                <Image alt="dates alternativ ingredient image" srcPath="/img/base-ingredients/dates-alt" size="small" />
-              </div>
-            </Swiper>
+            <InView triggerOnce>
+              {({ inView, ref }) => (
+                <div ref={ref}>
+                  {inView && (
+                    <Swiper {...simpleParams}>
+                      <div>
+                        <Image alt="all ingredients image" srcPath="/img/base-ingredients/all" size="small" />
+                      </div>
+                      <div>
+                        <Image alt="apricot ingredient image" srcPath="/img/base-ingredients/apricot" size="small" />
+                      </div>
+                      <div>
+                        <Image alt="dates ingredient image" srcPath="/img/base-ingredients/dates" size="small" />
+                      </div>
+                      <div>
+                        <Image
+                          alt="dates alternativ ingredient image"
+                          srcPath="/img/base-ingredients/dates-alt"
+                          size="small"
+                        />
+                      </div>
+                    </Swiper>
+                  )}
+                </div>
+              )}
+            </InView>
           </div>
           <div className="home__col home__col--content">
             <div className="home__col-content-wrapper">
@@ -606,28 +618,40 @@ export default () => {
             </div>
           </div>
           <div className="home__col">
-            <Swiper {...simpleParams}>
-              <div>
-                <Image alt="cocos ingredients image" srcPath="/img/supplementary-ingredients/cocos" size="small" />
-              </div>
-              <div>
-                <Image
-                  alt="cranberries ingredient image"
-                  srcPath="/img/supplementary-ingredients/cranberries"
-                  size="small"
-                />
-              </div>
-              <div>
-                <Image
-                  alt="hazelnuts ingredient image"
-                  srcPath="/img/supplementary-ingredients/hazelnuts"
-                  size="small"
-                />
-              </div>
-              <div>
-                <Image alt="oat ingredient image" srcPath="/img/supplementary-ingredients/oat" size="small" />
-              </div>
-            </Swiper>
+            <InView triggerOnce>
+              {({ inView, ref }) => (
+                <div ref={ref}>
+                  {inView && (
+                    <Swiper {...simpleParams}>
+                      <div>
+                        <Image
+                          alt="cocos ingredients image"
+                          srcPath="/img/supplementary-ingredients/cocos"
+                          size="small"
+                        />
+                      </div>
+                      <div>
+                        <Image
+                          alt="cranberries ingredient image"
+                          srcPath="/img/supplementary-ingredients/cranberries"
+                          size="small"
+                        />
+                      </div>
+                      <div>
+                        <Image
+                          alt="hazelnuts ingredient image"
+                          srcPath="/img/supplementary-ingredients/hazelnuts"
+                          size="small"
+                        />
+                      </div>
+                      <div>
+                        <Image alt="oat ingredient image" srcPath="/img/supplementary-ingredients/oat" size="small" />
+                      </div>
+                    </Swiper>
+                  )}
+                </div>
+              )}
+            </InView>
           </div>
         </div>
       </div>
@@ -637,17 +661,25 @@ export default () => {
 
         <div className="home__row">
           <div className="home__col">
-            <Swiper {...simpleParams}>
-              <div>
-                <Image alt="bars image" srcPath="/img/why-section/bars" size="small" />
-              </div>
-              <div>
-                <Image alt="emotion image" srcPath="/img/why-section/emotion" size="small" />
-              </div>
-              <div>
-                <Image alt="bowl image" srcPath="/img/why-section/bowl" size="small" />
-              </div>
-            </Swiper>
+            <InView triggerOnce>
+              {({ inView, ref }) => (
+                <div ref={ref}>
+                  {inView && (
+                    <Swiper {...simpleParams}>
+                      <div>
+                        <Image alt="bars image" srcPath="/img/why-section/bars" size="small" />
+                      </div>
+                      <div>
+                        <Image alt="emotion image" srcPath="/img/why-section/emotion" size="small" />
+                      </div>
+                      <div>
+                        <Image alt="bowl image" srcPath="/img/why-section/bowl" size="small" />
+                      </div>
+                    </Swiper>
+                  )}
+                </div>
+              )}
+            </InView>
           </div>
           <div className="home__col home__col--content">
             <div className="home__col-content-wrapper">
@@ -663,9 +695,11 @@ export default () => {
             </div>
           </div>
           <div className="home__col">
-            <div>
-              <Image alt="ceos image" srcPath="/img/why-section/ceos" />
-            </div>
+            <InView triggerOnce>
+              {({ inView, ref }) => (
+                <div ref={ref}>{inView && <Image alt="ceos image" srcPath="/img/why-section/ceos" />}</div>
+              )}
+            </InView>
           </div>
         </div>
       </div>
@@ -738,9 +772,11 @@ export default () => {
             </div>
           </div>
           <div className="home__col">
-            <div>
-              <Image alt="contact emotion image" srcPath="/img/contact-emotion" />
-            </div>
+            <InView triggerOnce>
+              {({ inView, ref }) => (
+                <div ref={ref}>{inView && <Image alt="contact emotion image" srcPath="/img/contact-emotion" />}</div>
+              )}
+            </InView>
           </div>
         </div>
       </div>
@@ -750,7 +786,7 @@ export default () => {
         <h3 className="home__insta-text">{translations.instagram.text}</h3>
 
         <div className="home__row">
-          <InstagramWrapper shouldRender />
+          <InView triggerOnce>{({ inView, ref }) => <div ref={ref}>{inView && <InstagramWrapper shouldRender />}</div>}</InView>
         </div>
         <Button>
           <a className="home__follow-instagram" target="_blank" href={translations.footer.insta}>
