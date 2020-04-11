@@ -2,6 +2,8 @@ import path from "path";
 import LocalizedConfig from "./build.config.json";
 
 export default {
+  extractCssChunks: true,
+  inlineCss: true,
   plugins: [
     [
       require.resolve("react-static-plugin-localized"),

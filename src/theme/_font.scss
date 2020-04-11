@@ -1,17 +1,20 @@
 @font-face {
-  font-family: 'Muli';
-  src: url('./fonts/Muli/Muli-Regular.ttf') format('truetype');
+  font-family: "Muli";
+  src: url("./fonts/Muli/Muli-Regular.ttf") format("truetype");
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'Muli';
-  src: url('./fonts/Muli/Muli-Bold.ttf') format('truetype');
+  font-family: "Muli";
+  src: url("./fonts/Muli/Muli-Bold.ttf") format("truetype");
   font-weight: 600;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'Handlee';
-  src: url('./fonts/Handlee/Handlee-Regular.ttf') format('truetype');
+  font-family: "Handlee";
+  src: url("./fonts/Handlee/Handlee-Regular.ttf") format("truetype");
   font-weight: 400;
+  font-display: swap;
 }
