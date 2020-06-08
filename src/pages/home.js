@@ -709,7 +709,7 @@ export default () => {
 
         <div className="home__buy-products">
           <Button>
-            <a className="home__contact-btn" href="https://derriegel.myshopify.com/collections/all">
+            <a className="home__contact-btn" href="https://derriegel.myshopify.com">
               {translations.buy.onlineShop}
             </a>
           </Button>

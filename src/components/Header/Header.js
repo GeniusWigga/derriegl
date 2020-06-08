@@ -54,7 +54,7 @@ export default ({ translations }) => {
         <a
           onClick={close}
           className={buildClassName("header__item", { active: hash === "products" })}
-          href="https://derriegel.myshopify.com/collections/all"
+          href="https://derriegel.myshopify.com"
         >
           {header.products}
         </a>
