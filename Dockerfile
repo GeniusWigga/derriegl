@@ -1,6 +1,4 @@
-FROM nginx:alpine as build
-
-RUN apk add --update nodejs npm
+FROM node:12-alpine as build
 
 WORKDIR /app
 
@@ -10,12 +8,17 @@ RUN chmod +x /node-prune.sh \
 
 COPY . ./
 
+RUN chown -R node:node /app
+USER node
+
 RUN npm ci --no-optional \
     && npm cache clean --force
 
 RUN npm run build
+RUN npm prune --production
 
-FROM build as prod
+FROM nginx:alpine
+
 WORKDIR /app
 
 RUN ls -la
