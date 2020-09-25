@@ -1,6 +1,13 @@
 import React from "react";
 import path from "path";
+import _ from "lodash";
 import LocalizedConfig from "./build.config.json";
+import { makeRequest } from "./src/service/squidex";
+import "./config";
+
+const { CLIENT_ID, CLIENT_SECRET, CMS_URL, SQUIDEX_APP } = process.env;
+
+global.appRoot = path.resolve(__dirname);
 
 export default {
   Document: ({ Html, Head, Body, children, state: { siteData, renderMeta } }) => (
@@ -15,6 +22,17 @@ export default {
   ),
   extractCssChunks: true,
   inlineCss: true,
+  getSiteData: async () => {
+    const cmsRequest = await makeRequest(CLIENT_ID, CLIENT_SECRET, CMS_URL);
+    const navigation = await cmsRequest({
+      method: "GET",
+      url: `${CMS_URL}/api/content/${SQUIDEX_APP}/navigation/`,
+    });
+
+    return {
+      navigation: _.get(navigation.data, ["items", 0, "data", "navigation-list"]),
+    };
+  },
   plugins: [
     [
       require.resolve("react-static-plugin-localized"),

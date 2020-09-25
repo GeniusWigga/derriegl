@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useSiteData } from "react-static";
 
 // Do not remove router
 import Router from "../Router";
@@ -7,17 +8,16 @@ import "./Header.scss";
 import buildClassName from "../../helpers/buildClassName";
 
 export default ({ translations }) => {
+  const { navigation } = useSiteData();
   const [open, setOpen] = useState(false);
+  console.log("navigation: ", navigation);
 
   const { header } = translations;
 
   let hash = "";
 
   if (window) {
-    hash = _.chain(window.location.href)
-      .split("#")
-      .nth(1)
-      .value();
+    hash = _.chain(window.location.href).split("#").nth(1).value();
   }
 
   const close = () => setOpen(false);

@@ -1,4 +1,6 @@
 .idea
+.env
+API_TOKEN
 node_modules
 dist
 tmp
