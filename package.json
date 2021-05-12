@@ -43,7 +43,7 @@
     "react-static-plugin-sitemap": "7.2.3",
     "react-static-plugin-source-filesystem": "7.2.3",
     "svg-inline-react": "3.2.0",
-    "swiper": "4.5.1"
+    "swiper": "6.5.1"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "5.13.0",
