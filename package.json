@@ -58,7 +58,7 @@
     "gulp": "4.0.2",
     "gulp-responsive": "^3.0.1",
     "gulp-rsync": "0.0.8",
-    "minimist": "1.2.5 ",
+    "minimist": "1.2.6",
     "serve": "11.3.0"
   }
 }
